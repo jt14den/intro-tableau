@@ -1,84 +1,40 @@
-# The Carpentries Workbench Template Markdown Lesson
+# Introduction to Data Visualization with Tableau
 
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench]. 
+This lesson introduces learners to foundational data visualization concepts using Tableau Public. Learners will gain hands-on experience building charts, exploring datasets, and creating dashboards, with a focus on practical skills for presenting and analyzing data visually. No prior experience with Tableau or data visualization is required.
 
-## Note about lesson life cycle stage
-Although the `config.yaml` states the life cycle stage as pre-alpha, **the template is stable and ready to use**. The life cycle stage is preset to `"pre-alpha"` as this setting is appropriate for new lessons initialised using the template.
+## 📘 Lesson Overview
 
-## Create a new repository from this template
+* **Lesson website**: [https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/)
+  (Replace with the actual URL once deployed)
+* **Audience**: Beginners in data visualization, including researchers, librarians, instructors, and students
+* **Requirements**: No prior experience with Tableau; learners should have a stable internet connection and access to [Tableau Public](https://public.tableau.com/)
 
-To use this template to start a new lesson repository, 
-make sure you're logged into Github.   
-Visit https://github.com/carpentries/workbench-template-md/generate
-and follow the instructions.
-Checking the 'Include all branches' option will save some time waiting for the first website build
-when your new repository is initialised.
+## ✉️ Contact Information
 
-If you have any questions, contact [@tobyhodges](https://github.com/tobyhodges)
+For questions, suggestions, or feedback, please contact the maintainers at:
+📧 [tdennis@library.ucla.edu](mailto:tdennis@library.ucla.edu)
+Or open an issue in the [GitHub repository](https://github.com/your-username/your-repo-name/issues).
 
-## Configure a new lesson
+## 🤝 Contributing
 
-Follow the steps below to
-complete the initial configuration of a new lesson repository built from this template:
+We welcome contributions from the community! If you would like to suggest changes, add content, or report an issue:
 
-1. **Make sure GitHub Pages is activated:**
-   navigate to _Settings_,
-   select _Pages_ from the left sidebar,
-   and make sure that `gh-pages` is selected as the branch to build from.
-   If no `gh-pages` branch is available, check the _Actions_ tab to see if the first
-   website build workflows are still running.
-   If they're not running yet, you may need to manually enable them via the _Actions_ tab.
-   The branch should become available when those have completed.
-1. **Adjust the `config.yaml` file:**
-   this file contains global parameters for your lesson site.
-   Individual fields within the file are documented with comments (beginning with `#`)
-   At minimum, you should adjust all the fields marked 'FIXME':
-   - `title`
-   - `created`
-   - `keywords`
-   - `life_cycle` (the default, _pre-alpha_, is the appropriate for brand new lessons)
-   - `contact`
-1. **Annotate the repository** with site URL and topic tags:
-   navigate back to the repository landing page and
-   click on the gear wheel/cog icon (similar to ⚙️) 
-   at the top-right of the _About_ box.
-   Check the "Use your GitHub Pages website" option,
-   and [add some keywords and other annotations to describe your lesson](https://cdh.carpentries.org/the-carpentries-incubator.html#topic-tags)
-   in the _Topics_ field.
-   At minimum, these should include:
-   - `lesson`
-   - the life cycle of the lesson (e.g. `pre-alpha`)
-   - the human language the lesson is written in (e.g. `deutsch`)
-1. **Adjust the 
-   `CITATION.cff`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `LICENSE.md` files**
-   as appropriate for your project.
-   -  `CITATION.cff`:
-      this file contains information that people can use to cite your lesson,
-      for example if they publish their own work based on it.
-      You should [update the CFF][cff-sandpaper-docs] now to include information about your lesson,
-      and remember to return to it periodically, keeping it updated as your
-      author list grows and other details become available or need to change.
-      The [Citation File Format home page][cff-home] gives more information about the format,
-      and the [`cffinit` webtool][cffinit] can be used to create new and update existing CFF files.
-   -  `CODE_OF_CONDUCT.md`: 
-      if you are using this template for a project outside The Carpentries,
-      you should adjust this file to describe 
-      who should be contacted with Code of Conduct reports,
-      and how those reports will be handled.
-   -  `CONTRIBUTING.md`:
-      depending on the current state and maturity of your project,
-      the contents of the template Contributing Guide may not be appropriate.
-      You should adjust the file to help guide contributors on how best
-      to get involved and make an impact on your lesson.
-   -  `LICENSE.md`:
-      in line with the terms of the CC-BY license,
-      you should ensure that the copyright information 
-      provided in the license file is accurate for your project.
-1. **Update this README with 
-   [relevant information about your lesson](https://carpentries.github.io/lesson-development-training/collaborating-newcomers.html#readme)**
-   and delete this section.
+* Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines.
+* Issues and pull requests are tracked through the GitHub repository.
+* We especially encourage feedback from instructors and learners who have used the lesson in workshops or courses.
 
-[cff-home]: https://citation-file-format.github.io/
-[cff-sandpaper-docs]:  https://carpentries.github.io/sandpaper-docs/editing.html#making-your-lesson-citable
-[cffinit]: https://citation-file-format.github.io/cff-initializer-javascript/
-[workbench]: https://carpentries.github.io/sandpaper-docs/
+## 🙏 Acknowledgements
+
+This lesson was authored by **Julia Wood** and **Emily Gong** as part of the UCLA Library Data Science Center’s instructional program. Both are team members of the **DataSquad**, a student-driven initiative supporting data education and research at UCLA. We thank them for their thoughtful lesson design and commitment to accessible data visualization instruction.
+
+The lesson was developed using [The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/) and draws on open educational resources and teaching practices from the broader Carpentries community.
+
+A full list of contributors can be found in [AUTHORS.md](AUTHORS.md).
+
+## 📚 Citation
+
+If you use or adapt this lesson, please cite it using the information in [CITATION.cff](CITATION.cff). This helps us track usage and demonstrate impact to our funders and community.
+
+## 🪪 License
+
+This lesson is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](LICENSE.md). You are free to share and adapt the material with attribution.
