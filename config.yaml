@@ -68,7 +68,7 @@ contact: 'team@carpentries.org' # FIXME
 episodes: 
 - introduction.md
 - exploring-data.md
-- creating-visualizations.md
+- creating-visualisations.md
 - adding-interactivity.md
 - building-dashboards.md
 
