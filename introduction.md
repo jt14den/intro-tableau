@@ -1,7 +1,7 @@
 ---
-title: "Using Markdown"
-teaching: 10
-exercises: 2
+title: "Getting Started with Tableau Public"
+teaching: 15
+exercises: 20
 ---
 
 ::: questions
