@@ -253,6 +253,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="adding-interactivity.html">2. Adding Interactivity with Pages and Filters</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -407,6 +419,203 @@ visualizations.</li>
 visualizations.</li>
 <li>You can get started quickly by using public datasets in CSV
 format.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-adding-interactivity"><p>Content from <a href="adding-interactivity.html">Adding Interactivity with Pages and Filters</a></p>
+<hr>
+<p>Last updated on 2025-05-14 |
+
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/adding-interactivity.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can I animate a visualization over time?</li>
+<li>How can filters help explore different aspects of a dataset?</li>
+<li>What options in Tableau help make visualizations more dynamic and
+readable?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use the Pages shelf to animate a chart over time.</li>
+<li>Apply filters to limit and explore subsets of your data.</li>
+<li>Improve visualization clarity with labels, tooltips, and color.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="animation-using-the-pages-shelf">Animation Using the Pages Shelf<a class="anchor" aria-label="anchor" href="#animation-using-the-pages-shelf"></a>
+</h2>
+<hr class="half-width">
+<p>We can animate our line chart to show how accidents accumulate over
+time.</p>
+<div id="checklist1" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Duplicate your line chart worksheet
+(<code>Right-click &gt; Duplicate</code>).</li>
+<li>Drag <code>Date Occurred</code> to the <strong>Pages</strong>
+shelf.</li>
+<li>Change the <strong>Marks</strong> type to <code>Circle</code> for
+better visibility.</li>
+<li>In the Pages card:
+<ul>
+<li>Click <strong>Show History</strong>
+</li>
+<li>Set Marks to show history for <strong>All</strong>, and enable
+<strong>Trails</strong>
+</li>
+</ul>
+</li>
+<li>Click the <strong>Play</strong> button in the Pages card to
+animate.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The Pages shelf lets you break visualizations into “frames” by a
+field—perfect for time-based animation.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="using-filters-to-refine-visuals">Using Filters to Refine Visuals<a class="anchor" aria-label="anchor" href="#using-filters-to-refine-visuals"></a>
+</h2>
+<hr class="half-width">
+<p>Filters allow users to focus on specific subsets of data.</p>
+<div id="checklist2" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Drag a field like <code>Area Name</code> to the
+<strong>Filters</strong> shelf.</li>
+<li>Select values to include, then click <strong>Show Filter</strong>
+from the dropdown menu.</li>
+<li>Tableau adds a filter widget to your view—users can now control the
+data dynamically.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote>
+<p>You can change the filter style to a dropdown, checklist, slider,
+etc.</p>
+</blockquote>
+</section><section><h2 class="section-heading" id="improving-readability">Improving Readability<a class="anchor" aria-label="anchor" href="#improving-readability"></a>
+</h2>
+<hr class="half-width">
+<p>Small changes improve how users read and interpret your
+visualization:</p>
+<ul>
+<li>
+<strong>Drag a field to Label</strong> to annotate points or
+bars</li>
+<li>
+<strong>Use Color</strong> to differentiate categories</li>
+<li>
+<strong>Hover</strong> to preview tooltips and ensure they
+communicate clearly</li>
+<li>Use <strong>Title</strong> and <strong>Axis Labels</strong> to
+explain your chart</li>
+</ul>
+<hr>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><strong>Challenge: Filter and Customize a Histogram</strong></p>
+<p>Using your histogram of <code>Time Occurred (bin)</code>, add a
+filter to let users explore different <code>Area Name</code> values.</p>
+<ul>
+<li>Can you make the title dynamic?</li>
+<li>Can you adjust the filter appearance for better UX?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>Double-click the title → Insert → select the filter field name.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Drag <code>Area Name</code> to Filters → click <strong>Show
+Filter</strong>.</li>
+<li>Change filter style via dropdown menu.</li>
+<li>Double-click the chart title → Insert → <code>Area Name</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>The Pages shelf adds animation by slicing your visualization into
+steps.</li>
+<li>Filters let you focus on specific parts of your dataset.</li>
+<li>Labels, color, and dynamic titles help clarify what your
+visualization is showing.</li>
 </ul>
 </div>
 </div>
