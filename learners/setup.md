@@ -25,6 +25,7 @@ Unzip the zip file and put everything into the same folder as the earlier one
 :::: checklist
 
 If you are a full-time student:
+
 - Go to this link: https://www.tableau.com/academic/students
 - Click the central button “GET TABLEAU FOR FREE”
 - Enter your details 
@@ -34,4 +35,5 @@ If you are a full-time student:
 - It will download tableau desktop and open this tab: https://www.tableau.com/products/desktop/download?signin=academic
 - Follow the three steps on the website linked in step 7 (1. Download, 2. Install, 3. Register)
 - Find & Open ‘Tableau Desktop’ in your Applications
+- 
 ::::::::
