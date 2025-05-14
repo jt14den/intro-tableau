@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: All in One View</title>
+<title>Introduction to Data Visualization with Tableau: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="Lesson Description" src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
               <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
@@ -91,10 +91,10 @@
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
-      <img class="small-logo" alt="Lesson Description" src="../assets/images/incubator-logo-sm.svg">
+      <img class="small-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Introduction to Data Visualization with Tableau
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -105,7 +105,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Introduction to Data Visualization with Tableau
           </span>
         </li>
         <li class="nav-item">
@@ -142,7 +142,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Lesson Title
+  Introduction to Data Visualization with Tableau
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -256,7 +256,43 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="adding-interactivity.html">2. Adding Interactivity with Pages and Filters</a>
+        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="creating-visualisations.html">3. Visualizing Data with Charts and Maps</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="adding-interactivity.html">4. Adding Interactivity with Pages and Filters</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="building-dashboards.html">5. Building and Sharing Dashboards</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -324,7 +360,7 @@
 <hr>
 <p>Last updated on 2025-05-14 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -427,11 +463,397 @@ format.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</section></section><section id="aio-exploring-data"><p>Content from <a href="exploring-data.html">Exploring and Cleaning Your Data</a></p>
+<hr>
+<p>Last updated on 2025-05-14 |
+
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/exploring-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How does Tableau interpret and categorize data types?</li>
+<li>What are Dimensions and Measures?</li>
+<li>How do I identify and prepare fields for visualization?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand Tableau’s automatic data typing (dimensions
+vs. measures).</li>
+<li>Explore the Show Me panel to preview visualization options.</li>
+<li>Use calculated fields and binning to prepare data for charts.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="dimensions-and-measures">Dimensions and Measures<a class="anchor" aria-label="anchor" href="#dimensions-and-measures"></a>
+</h2>
+<hr class="half-width">
+<p>After loading your dataset and opening a worksheet, you’ll notice
+that Tableau classifies your columns as either:</p>
+<ul>
+<li>
+<strong>Dimensions</strong> (blue pills): qualitative data like
+names, IDs, or categories.</li>
+<li>
+<strong>Measures</strong> (green pills): quantitative data that can
+be aggregated, such as counts or amounts.</li>
+</ul>
+<blockquote>
+<p>Tip: You can change a field’s classification by right-clicking and
+selecting <strong>Convert to Dimension</strong> or <strong>Convert to
+Measure</strong>.</p>
+</blockquote>
+</section><section><h2 class="section-heading" id="discrete-vs--continuous">Discrete vs. Continuous<a class="anchor" aria-label="anchor" href="#discrete-vs--continuous"></a>
+</h2>
+<hr class="half-width">
+<p>Tableau also distinguishes between:</p>
+<ul>
+<li>
+<strong>Discrete</strong> fields: Separate values like city names,
+months, or categories.</li>
+<li>
+<strong>Continuous</strong> fields: Numeric or time-based fields
+used on a continuous scale.</li>
+</ul>
+<blockquote>
+<p>Discrete = blue<br>
+Continuous = green</p>
+</blockquote>
+</section><section><h2 class="section-heading" id="exploring-the-data-with-show-me">Exploring the Data with Show Me<a class="anchor" aria-label="anchor" href="#exploring-the-data-with-show-me"></a>
+</h2>
+<hr class="half-width">
+<p>The <strong>Show Me</strong> panel suggests visualizations based on
+the fields you’ve selected.</p>
+<p>Try this:</p>
+<ol style="list-style-type: decimal">
+<li>Select <code>Area Name</code> and <code>DR Number</code>
+</li>
+<li>Click on different chart types in the <strong>Show Me</strong>
+panel</li>
+<li>See how Tableau updates the chart preview dynamically</li>
+</ol></section><section><h2 class="section-heading" id="creating-a-calculated-field">Creating a Calculated Field<a class="anchor" aria-label="anchor" href="#creating-a-calculated-field"></a>
+</h2>
+<hr class="half-width">
+<p>You can create new fields to better control your visualizations.</p>
+<p>To count the number of traffic accidents:</p>
+<ol style="list-style-type: decimal">
+<li>Right-click in the Data pane → <strong>Create Calculated
+Field</strong>
+</li>
+<li>Name it: <code>Number of Accidents</code>
+</li>
+<li>Formula: <code>COUNT([DR Number])</code>
+</li>
+</ol>
+<p>This new measure will appear in your data pane.</p>
+</section><section><h2 class="section-heading" id="creating-bins-for-time-of-day">Creating Bins (for Time of Day)<a class="anchor" aria-label="anchor" href="#creating-bins-for-time-of-day"></a>
+</h2>
+<hr class="half-width">
+<p>To examine accident frequency across different times of day:</p>
+<ol style="list-style-type: decimal">
+<li>Right-click on <code>Time Occurred</code> →
+<strong>Duplicate</strong>
+</li>
+<li>Right-click the duplicate → <strong>Convert to
+Dimension</strong>
+</li>
+<li>Right-click again → <strong>Create Bins</strong>
+</li>
+<li>Set bin size to <code>100</code>
+</li>
+</ol>
+<p>This creates a new field like <code>Time Occurred (bin)</code> that
+groups records by hour.</p>
+<hr>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal">
+<li>Use Show Me to try 3 different chart types with
+<code>Area Name</code>, <code>Date Occurred</code>, and
+<code>DR Number</code>.</li>
+<li>Create a calculated field to count accidents.</li>
+<li>Create a binned version of <code>Time Occurred</code>.</li>
+<li>Which fields would be good candidates for filters in a
+dashboard?</li>
+</ol>
+</div>
+</div>
+</div>
+<hr>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Think about what each field <em>represents</em> and how it might be
+grouped or summarized. Clean, consistent values (like standardized
+department names) make visualizations more readable and accurate.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Tableau automatically classifies data into dimensions (categorical)
+and measures (quantitative).</li>
+<li>The “Show Me” panel suggests visualization types based on selected
+data.</li>
+<li>Data preparation, including binning and calculated fields, improves
+visualization clarity.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-creating-visualisations"><p>Content from <a href="creating-visualisations.html">Visualizing Data with Charts and Maps</a></p>
+<hr>
+<p>Last updated on 2025-05-14 |
+
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/creating-visualisations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I create a line chart, histogram, or map in Tableau?</li>
+<li>How do field types affect the kind of visualization Tableau
+creates?</li>
+<li>How can I use geographic data for mapping?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Create a line chart showing accidents over time by area.</li>
+<li>Use binned time data to generate a histogram.</li>
+<li>Create a basic map using latitude and longitude values.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="line-chart-accidents-over-time-by-area">Line Chart: Accidents Over Time by Area<a class="anchor" aria-label="anchor" href="#line-chart-accidents-over-time-by-area"></a>
+</h2>
+<hr class="half-width">
+<p>We’ll create a line chart showing how accident counts vary by area
+over time.</p>
+<div id="checklist1" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Open a new worksheet.</li>
+<li>Drag <code>Date Occurred</code> to <strong>Columns</strong> →
+right-click → Convert to <strong>Continuous</strong>.</li>
+<li>Drag <code>DR Number</code> to <strong>Rows</strong> → right-click →
+<strong>Measure &gt; Count</strong>.</li>
+<li>Drag <code>Area Name</code> to <strong>Color</strong> under the
+Marks card.</li>
+<li>Double-click axis labels to rename them if desired.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>A “blue pill” in Tableau means the field is discrete (e.g.,
+individual years), while a “green pill” is continuous (e.g., time as a
+timeline).</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="histogram-accidents-by-time-of-day">Histogram: Accidents by Time of Day<a class="anchor" aria-label="anchor" href="#histogram-accidents-by-time-of-day"></a>
+</h2>
+<hr class="half-width">
+<p>Use the binned field created in the previous episode to examine
+accident frequency over time.</p>
+<div id="checklist2" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Create a new worksheet.</li>
+<li>Drag <code>Time Occurred (bin)</code> to
+<strong>Columns</strong>.</li>
+<li>Drag the calculated field <code>Number of Accidents</code> to
+<strong>Rows</strong>.</li>
+<li>Optional: Drag <code>Area Name</code> to <strong>Filters</strong>,
+then click the filter card menu → <strong>Show Filter</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Histograms are ideal for showing the distribution of values across
+intervals—perfect for analyzing “Time Occurred.”</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles<a class="anchor" aria-label="anchor" href="#map-plotting-accidents-in-los-angeles"></a>
+</h2>
+<hr class="half-width">
+<p>If your dataset includes a <code>Location</code> column like
+<code>"34.05, -118.24"</code>:</p>
+<div id="checklist3" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Right-click <code>Location</code> → <strong>Split</strong>.</li>
+<li>Rename the resulting fields <code>Latitude</code> and
+<code>Longitude</code>.</li>
+<li>Right-click each field → set <strong>Data Type</strong> to
+<em>Number (decimal)</em>.</li>
+<li>Set <strong>Geographic Role</strong>: <code>Latitude</code> and
+<code>Longitude</code>.</li>
+<li>Double-click both fields to generate a map.</li>
+<li>Use the map search bar to zoom to <em>Los Angeles</em>.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Each point now represents a traffic incident.</p>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><strong>Challenge: Compare Accidents Across Areas</strong></p>
+<p>Create a bar chart showing how accident counts compare across
+different police areas.</p>
+<ul>
+<li>Which field will you put on the x-axis (Columns)?</li>
+<li>Which field is best for the y-axis (Rows)?</li>
+<li>Can you improve the chart by adding <code>Color</code>,
+<code>Label</code>, or a <code>Filter</code>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>Use <code>Area Name</code> for Columns and
+<code>Number of Accidents</code> as the Measure.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Drag <code>Area Name</code> to <strong>Columns</strong>.</li>
+<li>Use <code>Number of Accidents</code> (COUNT of
+<code>DR Number</code>) on <strong>Rows</strong>.</li>
+<li>Optionally add <code>Number of Accidents</code> to
+<strong>Label</strong> for better readability.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Dragging fields to Columns and Rows defines the structure of your
+chart.</li>
+<li>The Show Me panel helps you quickly preview different visualization
+types.</li>
+<li>Latitude and longitude values can be transformed into map views
+using geographic roles.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section><section id="aio-adding-interactivity"><p>Content from <a href="adding-interactivity.html">Adding Interactivity with Pages and Filters</a></p>
 <hr>
 <p>Last updated on 2025-05-14 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/adding-interactivity.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/adding-interactivity.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -624,6 +1046,206 @@ visualization is showing.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</section></section><section id="aio-building-dashboards"><p>Content from <a href="building-dashboards.html">Building and Sharing Dashboards</a></p>
+<hr>
+<p>Last updated on 2025-05-14 |
+
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/building-dashboards.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I combine multiple visualizations into a single
+dashboard?</li>
+<li>How can filters and interactivity be shared across charts?</li>
+<li>How do I publish or share Tableau Public visualizations?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Create a dashboard that brings together multiple views.</li>
+<li>Enable filtering across all visualizations in a dashboard.</li>
+<li>Save and share your dashboard using Tableau Public.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-is-a-dashboard">What Is a Dashboard?<a class="anchor" aria-label="anchor" href="#what-is-a-dashboard"></a>
+</h2>
+<hr class="half-width">
+<p>A <strong>dashboard</strong> in Tableau is a canvas where you can
+combine multiple charts and visual elements into a single interactive
+view. This allows users to compare different perspectives and apply
+filters across charts.</p>
+</section><section><h2 class="section-heading" id="creating-a-dashboard">Creating a Dashboard<a class="anchor" aria-label="anchor" href="#creating-a-dashboard"></a>
+</h2>
+<hr class="half-width">
+<div id="checklist1" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Click the <strong>Dashboard</strong> icon (bottom tab next to
+sheets).</li>
+<li>In the left sidebar, drag your sheets into the dashboard area.
+<ul>
+<li>Example: <code>Line Chart</code>, <code>Histogram</code>, and
+<code>Map</code>.</li>
+</ul>
+</li>
+<li>Adjust layout by dragging edges or setting size to
+<strong>Automatic</strong>.</li>
+<li>Label your sheets by double-clicking the tab name at the
+bottom.</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="adding-interactivity">Adding Interactivity<a class="anchor" aria-label="anchor" href="#adding-interactivity"></a>
+</h2>
+<hr class="half-width">
+<p>You can make any sheet act as a filter for others in the
+dashboard.</p>
+<div id="checklist2" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Click on a chart inside the dashboard.</li>
+<li>Use the filter icon (funnel symbol) to <strong>Use as
+Filter</strong>.</li>
+<li>Repeat for any views that should affect others interactively.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote>
+<p>Now, when you click a value (e.g., a bar or map area), other views
+will respond.</p>
+</blockquote>
+</section><section><h2 class="section-heading" id="saving-and-publishing-to-tableau-public">Saving and Publishing to Tableau Public<a class="anchor" aria-label="anchor" href="#saving-and-publishing-to-tableau-public"></a>
+</h2>
+<hr class="half-width">
+<p>Once you’re satisfied with your dashboard:</p>
+<div id="checklist3" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
+<ul>
+<li>Go to <strong>File &gt; Save to Tableau Public As…</strong>
+</li>
+<li>Log in to your Tableau Public account.</li>
+<li>Name your workbook and save it.</li>
+<li>Tableau will open a browser with your published visualization.</li>
+<li>Click the <strong>Share</strong> icon to get an embed code or
+link.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Caution</h3>
+<div class="callout-content">
+<p>All data in Tableau Public is public. Don’t upload sensitive or
+private data.</p>
+</div>
+</div>
+</div>
+<hr>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><strong>Challenge: Build and Publish a Dashboard</strong></p>
+<p>Create a dashboard with at least two visualizations. Enable filter
+interactivity, and publish it to your Tableau Public profile.</p>
+<ul>
+<li>What story does your dashboard tell?</li>
+<li>Could someone unfamiliar with the data understand what they’re
+seeing?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>Add meaningful titles and tooltips to help interpret your charts.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Combine the Line Chart and Map into one dashboard.</li>
+<li>Use <code>Area Name</code> as a filter.</li>
+<li>Add a dynamic title and test your dashboard in the browser.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Dashboards combine multiple charts into one interactive view.</li>
+<li>Filters and selections can link multiple charts together.</li>
+<li>Tableau Public lets you publish and share dashboards easily.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section>
 </div>
     </main>
@@ -637,12 +1259,12 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/jt14den/intro-tableau/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/carpentries/workbench-template-md/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/jt14den/intro-tableau/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/jt14den/intro-tableau/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -662,15 +1284,15 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
+  "@id": "https://jt14den.github.io/intro-tableau/instructor/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "data visualization, Tableau, dashboards, exploratory data analysis, beginner-friendly, open science, instructional design, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
+  "url": "https://jt14den.github.io/intro-tableau/instructor/aio.html",
+  "identifier": "https://jt14den.github.io/intro-tableau/instructor/aio.html",
   "dateCreated": "2025-05-14",
   "dateModified": "2025-05-14",
   "datePublished": "2025-05-14"
