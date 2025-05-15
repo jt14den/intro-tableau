@@ -25,7 +25,7 @@ We welcome contributions from the community! If you would like to suggest change
 
 ## 🙏 Acknowledgements
 
-This lesson was authored by **Julia Wood** and **Emily Gong** as part of the UCLA Library Data Science Center’s instructional program. Both are team members of the **DataSquad**, a student-driven initiative supporting data education and research at UCLA. We thank them for their thoughtful lesson design and commitment to accessible data visualization instruction.
+This lesson was authored by **Julia Wood** and **Emily Gong** as part of the UCLA Library Data Science Center’s instructional program. Both were team members of the **DataSquad**, a student-driven initiative supporting data education and research at UCLA. We thank them for their thoughtful lesson design and commitment to accessible data visualization instruction.
 
 The lesson was developed using [The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/) and draws on open educational resources and teaching practices from the broader Carpentries community.
 
