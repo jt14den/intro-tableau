@@ -49,6 +49,28 @@ Use the binned field created in the previous episode to examine accident frequen
 Histograms are ideal for showing the distribution of values across intervals—perfect for analyzing "Time Occurred."
 :::
 
+## Bar Chart: Accidents by Age
+
+Let’s visualize how accident counts vary by age of victim.
+
+1. Drag `Age` to **Columns`
+2. Right-click and choose **Convert to Dimension**
+3. Drag `Number of Accidents` (your calculated field) to **Rows**
+4. Change the Marks type to **Bar**
+5. Use **Size** to reduce bar width and prevent overlap
+6. Go to **Analysis > Show Mark Labels**
+
+::: challenge
+
+**Interpret the Distribution**  
+- Do any ages have unusual spikes?  
+- What might cause them?  
+
+(Hint: Consider estimation or rounding practices in field data collection.)
+
+:::
+
+
 ## Map: Plotting Accidents in Los Angeles
 
 If your dataset includes a `Location` column like `"34.05, -118.24"`:
