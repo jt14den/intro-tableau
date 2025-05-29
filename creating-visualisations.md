@@ -86,6 +86,15 @@ If your dataset includes a `Location` column like `"34.05, -118.24"`:
 
 Each point now represents a traffic incident.
 
+## Optional: Refine Your Map Display
+
+To improve readability and orientation:
+
+- Go to **Map → Background Maps → Streets** to switch to a street-level basemap.
+- Use the **Pan Tool** (click the hand icon) to move across the map.
+- Remove null points by right-clicking on any point in the ocean (0,0) and selecting **Exclude**.
+
+
 ::: challenge
 **Challenge: Compare Accidents Across Areas**
 
