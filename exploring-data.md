@@ -57,6 +57,15 @@ To count the number of traffic accidents:
 
 This new measure will appear in your data pane.
 
+::: callout
+
+### 💡 Troubleshooting Tip
+
+If Tableau freezes while you're working, try saving frequently and duplicating worksheets before experimenting. To duplicate: right-click on the sheet tab → Duplicate.
+
+:::
+
+
 ## Creating Bins (for Time of Day)
 
 To examine accident frequency across different times of day:
