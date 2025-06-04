@@ -1283,7 +1283,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-building-dashboards"><p>Content from <a href="building-dashboards.html">Building and Sharing Dashboards</a></p>
 <hr>
-<p>Last updated on 2025-05-14 |
+<p>Last updated on 2025-06-04 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/building-dashboards.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -1320,36 +1320,37 @@ dashboard?</li>
 </div>
 </div>
 </div>
+<p>Welcome to the final episode! Here, we’ll bring together all the
+visualizations we’ve created into powerful, interactive dashboards.
+Dashboards are where your data story truly comes alive, allowing others
+to explore and understand your insights.</p>
 <section><h2 class="section-heading" id="what-is-a-dashboard">What Is a Dashboard?<a class="anchor" aria-label="anchor" href="#what-is-a-dashboard"></a>
 </h2>
 <hr class="half-width">
 <p>A <strong>dashboard</strong> in Tableau is a canvas where you can
 combine multiple charts and visual elements into a single interactive
-view. This allows users to compare different perspectives and apply
-filters across charts.</p>
-</section><section><h2 class="section-heading" id="creating-a-dashboard">Creating a Dashboard<a class="anchor" aria-label="anchor" href="#creating-a-dashboard"></a>
-</h2>
-<hr class="half-width">
-<div id="checklist1" class="callout checklist">
+view. This allows users to compare different perspectives and present a
+lot more information in a smaller, cohesive frame.</p>
+<div id="creating-a-dashboard" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Checklist</h3>
+<div id="creating-a-dashboard" class="callout-inner">
+<h3 class="callout-title">Creating a Dashboard</h3>
 <div class="callout-content">
 <ul>
-<li>Click the <strong>Dashboard</strong> icon (bottom tab next to
-sheets).</li>
-<li>In the left sidebar, drag your sheets into the dashboard area.
-<ul>
-<li>Example: <code>Line Chart</code>, <code>Histogram</code>, and
-<code>Map</code>.</li>
-</ul>
-</li>
-<li>Adjust layout by dragging edges or setting size to
-<strong>Automatic</strong>.</li>
-<li>Label your sheets by double-clicking the tab name at the
-bottom.</li>
+<li>Click the <strong>Dashboard</strong> icon (the middle tab at the
+bottom, typically between “New Worksheet” and “New Story”).</li>
+<li>In the left sidebar, you’ll see a list of all your created sheets.
+Drag your desired sheets (e.g.,
+<code>Accidents Over Time (Animated)</code>,
+<code>Running Total Accidents Over Time</code>, and
+<code>Accident Map</code>) into the main dashboard area.</li>
+<li>Adjust the layout by dragging edges of the sheets or by setting the
+dashboard size to <strong>Automatic</strong> for flexible viewing.</li>
+<li>You can label your sheets directly on the dashboard by
+double-clicking the tab name at the bottom of each sheet you’ve
+added.</li>
 </ul>
 </div>
 </div>
@@ -1357,28 +1358,34 @@ bottom.</li>
 </section><section><h2 class="section-heading" id="adding-interactivity">Adding Interactivity<a class="anchor" aria-label="anchor" href="#adding-interactivity"></a>
 </h2>
 <hr class="half-width">
-<p>You can make any sheet act as a filter for others in the
-dashboard.</p>
-<div id="checklist2" class="callout checklist">
+<p>This is where dashboards become truly powerful! You can make any
+sheet on your dashboard act as a filter for others, allowing users to
+interact with your data dynamically.</p>
+<div id="adding-an-interactive-filter" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Checklist</h3>
+<div id="adding-an-interactive-filter" class="callout-inner">
+<h3 class="callout-title">Adding an Interactive Filter</h3>
 <div class="callout-content">
 <ul>
-<li>Click on a chart inside the dashboard.</li>
-<li>Use the filter icon (funnel symbol) to <strong>Use as
-Filter</strong>.</li>
-<li>Repeat for any views that should affect others interactively.</li>
+<li>Click on a chart <em>inside</em> the dashboard that you want to use
+as a filter (e.g., your <code>Accident Map</code>).</li>
+<li>On the floating toolbar that appears when a chart is selected, click
+the <strong>Use as Filter</strong> icon (it looks like a funnel
+symbol).</li>
+<li>Repeat this step for any other views that should affect others
+interactively. For example, if you make your
+<code>Accidents Over Time (Animated)</code> sheet a filter as well.</li>
 </ul>
 </div>
 </div>
 </div>
-<blockquote>
-<p>Now, when you click a value (e.g., a bar or map area), other views
-will respond.</p>
-</blockquote>
+<p>Now, when you click a specific value (e.g., a bar on a chart, or a
+specific area on a map), other views linked by the filter will respond
+instantly, updating to show only the data relevant to your selection.
+This dynamic interaction makes your dashboard a powerful exploration
+tool!</p>
 </section><section><h2 class="section-heading" id="saving-and-publishing-to-tableau-public">Saving and Publishing to Tableau Public<a class="anchor" aria-label="anchor" href="#saving-and-publishing-to-tableau-public"></a>
 </h2>
 <hr class="half-width">
