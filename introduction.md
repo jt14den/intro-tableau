@@ -36,7 +36,9 @@ As of version 2025.1.2, Tableau Public supports local saves. However, all visual
 
 ## Launching Tableau and Connecting to Data
 
-Once Tableau Public is open:
+To get started, if Tableau Desktop (or Public) is in your dock, you can click it open. However, a standard method is to navigate to your Applications folder (or wherever you installed it) and launch it from there.
+
+Once Tableau  is open:
 
 1. Under **Connect**, click **Text File**.
 2. Browse to your downloaded CSV file and select it.
