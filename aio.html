@@ -891,7 +891,7 @@ questions about data collection practices!</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Consider estimation or rounding practices in field data
 collection.</p>
@@ -985,7 +985,7 @@ different police areas.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Use <code>Area Name</code> for Columns and
 <code>Number of Accidents</code> as the Measure.</p>
@@ -998,7 +998,7 @@ different police areas.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Drag <code>Area Name</code> to <strong>Columns</strong>.</li>
@@ -1035,7 +1035,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-adding-interactivity"><p>Content from <a href="adding-interactivity.html">Adding Interactivity with Pages and Filters</a></p>
 <hr>
-<p>Last updated on 2025-05-14 |
+<p>Last updated on 2025-06-04 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/adding-interactivity.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1071,11 +1071,16 @@ readable?</li>
 </div>
 </div>
 </div>
+<p>In this episode, we’ll transform our static visualizations into
+dynamic, interactive tools. We’ll explore how to animate charts to
+reveal trends over time and how to empower users to examine specific
+subsets of your data using filters.</p>
 <section><h2 class="section-heading" id="animation-using-the-pages-shelf">Animation Using the Pages Shelf<a class="anchor" aria-label="anchor" href="#animation-using-the-pages-shelf"></a>
 </h2>
 <hr class="half-width">
 <p>We can animate our line chart to show how accidents accumulate over
-time.</p>
+time. To do this without altering your original chart, it’s a good
+practice to <strong>duplicate</strong> the existing worksheet.</p>
 <div id="checklist1" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -1084,43 +1089,69 @@ time.</p>
 <h3 class="callout-title">Checklist</h3>
 <div class="callout-content">
 <ul>
-<li>Duplicate your line chart worksheet
-(<code>Right-click &gt; Duplicate</code>).</li>
-<li>Drag <code>Date Occurred</code> to the <strong>Pages</strong>
-shelf.</li>
-<li>Change the <strong>Marks</strong> type to <code>Circle</code> for
-better visibility.</li>
+<li>Duplicate your line chart worksheet (Right-click on the sheet tab
+&gt; Duplicate).</li>
+<li>Drag <code>Date Occurred</code> to the <strong>Pages</strong> shelf.
+This creates a control panel for animation.</li>
+<li>Change the <strong>Marks</strong> type from <code>Automatic</code>
+to <code>Circle</code> for better visibility of individual data points
+as they move.</li>
 <li>In the Pages card:
 <ul>
-<li>Click <strong>Show History</strong>
-</li>
+<li>Click <strong>Show History</strong>.</li>
 <li>Set Marks to show history for <strong>All</strong>, and enable
-<strong>Trails</strong>
+<strong>Trails</strong>. <em>(Choosing ‘Trails’ creates a nice line
+indicating the past path, with the circle marking the current point in
+time. ‘Both’ would show individual circles at every past point, which
+can get cluttered.)</em>
 </li>
 </ul>
 </li>
-<li>Click the <strong>Play</strong> button in the Pages card to
-animate.</li>
+<li>Click the <strong>Play</strong> button in the Pages card to animate.
+Be patient, as rendering can sometimes take a moment depending on your
+computer’s performance and data size!</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
+<div id="the-pages-shelf-your-animation-control" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="the-pages-shelf-your-animation-control" class="callout-inner">
+<h3 class="callout-title">The Pages Shelf: Your Animation Control</h3>
 <div class="callout-content">
-<p>The Pages shelf lets you break visualizations into “frames” by a
-field—perfect for time-based animation.</p>
+<p>The Pages shelf enables you to break your visualizations into
+“frames” based on the values of a field, making it perfect for
+time-based animations. As the animation plays, you might observe lines
+“zigzagging” or crossing. This simply indicates that an area’s relative
+ranking in accident counts might change over time.</p>
+</div>
+</div>
+</div>
+<div id="interpreting-your-animated-chart" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="interpreting-your-animated-chart" class="callout-inner">
+<h3 class="callout-title">Interpreting Your Animated Chart</h3>
+<div class="callout-content">
+<p>As your chart animates, observe the evolving trends: * Notice how
+lines grow and diverge over the years. * Can you identify which areas
+consistently show higher accident counts? * Do some areas, like 77th
+Street, visibly “take the lead” in cumulative accidents compared to
+others like Foothill?</p>
+<p>This dynamic view helps reveal long-term patterns that a static chart
+might not.</p>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="using-filters-to-refine-visuals">Using Filters to Refine Visuals<a class="anchor" aria-label="anchor" href="#using-filters-to-refine-visuals"></a>
 </h2>
 <hr class="half-width">
-<p>Filters allow users to focus on specific subsets of data.</p>
+<p>Filters empower users to explore specific subsets of your data
+directly within the visualization. This is a fundamental step in making
+your charts more interactive and user-driven.</p>
 <div id="checklist2" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -1131,18 +1162,34 @@ field—perfect for time-based animation.</p>
 <ul>
 <li>Drag a field like <code>Area Name</code> to the
 <strong>Filters</strong> shelf.</li>
-<li>Select values to include, then click <strong>Show Filter</strong>
-from the dropdown menu.</li>
-<li>Tableau adds a filter widget to your view—users can now control the
-data dynamically.</li>
+<li>In the filter dialog box, select the specific values you wish to
+include, then click “OK”.</li>
+<li>Now, right-click on the <code>Area Name</code> filter on the Filters
+shelf and select <strong>Show Filter</strong> from the dropdown
+menu.</li>
+<li>Tableau adds a filter widget to your view, typically on the right
+sidebar. Users can now control which data is displayed dynamically.</li>
 </ul>
 </div>
 </div>
 </div>
-<blockquote>
-<p>You can change the filter style to a dropdown, checklist, slider,
-etc.</p>
-</blockquote>
+<div id="using-filters-in-tableau" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="using-filters-in-tableau" class="callout-inner">
+<h3 class="callout-title">Using Filters in Tableau</h3>
+<div class="callout-content">
+<p>You can change the filter style (e.g., to a dropdown, checklist, or
+slider) by clicking the small dropdown arrow in the top right of the
+filter widget in your view.</p>
+<p><strong>Looking Ahead:</strong> Filters are powerful, especially when
+building interactive dashboards. In the next episode, we’ll see how
+filters on one sheet can be used to control all visualizations on a
+dashboard, creating a truly unified experience.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="improving-readability">Improving Readability<a class="anchor" aria-label="anchor" href="#improving-readability"></a>
 </h2>
 <hr class="half-width">
@@ -1160,7 +1207,6 @@ communicate clearly</li>
 <li>Use <strong>Title</strong> and <strong>Axis Labels</strong> to
 explain your chart</li>
 </ul>
-<hr>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1183,7 +1229,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Double-click the title → Insert → select the filter field name.</p>
 </div>
@@ -1195,7 +1241,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Drag <code>Area Name</code> to Filters → click <strong>Show
