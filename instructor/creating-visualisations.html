@@ -236,7 +236,9 @@
       <div class="accordion-body">
         <ul><li><a href="#line-chart-accidents-over-time-by-area">Line Chart: Accidents Over Time by Area</a></li>
 <li><a href="#histogram-accidents-by-time-of-day">Histogram: Accidents by Time of Day</a></li>
+<li><a href="#bar-chart-accidents-by-age">Bar Chart: Accidents by Age</a></li>
 <li><a href="#map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles</a></li>
+<li><a href="#optional-refine-your-map-display">Optional: Refine Your Map Display</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -319,7 +321,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Visualizing Data with Charts and Maps</h1>
-        <p>Last updated on 2025-05-14 |
+        <p>Last updated on 2025-05-29 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/creating-visualisations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -425,6 +427,35 @@ intervals—perfect for analyzing “Time Occurred.”</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="bar-chart-accidents-by-age">Bar Chart: Accidents by Age<a class="anchor" aria-label="anchor" href="#bar-chart-accidents-by-age"></a></h2>
+<hr class="half-width"><p>Let’s visualize how accident counts vary by age of victim.</p>
+<ol style="list-style-type: decimal"><li>Drag <code>Age</code> to **Columns`</li>
+<li>Right-click and choose <strong>Convert to Dimension</strong>
+</li>
+<li>Drag <code>Number of Accidents</code> (your calculated field) to
+<strong>Rows</strong>
+</li>
+<li>Change the Marks type to <strong>Bar</strong>
+</li>
+<li>Use <strong>Size</strong> to reduce bar width and prevent
+overlap</li>
+<li>Go to <strong>Analysis &gt; Show Mark Labels</strong>
+</li>
+</ol><div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><strong>Interpret the Distribution</strong><br>
+- Do any ages have unusual spikes?<br>
+- What might cause them?</p>
+<p>(Hint: Consider estimation or rounding practices in field data
+collection.)</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles<a class="anchor" aria-label="anchor" href="#map-plotting-accidents-in-los-angeles"></a></h2>
 <hr class="half-width"><p>If your dataset includes a <code>Location</code> column like
 <code>"34.05, -118.24"</code>:</p>
@@ -448,7 +479,15 @@ intervals—perfect for analyzing “Time Occurred.”</p>
 </div>
 </div>
 <p>Each point now represents a traffic incident.</p>
-<div id="challenge1" class="callout challenge">
+</section><section><h2 class="section-heading" id="optional-refine-your-map-display">Optional: Refine Your Map Display<a class="anchor" aria-label="anchor" href="#optional-refine-your-map-display"></a></h2>
+<hr class="half-width"><p>To improve readability and orientation:</p>
+<ul><li>Go to <strong>Map → Background Maps → Streets</strong> to switch to
+a street-level basemap.</li>
+<li>Use the <strong>Pan Tool</strong> (click the hand icon) to move
+across the map.</li>
+<li>Remove null points by right-clicking on any point in the ocean (0,0)
+and selecting <strong>Exclude</strong>.</li>
+</ul><div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -571,9 +610,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
-  "dateCreated": "2025-05-15",
-  "dateModified": "2025-05-14",
-  "datePublished": "2025-05-15"
+  "dateCreated": "2025-06-04",
+  "dateModified": "2025-05-29",
+  "datePublished": "2025-06-04"
 }
 
   </script><script>
