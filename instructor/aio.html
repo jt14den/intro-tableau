@@ -521,11 +521,19 @@ names, IDs, or categories.</li>
 <strong>Measures</strong> (green pills): quantitative data that can
 be aggregated, such as counts or amounts.</li>
 </ul>
-<blockquote>
-<p>Tip: You can change a field’s classification by right-clicking and
+<div id="tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="tip" class="callout-inner">
+<h3 class="callout-title">Tip:</h3>
+<div class="callout-content">
+<p>You can change a field’s classification by right-clicking and
 selecting <strong>Convert to Dimension</strong> or <strong>Convert to
 Measure</strong>.</p>
-</blockquote>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="discrete-vs--continuous">Discrete vs. Continuous<a class="anchor" aria-label="anchor" href="#discrete-vs--continuous"></a>
 </h2>
 <hr class="half-width">
@@ -533,15 +541,32 @@ Measure</strong>.</p>
 <ul>
 <li>
 <strong>Discrete</strong> fields: Separate values like city names,
-months, or categories.</li>
+months, or categories. These usually appear as <strong>blue
+pills</strong>.</li>
 <li>
 <strong>Continuous</strong> fields: Numeric or time-based fields
-used on a continuous scale.</li>
+used on a continuous scale. These usually appear as <strong>green
+pills</strong>.</li>
 </ul>
-<blockquote>
-<p>Discrete = blue<br>
-Continuous = green</p>
-</blockquote>
+<div id="pro-tip-blue-vs.-green" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="pro-tip-blue-vs.-green" class="callout-inner">
+<h3 class="callout-title">Pro-Tip: Blue vs. Green</h3>
+<div class="callout-content">
+<p>In Tableau, colors are key! - <strong>Blue pills</strong> (discrete)
+mean you’re looking at distinct categories or individual items. -
+<strong>Green pills</strong> (continuous) mean you’re viewing data along
+a continuous axis, like a range of numbers or a timeline.</p>
+<p>Sometimes, Tableau might interpret a date field as discrete (blue),
+showing individual years as distinct categories. However, for analyzing
+trends over time, we often prefer a <strong>continuous (green) date
+field</strong> so it acts like a proper time axis. You’ll see us change
+this later to ensure smooth visualizations.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="exploring-the-data-with-show-me">Exploring the Data with Show Me<a class="anchor" aria-label="anchor" href="#exploring-the-data-with-show-me"></a>
 </h2>
 <hr class="half-width">
@@ -557,7 +582,9 @@ panel</li>
 </ol></section><section><h2 class="section-heading" id="creating-a-calculated-field">Creating a Calculated Field<a class="anchor" aria-label="anchor" href="#creating-a-calculated-field"></a>
 </h2>
 <hr class="half-width">
-<p>You can create new fields to better control your visualizations.</p>
+<p>You can create new fields to better control your visualizations. A
+<strong>calculated field</strong> allows you to perform calculations or
+transformations on existing data to create new insights.</p>
 <p>To count the number of traffic accidents:</p>
 <ol style="list-style-type: decimal">
 <li>Right-click in the Data pane → <strong>Create Calculated
@@ -568,44 +595,57 @@ Field</strong>
 <li>Formula: <code>COUNT([DR Number])</code>
 </li>
 </ol>
-<p>This new measure will appear in your data pane.</p>
-<div id="troubleshooting-tip" class="callout">
+<p>This new measure will appear in your data pane. You might notice it’s
+a <strong>green</strong> with a little <code>=</code> sign next to it.
+Can you guess why Tableau interprets <code>Number of Accidents</code> as
+a <strong>continuous measure</strong>? <em>(Pause for thought)</em> It’s
+green because it’s quantitative (a number of accidents), and it’s a
+measure because it’s an aggregated count.</p>
+<div id="troubleshooting-tip-freezing-tableau" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="troubleshooting-tip" class="callout-inner">
-<h3 class="callout-title">Troubleshooting Tip</h3>
+<div id="troubleshooting-tip-freezing-tableau" class="callout-inner">
+<h3 class="callout-title">Troubleshooting Tip: Freezing Tableau</h3>
 <div class="callout-content">
-<p>If Tableau freezes while you’re working, try saving frequently and
-duplicating worksheets before attempting to experiment. To duplicate:
-right-click on the sheet tab → Duplicate.</p>
+<p>If Tableau freezes while you’re working, it can be frustrating! Try
+saving frequently. Also, a good practice before experimenting with
+complex changes is to <strong>duplicate worksheets</strong>. To
+duplicate: right-click on the sheet tab → Duplicate. This ensures you
+have a stable version to revert to.</p>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="creating-bins-for-time-of-day">Creating Bins (for Time of Day)<a class="anchor" aria-label="anchor" href="#creating-bins-for-time-of-day"></a>
 </h2>
 <hr class="half-width">
-<p>To examine accident frequency across different times of day:</p>
+<p>To examine accident frequency across different times of day, creating
+<strong>bins</strong> allows you to group continuous data into discrete
+intervals. This is particularly useful for building histograms or charts
+that show distributions.</p>
 <ol style="list-style-type: decimal">
 <li>Right-click on <code>Time Occurred</code> →
 <strong>Duplicate</strong>
 </li>
-<li>Right-click the duplicate → <strong>Convert to
-Dimension</strong>
+<li>Right-click the duplicate → <strong>Convert to Dimension</strong>
+<em>(This is important because we want to treat hours as distinct
+categories for grouping, not a continuous stream.)</em>
 </li>
 <li>Right-click again → <strong>Create Bins</strong>
 </li>
-<li>Set bin size to <code>100</code>
+<li>Set bin size to <code>100</code> <em>(This effectively groups by
+hour, as <code>Time Occurred</code> might be in a HHMM
+format.)</em>
 </li>
 </ol>
 <p>This creates a new field like <code>Time Occurred (bin)</code> that
 groups records by hour.</p>
-<div id="discussion1" class="callout discussion">
+<div id="section" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<div id="section" class="callout-inner">
+<h3 class="callout-title"></h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Use Show Me to try 3 different chart types with
@@ -619,16 +659,18 @@ dashboard?</li>
 </div>
 </div>
 </div>
-<div id="callout2" class="callout">
+<div id="practice-challenge-data-exploration-preparation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="practice-challenge-data-exploration-preparation" class="callout-inner">
+<h3 class="callout-title">Practice Challenge: Data Exploration &amp; Preparation</h3>
 <div class="callout-content">
 <p>Think about what each field <em>represents</em> and how it might be
 grouped or summarized. Clean, consistent values (like standardized
-department names) make visualizations more readable and accurate.</p>
+department names) make visualizations more readable and accurate.
+Remember, the goal of cleaning and exploring data is to make it ready
+for clear, effective communication through visualizations.</p>
 </div>
 </div>
 </div>
@@ -1062,7 +1104,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Double-click the title → Insert → select the filter field name.</p>
 </div>
@@ -1074,7 +1116,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Drag <code>Area Name</code> to Filters → click <strong>Show
