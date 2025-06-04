@@ -5,22 +5,34 @@ exercises: 20
 ---
 
 ::: questions
+- What is Tableau?
 - What is Tableau Public?
 - How do I install Tableau Public and open a dataset?
 - What kinds of data can Tableau help me visualize?
 :::
 
 ::: objectives
+- Understand what Tableau is and the difference between the Public and Desktop versions.
 - Install and launch Tableau Public.
-- Understand the difference between Tableau Public and Tableau Desktop.
 - Load a sample dataset and become familiar with the interface.
 :::
 
-## What is Tableau Public?
+## What is Tableau?
 
-[Tableau Public](https://public.tableau.com/en-us/s/) is a free desktop application for creating interactive visualizations. It lets you connect to CSV or Excel files, create charts and dashboards, and share your work via a public profile.
+Tableau is a data visualization platform that enables users to explore and communicate data effectively through interactive charts, dashboards, and maps. It’s widely used across many fields, including business, public policy, and research.
 
-> Note: Tableau Public saves your work to the web, and your data will be visible to others.
+## Tableau Public vs. Tableau Desktop
+
+There are two main versions of Tableau:
+
+- **Tableau Public** is a free version that lets you create visualizations and publish them to a public web profile. It’s ideal for learning, sharing, and non-sensitive data.
+- **Tableau Desktop** is the full version available through paid licenses or free academic access for students. It includes additional features like saving locally and connecting to a broader range of data sources.
+
+:::: callout
+
+As of version 2025.1.2, Tableau Public supports local saves. However, all visualizations are still published to your public Tableau profile unless you explicitly choose to save them offline.
+
+::::
 
 ## Launching Tableau and Connecting to Data
 
@@ -30,12 +42,9 @@ Once Tableau Public is open:
 2. Browse to your downloaded CSV file and select it.
 3. Tableau will show a preview of the data. Click **Sheet 1** to begin working.
 
-## Interface Overview
-
-- **Dimensions** (blue):
-
 ::: keypoints
-- Tableau Public is a free tool for creating and sharing interactive visualizations.
-- Data must be well-formatted and clean to produce effective visualizations.
-- You can get started quickly by using public datasets in CSV format.
+- Tableau helps you explore and present data using interactive visualizations.
+- Tableau Public is free and great for learning, but saves work to the web.
+- Tableau Desktop provides additional functionality and is free for students.
+- Use well-formatted CSVs to start quickly.
 :::
