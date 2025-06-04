@@ -698,7 +698,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-creating-visualisations"><p>Content from <a href="creating-visualisations.html">Visualizing Data with Charts and Maps</a></p>
 <hr>
-<p>Last updated on 2025-05-29 |
+<p>Last updated on 2025-06-04 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/creating-visualisations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
@@ -735,41 +735,60 @@ creates?</li>
 </div>
 </div>
 </div>
+<p>Welcome back! In this episode, we will take the data we’ve prepared
+and start building impactful visualizations. We’ll explore how to create
+common chart types, such as line charts and histograms, and delve into
+the exciting world of mapping with geographic data.</p>
 <section><h2 class="section-heading" id="line-chart-accidents-over-time-by-area">Line Chart: Accidents Over Time by Area<a class="anchor" aria-label="anchor" href="#line-chart-accidents-over-time-by-area"></a>
 </h2>
 <hr class="half-width">
-<p>We’ll create a line chart showing how accident counts vary by area
-over time.</p>
-<div id="checklist1" class="callout checklist">
+<p>To start, let’s visualize how the number of accidents changes over
+time, broken down by different areas. When thinking about a “time
+series” chart, we typically want time on our horizontal (x) axis. Let’s
+examine our available time variables.</p>
+<div id="accidents-over-time" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Checklist</h3>
+<div id="accidents-over-time" class="callout-inner">
+<h3 class="callout-title">Accidents over time</h3>
 <div class="callout-content">
 <ul>
-<li>Open a new worksheet.</li>
-<li>Drag <code>Date Occurred</code> to <strong>Columns</strong> →
-right-click → Convert to <strong>Continuous</strong>.</li>
-<li>Drag <code>DR Number</code> to <strong>Rows</strong> → right-click →
-<strong>Measure &gt; Count</strong>.</li>
-<li>Drag <code>Area Name</code> to <strong>Color</strong> under the
-Marks card.</li>
-<li>Double-click axis labels to rename them if desired.</li>
+<li>Open a new worksheet. Let’s rename this sheet
+<code>Accidents Over Time</code>.</li>
+<li>Drag <code>Date Occurred</code> to <strong>Columns</strong>. You’ll
+notice it likely appears as a <strong>blue pill</strong> (discrete
+year).</li>
+<li>
+<strong>Important:</strong> Right-click <code>Date Occurred</code>
+on the Columns shelf → Convert to <strong>Continuous</strong> (choose
+<code>Year</code> under the green “Continuous” section). This transforms
+it into a <strong>green pill</strong>, representing a continuous
+timeline.</li>
+<li>Drag your calculated field, <code>Number of Accidents</code>, to
+<strong>Rows</strong>.</li>
+<li>To see trends for different areas, drag <code>Area Name</code> to
+<strong>Color</strong> under the Marks card. This will create a separate
+line for each area and generate a color legend.</li>
+<li>Double-click axis labels to rename them if desired, for example,
+from “SUM(Number of Accidents)” to “Number of Accidents.”</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
+<div id="understanding-continuous-vs.-discrete-dates" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="understanding-continuous-vs.-discrete-dates" class="callout-inner">
+<h3 class="callout-title">Understanding Continuous vs. Discrete Dates</h3>
 <div class="callout-content">
-<p>A “blue pill” in Tableau means the field is discrete (e.g.,
-individual years), while a “green pill” is continuous (e.g., time as a
-timeline).</p>
+<p>When you first drag a date field, Tableau often defaults to a “blue
+pill” (discrete), showing individual years as distinct categories.
+However, for visualizing trends <em>over time</em> along a continuous
+axis, a “green pill” (continuous) is essential. This creates a proper
+timeline, allowing for smooth lines and animations, which we’ll explore
+later!</p>
 </div>
 </div>
 </div>
@@ -812,21 +831,37 @@ intervals—perfect for analyzing “Time Occurred.”</p>
 </section><section><h2 class="section-heading" id="bar-chart-accidents-by-age">Bar Chart: Accidents by Age<a class="anchor" aria-label="anchor" href="#bar-chart-accidents-by-age"></a>
 </h2>
 <hr class="half-width">
-<p>Let’s visualize how accident counts vary by age of victim.</p>
+<p>Next, let’s visualize how accident counts vary by the age of the
+victim. This will help us understand the distribution of accidents
+across different age groups.</p>
+<div id="checklist3" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
-<li>Drag <code>Age</code> to **Columns`</li>
-<li>Right-click and choose <strong>Convert to Dimension</strong>
+<li>Create a new worksheet and rename it
+<code>Age Distribution of Accidents</code>.</li>
+<li>Drag <code>Victim Age</code> to <strong>Columns</strong>.</li>
+<li>Right-click on <code>Victim Age</code> on the Columns shelf and
+choose <strong>Convert to Dimension</strong>. <em>(Even though age is a
+number, we’re treating it as a distinct category for each bar in this
+chart, rather than a continuous range for a single line.)</em>
 </li>
 <li>Drag <code>Number of Accidents</code> (your calculated field) to
-<strong>Rows</strong>
-</li>
-<li>Change the Marks type to <strong>Bar</strong>
-</li>
-<li>Use <strong>Size</strong> to reduce bar width and prevent
-overlap</li>
-<li>Go to <strong>Analysis &gt; Show Mark Labels</strong>
-</li>
+<strong>Rows</strong>.</li>
+<li>Change the Marks type from <strong>Automatic</strong> to
+<strong>Bar</strong>.</li>
+<li>Use the <strong>Size</strong> slider on the Marks card to reduce bar
+width and prevent overlap, making the bars easier to distinguish.</li>
+<li>Go to <strong>Analysis &gt; Show Mark Labels</strong> to display the
+<code>Number of Accidents</code> directly on top of each bar.</li>
 </ol>
+</div>
+</div>
+</div>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -847,7 +882,7 @@ collection.)</p>
 <hr class="half-width">
 <p>If your dataset includes a <code>Location</code> column like
 <code>"34.05, -118.24"</code>:</p>
-<div id="checklist3" class="callout checklist">
+<div id="checklist4" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
@@ -1104,7 +1139,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Double-click the title → Insert → select the filter field name.</p>
 </div>
@@ -1116,7 +1151,7 @@ filter to let users explore different <code>Area Name</code> values.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Drag <code>Area Name</code> to Filters → click <strong>Show
@@ -1307,7 +1342,7 @@ seeing?</li>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Add meaningful titles and tooltips to help interpret your charts.</p>
 </div>
@@ -1319,7 +1354,7 @@ seeing?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Combine the Line Chart and Map into one dashboard.</li>
