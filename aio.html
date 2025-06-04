@@ -829,12 +829,12 @@ intervals—perfect for analyzing “Time Occurred.”</p>
 <p>Next, let’s visualize how accident counts vary by the age of the
 victim. This will help us understand the distribution of accidents
 across different age groups.</p>
-<div id="checklist3" class="callout checklist">
+<div id="accidents-by-age" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Checklist</h3>
+<div id="accidents-by-age" class="callout-inner">
+<h3 class="callout-title">Accidents by Age</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Create a new worksheet and rename it
@@ -857,48 +857,98 @@ width and prevent overlap, making the bars easier to distinguish.</li>
 </div>
 </div>
 </div>
-<div id="discussion1" class="callout discussion">
+<div class="section level4">
+<h4 id="interpreting-the-age-distribution">Interpreting the Age Distribution<a class="anchor" aria-label="anchor" href="#interpreting-the-age-distribution"></a>
+</h4>
+<p>Now, let’s look at this distribution. Notice any interesting
+patterns? You might observe peaks at specific ages (like 30, 35, 40,
+45). This has come up before in workshops, and it’s quite interesting!
+It often makes us wonder if, for example, the LAPD estimates or rounds
+ages to the nearest five-year mark when exact victim age is unknown.</p>
+<p>Also, look at the very high bar around age 99. Why might there be so
+many victims listed at age 99? While we don’t have explicit
+documentation, a common practice in data collection is to use “99” as a
+placeholder for an <strong>unknown age</strong>. This is a great example
+of how visualizing data can reveal unexpected trends and prompt deeper
+questions about data collection practices!</p>
+<div id="interpret-the-distribution" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<div id="interpret-the-distribution" class="callout-inner">
+<h3 class="callout-title">Interpret the Distribution</h3>
 <div class="callout-content">
-<p><strong>Interpret the Distribution</strong><br>
-- Do any ages have unusual spikes?<br>
-- What might cause them?</p>
-<p>(Hint: Consider estimation or rounding practices in field data
-collection.)</p>
+<ul>
+<li>Do any ages have unusual spikes?<br>
+</li>
+<li>What might cause them?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Consider estimation or rounding practices in field data
+collection.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles<a class="anchor" aria-label="anchor" href="#map-plotting-accidents-in-los-angeles"></a>
 </h2>
 <hr class="half-width">
-<p>If your dataset includes a <code>Location</code> column like
-<code>"34.05, -118.24"</code>:</p>
-<div id="checklist4" class="callout checklist">
+<p>Now for one of Tableau’s most powerful features: creating maps! If
+your dataset includes a <code>Location</code> column like
+<code>"34.05, -118.24"</code>, Tableau can help you visualize these
+geographic points.</p>
+<div id="mapping-accidents-in-los-angeles" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Checklist</h3>
+<div id="mapping-accidents-in-los-angeles" class="callout-inner">
+<h3 class="callout-title">Mapping Accidents in Los Angeles</h3>
 <div class="callout-content">
 <ul>
-<li>Right-click <code>Location</code> → <strong>Split</strong>.</li>
-<li>Rename the resulting fields <code>Latitude</code> and
+<li>Open a new worksheet and rename it <code>Accident Map</code>.</li>
+<li>Right-click <code>Location</code> → <strong>Split</strong>. This
+will separate the latitude and longitude values based on the comma.</li>
+<li>Rename the resulting fields <code>Location Split 1</code> to
+<code>Latitude</code> and <code>Location Split 2</code> to
 <code>Longitude</code>.</li>
-<li>Right-click each field → set <strong>Data Type</strong> to
-<em>Number (decimal)</em>.</li>
-<li>Set <strong>Geographic Role</strong>: <code>Latitude</code> and
-<code>Longitude</code>.</li>
-<li>Double-click both fields to generate a map.</li>
-<li>Use the map search bar to zoom to <em>Los Angeles</em>.</li>
+<li>Right-click each field in the Data pane → set <strong>Data
+Type</strong> to <em>Number (decimal)</em>.</li>
+<li>Right-click again → set <strong>Geographic Role</strong>: for your
+<code>Latitude</code> field, choose <code>Latitude</code>; for your
+<code>Longitude</code> field, choose <code>Longitude</code>. (You’ll see
+a small globe icon next to them once set correctly.)</li>
+<li>Double-click both <code>Latitude</code> and <code>Longitude</code>
+fields. Tableau will automatically place them on the Rows and Columns
+shelves, respectively, and start rendering a map.</li>
+<li>Once the map begins to load, use the map search bar (magnifying
+glass icon in the top right of the map view) to zoom directly to <em>Los
+Angeles</em>.</li>
 </ul>
 </div>
 </div>
 </div>
+<div class="section level4">
+<h4 id="map-loading-interaction-tips">Map Loading &amp; Interaction Tips<a class="anchor" aria-label="anchor" href="#map-loading-interaction-tips"></a>
+</h4>
+<p>Maps, especially with many data points, can sometimes take a moment
+to load. Be patient! Once loaded, you might find yourself zoomed out to
+a global view. Use the search bar to pinpoint “Los Angeles, California”
+and quickly zoom in.</p>
+<p>Each point now represents a traffic incident. You can click the
+<strong>Pan Tool</strong> (represented by a hand icon) on the map
+controls to navigate the map view easily.</p>
 <p>Each point now represents a traffic incident.</p>
+</div>
 </section><section><h2 class="section-heading" id="optional-refine-your-map-display">Optional: Refine Your Map Display<a class="anchor" aria-label="anchor" href="#optional-refine-your-map-display"></a>
 </h2>
 <hr class="half-width">
@@ -911,7 +961,7 @@ across the map.</li>
 <li>Remove null points by right-clicking on any point in the ocean (0,0)
 and selecting <strong>Exclude</strong>.</li>
 </ul>
-<div id="challenge1" class="callout challenge">
+<div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -930,12 +980,12 @@ different police areas.</p>
 </div>
 </div>
 </div>
-<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
 <p>Use <code>Area Name</code> for Columns and
 <code>Number of Accidents</code> as the Measure.</p>
@@ -948,7 +998,7 @@ different police areas.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Drag <code>Area Name</code> to <strong>Columns</strong>.</li>
