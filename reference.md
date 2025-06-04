@@ -28,6 +28,3 @@ Pages Shelf
 
 Tableau Public
 : A free version of Tableau Desktop that allows users to create and explore visualizations. Workbooks created in Tableau Public are primarily designed to be saved to a public online profile, making them accessible to anyone on the web.
-
-Visus
-: A colloquial term used in the Tableau community to refer to individual visualizations or charts.
