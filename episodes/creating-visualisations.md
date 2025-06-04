@@ -65,6 +65,7 @@ Histograms are ideal for showing the distribution of values across intervals—p
 Next, let’s visualize how accident counts vary by the age of the victim. This will help us understand the distribution of accidents across different age groups.
 
 ::: checklist
+### Accidents by Age
 
 1.  Create a new worksheet and rename it `Age Distribution of Accidents`.
 2.  Drag `Victim Age` to **Columns**.
@@ -75,29 +76,48 @@ Next, let’s visualize how accident counts vary by the age of the victim. This 
 7.  Go to **Analysis > Show Mark Labels** to display the `Number of Accidents` directly on top of each bar.
 :::::
 
+#### Interpreting the Age Distribution
+
+Now, let's look at this distribution. Notice any interesting patterns? You might observe peaks at specific ages (like 30, 35, 40, 45). This has come up before in workshops, and it's quite interesting! It often makes us wonder if, for example, the LAPD estimates or rounds ages to the nearest five-year mark when exact victim age is unknown.
+
+Also, look at the very high bar around age 99. Why might there be so many victims listed at age 99? While we don't have explicit documentation, a common practice in data collection is to use "99" as a placeholder for an **unknown age**. This is a great example of how visualizing data can reveal unexpected trends and prompt deeper questions about data collection practices!
+
 ::: challenge
 
-**Interpret the Distribution**  
+### Interpret the Distribution
+
 - Do any ages have unusual spikes?  
 - What might cause them?  
 
-(Hint: Consider estimation or rounding practices in field data collection.)
+:::: hint
 
-:::
+Consider estimation or rounding practices in field data collection.
+
+:::: 
+::::
 
 
 ## Map: Plotting Accidents in Los Angeles
 
-If your dataset includes a `Location` column like `"34.05, -118.24"`:
+Now for one of Tableau's most powerful features: creating maps! If your dataset includes a `Location` column like `"34.05, -118.24"`, Tableau can help you visualize these geographic points.
 
 ::: checklist
-- Right-click `Location` → **Split**.
-- Rename the resulting fields `Latitude` and `Longitude`.
-- Right-click each field → set **Data Type** to *Number (decimal)*.
-- Set **Geographic Role**: `Latitude` and `Longitude`.
-- Double-click both fields to generate a map.
-- Use the map search bar to zoom to *Los Angeles*.
+### Mapping Accidents in Los Angeles
+
+- Open a new worksheet and rename it `Accident Map`.
+- Right-click `Location` → **Split**. This will separate the latitude and longitude values based on the comma.
+- Rename the resulting fields `Location Split 1` to `Latitude` and `Location Split 2` to `Longitude`.
+- Right-click each field in the Data pane → set **Data Type** to *Number (decimal)*.
+- Right-click again → set **Geographic Role**: for your `Latitude` field, choose `Latitude`; for your `Longitude` field, choose `Longitude`. (You'll see a small globe icon next to them once set correctly.)
+- Double-click both `Latitude` and `Longitude` fields. Tableau will automatically place them on the Rows and Columns shelves, respectively, and start rendering a map.
+- Once the map begins to load, use the map search bar (magnifying glass icon in the top right of the map view) to zoom directly to *Los Angeles*.
 :::
+
+#### Map Loading & Interaction Tips
+
+Maps, especially with many data points, can sometimes take a moment to load. Be patient! Once loaded, you might find yourself zoomed out to a global view. Use the search bar to pinpoint "Los Angeles, California" and quickly zoom in.
+
+Each point now represents a traffic incident. You can click the **Pan Tool** (represented by a hand icon) on the map controls to navigate the map view easily.
 
 Each point now represents a traffic incident.
 
@@ -111,6 +131,7 @@ To improve readability and orientation:
 
 
 ::: challenge
+
 **Challenge: Compare Accidents Across Areas**
 
 Create a bar chart showing how accident counts compare across different police areas.
