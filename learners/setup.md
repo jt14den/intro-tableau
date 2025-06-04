@@ -44,11 +44,11 @@ Tableau Desktop is available free of charge to full-time students. Tableau Publi
 1. Follow the 3 steps on the website linked in step 7 (1. Download, 2. Install, 3. Register)
 1. Find & Open ‘Tableau Desktop’ in your Applications
 
-![Tableau Student Signup](fig/tableau-student-signup.png)
+![Tableau Student Signup](fig/signup-tableau-student.png)
 
 1. On this window: Follow the blue link “Activate Tableau”
 1. Then this window will open and select “Activate with a product key”
 
-![Tableau Activate Product Key](fig/tableau-activate-key.png)
+![Tableau Activate Product Key](fig/activate-product-key.png)
 
 If prompted to create a profile, complete the form to activate your Tableau Public account.
