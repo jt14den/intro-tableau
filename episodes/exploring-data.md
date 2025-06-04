@@ -90,7 +90,7 @@ To examine accident frequency across different times of day, creating **bins** a
 This creates a new field like `Time Occurred (bin)` that groups records by hour.
 
 :::: challenge
-## 
+## Practicing with Tableau
 1.  Use Show Me to try 3 different chart types with `Area Name`, `Date Occurred`, and `DR Number`.
 2.  Create a calculated field to count accidents.
 3.  Create a binned version of `Time Occurred`.
@@ -101,7 +101,7 @@ This creates a new field like `Time Occurred (bin)` that groups records by hour.
 
 :::: callout
 
-## Practice Challenge: Data Exploration & Preparation
+## Data Exploration & Preparation
 
 Think about what each field *represents* and how it might be grouped or summarized. Clean, consistent values (like standardized department names) make visualizations more readable and accurate. Remember, the goal of cleaning and exploring data is to make it ready for clear, effective communication through visualizations.
 
