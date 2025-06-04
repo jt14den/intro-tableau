@@ -59,9 +59,9 @@ This new measure will appear in your data pane.
 
 ::: callout
 
-### 💡 Troubleshooting Tip
+### Troubleshooting Tip
 
-If Tableau freezes while you're working, try saving frequently and duplicating worksheets before experimenting. To duplicate: right-click on the sheet tab → Duplicate.
+If Tableau freezes while you're working, try saving frequently and duplicating worksheets before attempting to experiment. To duplicate: right-click on the sheet tab → Duplicate.
 
 :::
 
@@ -77,8 +77,6 @@ To examine accident frequency across different times of day:
 
 This creates a new field like `Time Occurred (bin)` that groups records by hour.
 
----
-
 :::: challenge
 
 1. Use Show Me to try 3 different chart types with `Area Name`, `Date Occurred`, and `DR Number`.
@@ -88,7 +86,6 @@ This creates a new field like `Time Occurred (bin)` that groups records by hour.
 
 :::::::
 
----
 :::: callout
 
 Think about what each field *represents* and how it might be grouped or summarized. Clean, consistent values (like standardized department names) make visualizations more readable and accurate.
