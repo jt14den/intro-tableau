@@ -16,32 +16,37 @@ exercises: 15
 - Save and share your dashboard using Tableau Public.
 :::
 
+Welcome to the final episode! Here, we'll bring together all the visualizations we've created into powerful, interactive dashboards. Dashboards are where your data story truly comes alive, allowing others to explore and understand your insights.
+
+
 ## What Is a Dashboard?
 
-A **dashboard** in Tableau is a canvas where you can combine multiple charts and visual elements into a single interactive view. This allows users to compare different perspectives and apply filters across charts.
-
-## Creating a Dashboard
+A **dashboard** in Tableau is a canvas where you can combine multiple charts and visual elements into a single interactive view. This allows users to compare different perspectives and present a lot more information in a smaller, cohesive frame.
 
 ::: checklist
-- Click the **Dashboard** icon (bottom tab next to sheets).
-- In the left sidebar, drag your sheets into the dashboard area.
-  - Example: `Line Chart`, `Histogram`, and `Map`.
-- Adjust layout by dragging edges or setting size to **Automatic**.
-- Label your sheets by double-clicking the tab name at the bottom.
 
+### Creating a Dashboard
+
+- Click the **Dashboard** icon (the middle tab at the bottom, typically between "New Worksheet" and "New Story").
+- In the left sidebar, you'll see a list of all your created sheets. Drag your desired sheets (e.g., `Accidents Over Time (Animated)`, `Running Total Accidents Over Time`, and `Accident Map`) into the main dashboard area.
+- Adjust the layout by dragging edges of the sheets or by setting the dashboard size to **Automatic** for flexible viewing.
+- You can label your sheets directly on the dashboard by double-clicking the tab name at the bottom of each sheet you've added.
 :::
 
 ## Adding Interactivity
 
-You can make any sheet act as a filter for others in the dashboard.
+This is where dashboards become truly powerful! You can make any sheet on your dashboard act as a filter for others, allowing users to interact with your data dynamically.
 
 ::: checklist
-- Click on a chart inside the dashboard.
-- Use the filter icon (funnel symbol) to **Use as Filter**.
-- Repeat for any views that should affect others interactively.
+
+### Adding an Interactive Filter
+
+- Click on a chart *inside* the dashboard that you want to use as a filter (e.g., your `Accident Map`).
+- On the floating toolbar that appears when a chart is selected, click the **Use as Filter** icon (it looks like a funnel symbol).
+- Repeat this step for any other views that should affect others interactively. For example, if you make your `Accidents Over Time (Animated)` sheet a filter as well.
 :::
 
-> Now, when you click a value (e.g., a bar or map area), other views will respond.
+Now, when you click a specific value (e.g., a bar on a chart, or a specific area on a map), other views linked by the filter will respond instantly, updating to show only the data relevant to your selection. This dynamic interaction makes your dashboard a powerful exploration tool!
 
 ## Saving and Publishing to Tableau Public
 
