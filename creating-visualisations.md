@@ -16,20 +16,31 @@ exercises: 20
 - Create a basic map using latitude and longitude values.
 :::
 
+Welcome back! In this episode, we will take the data we've prepared and start building impactful visualizations. We'll explore how to create common chart types, such as line charts and histograms, and delve into the exciting world of mapping with geographic data.
+
+
 ## Line Chart: Accidents Over Time by Area
 
-We’ll create a line chart showing how accident counts vary by area over time.
+To start, let's visualize how the number of accidents changes over time, broken down by different areas. When thinking about a "time series" chart, we typically want time on our horizontal (x) axis. Let's examine our available time variables.
 
 ::: checklist
-- Open a new worksheet.
-- Drag `Date Occurred` to **Columns** → right-click → Convert to **Continuous**.
-- Drag `DR Number` to **Rows** → right-click → **Measure > Count**.
-- Drag `Area Name` to **Color** under the Marks card.
-- Double-click axis labels to rename them if desired.
+
+## Accidents over time
+
+- Open a new worksheet. Let's rename this sheet `Accidents Over Time`.
+- Drag `Date Occurred` to **Columns**. You'll notice it likely appears as a **blue pill** (discrete year).
+- **Important:** Right-click `Date Occurred` on the Columns shelf → Convert to **Continuous** (choose `Year` under the green "Continuous" section). This transforms it into a **green pill**, representing a continuous timeline.
+- Drag your calculated field, `Number of Accidents`, to **Rows**.
+- To see trends for different areas, drag `Area Name` to **Color** under the Marks card. This will create a separate line for each area and generate a color legend.
+- Double-click axis labels to rename them if desired, for example, from "SUM(Number of Accidents)" to "Number of Accidents."
 :::
 
 ::: callout
-A "blue pill" in Tableau means the field is discrete (e.g., individual years), while a "green pill" is continuous (e.g., time as a timeline).
+
+#### Understanding Continuous vs. Discrete Dates
+
+When you first drag a date field, Tableau often defaults to a "blue pill" (discrete), showing individual years as distinct categories. However, for visualizing trends *over time* along a continuous axis, a "green pill" (continuous) is essential. This creates a proper timeline, allowing for smooth lines and animations, which we'll explore later!
+
 :::
 
 ## Histogram: Accidents by Time of Day
@@ -51,14 +62,18 @@ Histograms are ideal for showing the distribution of values across intervals—p
 
 ## Bar Chart: Accidents by Age
 
-Let’s visualize how accident counts vary by age of victim.
+Next, let’s visualize how accident counts vary by the age of the victim. This will help us understand the distribution of accidents across different age groups.
 
-1. Drag `Age` to **Columns`
-2. Right-click and choose **Convert to Dimension**
-3. Drag `Number of Accidents` (your calculated field) to **Rows**
-4. Change the Marks type to **Bar**
-5. Use **Size** to reduce bar width and prevent overlap
-6. Go to **Analysis > Show Mark Labels**
+::: checklist
+
+1.  Create a new worksheet and rename it `Age Distribution of Accidents`.
+2.  Drag `Victim Age` to **Columns**.
+3.  Right-click on `Victim Age` on the Columns shelf and choose **Convert to Dimension**. *(Even though age is a number, we're treating it as a distinct category for each bar in this chart, rather than a continuous range for a single line.)*
+4.  Drag `Number of Accidents` (your calculated field) to **Rows**.
+5.  Change the Marks type from **Automatic** to **Bar**.
+6.  Use the **Size** slider on the Marks card to reduce bar width and prevent overlap, making the bars easier to distinguish.
+7.  Go to **Analysis > Show Mark Labels** to display the `Number of Accidents` directly on top of each bar.
+:::::
 
 ::: challenge
 
