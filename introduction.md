@@ -51,8 +51,20 @@ However, a standard method is to navigate to your Applications folder (or wherev
 Once Tableau is open:
 
 1. Under **Connect**, click **Text File**.
+
+![Open and connect a text file](fig/connect-text-file.png){
+alt='Open Tableau and under Connect, select Text file'
+width='50%'
+}
+
 2. Browse to your downloaded CSV file and select it.
 3. Tableau will show a preview of the data. Click **Sheet 1** to begin working.
+
+
+![Worksheet 1 after selecting a CSV file](fig/tableau-data-source-preview.png){
+alt='Figure: After selecting your CSV file, Tableau displays a preview of your data source. Click "Sheet 1" at the bottom to proceed to the worksheet.'
+width='50%'
+}
 
 ::: keypoints
 - Tableau helps you explore and present data using interactive visualizations.
