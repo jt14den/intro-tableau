@@ -28,17 +28,27 @@ There are two main versions of Tableau:
 - **Tableau Public** is a free version that lets you create visualizations and publish them to a public web profile. It’s ideal for learning, sharing, and non-sensitive data.
 - **Tableau Desktop** is the full version available through paid licenses or free academic access for students. It includes additional features like saving locally and connecting to a broader range of data sources.
 
-:::: callout
+### Feature Comparison Table for current Tableau Public and Desktop
 
-As of version 2025.1.2, Tableau Public supports local saves. However, all visualizations are still published to your public Tableau profile unless you explicitly choose to save them offline.
+Table: Comparison of Tableau Desktop and Tableau Public features as of 2025
 
-::::
+| Feature                | Tableau Desktop              | Tableau Public (Desktop & Web)                                                 |
+| :--------------------- | :--------------------------- | :----------------------------------------------------------------------------- |
+| Save Locally           | Yes                          | Yes (as of 2025.1.2)                                                           |
+| Private Workbooks      | Yes (local, Server, Cloud)   | No (primarily for public sharing; local saves are for personal use/prep for publish) |
+| Data Sources           | Full (databases, cloud, files, etc.) | Limited (CSV, Excel, Google Sheets, JSON, PDF, Spatial Files, WDC, etc.)     |
+| Live Connections       | Yes                          | No (works with data extracts/snapshots)                                        |
+| Geospatial Files       | Yes                          | Yes                                                                            |
+| Join/Blend Data        | Yes (full capabilities)      | Yes (for supported file types; limited cross-database/published source joins)  |
+| Export Options         | PDF, PPT, Image, Data, Crosstab, etc. | Image, PDF, Data (when viewed on web); limited image export from desktop app only |
+| Cost                   | Paid license (free for students) | Free                                                                           |                                                                       |
 
 ## Launching Tableau and Connecting to Data
 
-To get started, if Tableau Desktop (or Public) is in your dock, you can click it open. However, a standard method is to navigate to your Applications folder (or wherever you installed it) and launch it from there.
+To get started, if Tableau Desktop (or Public) is in your dock, you can click it open. 
+However, a standard method is to navigate to your Applications folder (or wherever you installed it) and launch it from there.
 
-Once Tableau  is open:
+Once Tableau is open:
 
 1. Under **Connect**, click **Text File**.
 2. Browse to your downloaded CSV file and select it.
