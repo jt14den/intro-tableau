@@ -20,8 +20,8 @@ exercises: 15
 
 After loading your dataset and opening a worksheet, you'll notice that Tableau classifies your columns as either:
 
-- **Dimensions** (blue pills): qualitative data like names, IDs, or categories.
-- **Measures** (green pills): quantitative data that can be aggregated, such as counts or amounts.
+- **Dimensions** (blue): qualitative data like names, IDs, or categories.
+- **Measures** (green): quantitative data that can be aggregated, such as counts or amounts.
 
 ::: callout
 ## Tip: 
