@@ -321,7 +321,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Visualizing Data with Charts and Maps</h1>
-        <p>Last updated on 2025-06-04 |
+        <p>Last updated on 2025-06-05 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/creating-visualisations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -377,7 +377,7 @@ examine our available time variables.</p>
 <div id="accidents-over-time" class="callout-inner">
 <h3 class="callout-title">Accidents over time</h3>
 <div class="callout-content">
-<ul><li>Open a new worksheet. Let’s rename this sheet
+<ol style="list-style-type: decimal"><li>Open a new worksheet. Let’s rename this sheet
 <code>Accidents Over Time</code>.</li>
 <li>Drag <code>Date Occurred</code> to <strong>Columns</strong>. You’ll
 notice it likely appears as a <strong>blue pill</strong> (discrete
@@ -395,7 +395,7 @@ timeline.</li>
 line for each area and generate a color legend.</li>
 <li>Double-click axis labels to rename them if desired, for example,
 from “SUM(Number of Accidents)” to “Number of Accidents.”</li>
-</ul></div>
+</ol></div>
 </div>
 </div>
 <div id="understanding-continuous-vs.-discrete-dates" class="callout">
@@ -424,12 +424,12 @@ accident frequency over time.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Checklist</h3>
 <div class="callout-content">
-<ul><li>Create a new worksheet.</li>
+<ol style="list-style-type: decimal"><li>Create a new worksheet.</li>
 <li>Drag <code>Time Occurred (bin)</code> to
 <strong>Columns</strong>.</li>
 <li>Drag the calculated field <code>Number of Accidents</code> to
 <strong>Rows</strong>.</li>
-<li>Optional: Drag <code>Area Name</code> to <strong>Filters</strong>,
+</ol><ul><li>Optional: Drag <code>Area Name</code> to <strong>Filters</strong>,
 then click the filter card menu → <strong>Show Filter</strong>.</li>
 </ul></div>
 </div>
@@ -496,9 +496,9 @@ questions about data collection practices!</p>
 <div id="interpret-the-distribution" class="callout-inner">
 <h3 class="callout-title">Interpret the Distribution</h3>
 <div class="callout-content">
-<ul><li>Do any ages have unusual spikes?<br></li>
+<ol style="list-style-type: decimal"><li>Do any ages have unusual spikes?</li>
 <li>What might cause them?</li>
-</ul></div>
+</ol></div>
 </div>
 </div>
 <div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
@@ -527,9 +527,9 @@ geographic points.</p>
 <div id="mapping-accidents-in-los-angeles" class="callout-inner">
 <h3 class="callout-title">Mapping Accidents in Los Angeles</h3>
 <div class="callout-content">
-<ul><li>Open a new worksheet and rename it <code>Accident Map</code>.</li>
-<li>Right-click <code>Location</code> → <strong>Split</strong>. This
-will separate the latitude and longitude values based on the comma.</li>
+<ol style="list-style-type: decimal"><li>Open a new worksheet and rename it <code>Accident Map</code>.
+Right-click <code>Location</code> → <strong>Split</strong>. This will
+separate the latitude and longitude values based on the comma.</li>
 <li>Rename the resulting fields <code>Location Split 1</code> to
 <code>Latitude</code> and <code>Location Split 2</code> to
 <code>Longitude</code>.</li>
@@ -545,7 +545,7 @@ shelves, respectively, and start rendering a map.</li>
 <li>Once the map begins to load, use the map search bar (magnifying
 glass icon in the top right of the map view) to zoom directly to <em>Los
 Angeles</em>.</li>
-</ul></div>
+</ol></div>
 </div>
 </div>
 <div class="section level4">
@@ -567,7 +567,9 @@ a street-level basemap.</li>
 across the map.</li>
 <li>Remove null points by right-clicking on any point in the ocean (0,0)
 and selecting <strong>Exclude</strong>.</li>
-</ul><div id="challenge2" class="callout challenge">
+</ul><figure><img src="../fig/maps-add-streets.png" alt="Changing the base layer to show streets on your map." class="figure mx-auto d-block"><div class="figcaption">Changing the base layer to show streets on your
+map.</div>
+</figure><div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -691,7 +693,7 @@ any links that you are not going to use.
   "url": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
   "dateCreated": "2025-06-05",
-  "dateModified": "2025-06-04",
+  "dateModified": "2025-06-05",
   "datePublished": "2025-06-05"
 }
 

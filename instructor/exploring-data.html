@@ -429,11 +429,14 @@ transformations on existing data to create new insights.</p>
 <ol style="list-style-type: decimal"><li>Right-click in the Data pane → <strong>Create Calculated
 Field</strong>
 </li>
-<li>Name it: <code>Number of Accidents</code>
+</ol><figure><img src="../fig/calculated-field-dr-number.png" style="width:50.0%" alt="Example of creating a calculated field for Number of Accidents" class="figure mx-auto d-block"><div class="figcaption">Creating a calculated field for DR Number</div>
+</figure><ol start="2" style="list-style-type: decimal"><li>Name it: <code>Number of Accidents</code>
 </li>
 <li>Formula: <code>COUNT([DR Number])</code>
 </li>
-</ol><p>This new measure will appear in your data pane. You might notice it’s
+</ol><figure><img src="../fig/dr-number-count.png" style="width:50.0%" alt="Example of creating a calculated field for Number of Accidents" class="figure mx-auto d-block"><div class="figcaption">Making your new variable be a count of Number of
+Accidents</div>
+</figure><p>This new measure will appear in your data pane. You might notice it’s
 a <strong>green</strong> with a little <code>=</code> sign next to it.
 Can you guess why Tableau interprets <code>Number of Accidents</code> as
 a <strong>continuous measure</strong>? <em>(Pause for thought)</em> It’s
