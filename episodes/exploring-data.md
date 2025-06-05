@@ -64,8 +64,21 @@ You can create new fields to better control your visualizations. A **calculated 
 To count the number of traffic accidents:
 
 1. Right-click in the Data pane → **Create Calculated Field**
+
+![Creating a calculated field for DR Number](fig/calculated-field-dr-number.png){
+alt='Example of creating a calculated field for Number of Accidents'
+width='50%'
+}
+
 2. Name it: `Number of Accidents`
 3. Formula: `COUNT([DR Number])`
+
+
+![Making your new variable be a count of Number of Accidents](fig/dr-number-count.png){
+alt='Example of creating a calculated field for Number of Accidents'
+width='50%'
+}
+
 
 This new measure will appear in your data pane. You might notice it's a **green** with a little `=` sign next to it. Can you guess why Tableau interprets `Number of Accidents` as a **continuous measure**? *(Pause for thought)* It's green because it's quantitative (a number of accidents), and it's a measure because it's an aggregated count.
 
