@@ -30,13 +30,13 @@ We can animate our line chart to show how accidents accumulate over time. To do 
 - In the Pages card:
     - Click **Show History**.
     - Set Marks to show history for **All**, and enable **Trails**. *(Choosing 'Trails' creates a nice line indicating the past path, with the circle marking the current point in time. 'Both' would show individual circles at every past point, which can get cluttered.)*
-- Click the **Play** button in the Pages card to animate. Be patient, as rendering can sometimes take a moment depending on your computer's performance and data size!
+- Click the **Play** button in the Pages card to animate the content. Be patient, as rendering can sometimes take a moment, depending on your computer's performance and the size of the data.
 ::::
 
 ::: callout
 #### The Pages Shelf: Your Animation Control
 
-The Pages shelf enables you to break your visualizations into "frames" based on the values of a field, making it perfect for time-based animations. As the animation plays, you might observe lines "zigzagging" or crossing. This simply indicates that an area's relative ranking in accident counts might change over time.
+The Pages shelf enables you to break your visualizations into "frames" based on the values of a field, making it perfect for time-based animations. As the animation plays, you might observe lines "zigzagging" or crossing. This indicates that an area's relative ranking in accident counts might change over time.
 :::
 
 :::: challenge
@@ -56,10 +56,11 @@ This dynamic view helps reveal long-term patterns that a static chart might not.
 Filters empower users to explore specific subsets of your data directly within the visualization. This is a fundamental step in making your charts more interactive and user-driven.
 
 ::: checklist
-- Drag a field like `Area Name` to the **Filters** shelf.
-- In the filter dialog box, select the specific values you wish to include, then click "OK".
-- Now, right-click on the `Area Name` filter on the Filters shelf and select **Show Filter** from the dropdown menu.
-- Tableau adds a filter widget to your view, typically on the right sidebar. Users can now control which data is displayed dynamically.
+
+1. Drag a field like `Area Name` to the **Filters** shelf.
+1. In the filter dialog box, select the specific values you wish to include, then click "OK".
+1. Now, right-click on the `Area Name` filter on the Filters shelf and select **Show Filter** from the dropdown menu.
+1. Tableau adds a filter widget to your view, typically on the right sidebar. Users can now control which data is displayed dynamically.
 :::
 
 :::: callout 
@@ -68,7 +69,7 @@ Filters empower users to explore specific subsets of your data directly within t
 
 You can change the filter style (e.g., to a dropdown, checklist, or slider) by clicking the small dropdown arrow in the top right of the filter widget in your view.
 
-**Looking Ahead:** Filters are powerful, especially when building interactive dashboards. In the next episode, we'll see how filters on one sheet can be used to control all visualizations on a dashboard, creating a truly unified experience.
+Filters are powerful, especially when building interactive dashboards. In the next episode, we'll see how filters on one sheet can be used to control all visualizations on a dashboard, creating a truly unified experience.
 
 :::: 
 
@@ -76,9 +77,9 @@ You can change the filter style (e.g., to a dropdown, checklist, or slider) by c
 
 Small changes improve how users read and interpret your visualization:
 
-- **Drag a field to Label** to annotate points or bars
-- **Use Color** to differentiate categories
-- **Hover** to preview tooltips and ensure they communicate clearly
+- Drag a field to Label** to annotate points or bars
+- Use Color to differentiate categories
+- Hover to preview tooltips and ensure they communicate clearly
 - Use **Title** and **Axis Labels** to explain your chart
 
 ::: challenge
