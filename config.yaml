@@ -28,7 +28,7 @@ keywords: 'data visualization, Tableau, dashboards, exploratory data analysis, b
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -73,10 +73,13 @@ episodes:
 - building-dashboards.md
 
 # Information for Learners
-learners: 
+learners:
+- setup.md
+- reference.md
 
 # Information for Instructors
-instructors: 
+instructors:
+- instructor-notes.md
 
 # Learner Profiles
 profiles: 
