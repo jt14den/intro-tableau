@@ -4,16 +4,15 @@ This lesson introduces learners to foundational data visualization concepts usin
 
 ## 📘 Lesson Overview
 
-* **Lesson website**: [https://your-username.github.io/your-repo-name/](https://jt14den.github.io/intro-tableau/)
-  (Replace with the actual URL once deployed)
+* **Lesson website**: [https://jt14den.github.io/intro-tableau/](https://jt14den.github.io/intro-tableau/)
 * **Audience**: Beginners in data visualization, including researchers, librarians, instructors, and students
-* **Requirements**: No prior experience with Tableau; learners should have a stable internet connection and access to [Tableau Public](https://public.tableau.com/)
+* **Requirements**: No prior experience with Tableau; learners should install [Tableau Desktop: Public Edition](https://www.tableau.com/products/public/download), the installed desktop application (not Tableau Public web authoring)
 
 ## ✉️ Contact Information
 
 For questions, suggestions, or feedback, please contact the maintainers at:
 📧 [tdennis@library.ucla.edu](mailto:tdennis@library.ucla.edu)
-Or open an issue in the [GitHub repository](https://github.com/your-username/your-repo-name/issues).
+Or open an issue in the [GitHub repository](https://github.com/jt14den/intro-tableau/issues).
 
 ## 🤝 Contributing
 
