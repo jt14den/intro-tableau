@@ -2,60 +2,68 @@
 title: Setup
 ---
 
-## Data Sets
+:::: caution
+## Public data only
 
-Data #1: Traffic Collision Data from 2010 to Present
+Tableau Public publishes workbooks to a public website, and the underlying data may be downloadable by anyone who views it. **Do not use this workshop's tools with sensitive, private, licensed, or restricted data.** The dataset used here is public and openly licensed.
+::::
 
-https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data 
-
-- Click ‘Export’ in the upper right-hand menu
-- Make sure the export format is “CSV” (default) and click “Download”.
-- Please put this in a folder where you can find it later. 
-
-Data #2: Spatial LAPD Boundaries Data
-
-https://geohub.lacity.org/datasets/031d488e158144d0b3aecaa9c888b7b3_0 
-Click “View Full Details” in the left panel
-In the new page, click “Download”
-Unzip the zip file and put everything into the same folder as the earlier one
-
+> These instructions were validated against **Tableau Desktop: Public Edition 2026.2.x**. Web authoring (public.tableau.com) and earlier desktop versions may use slightly different menus.
 
 ## Tableau Installation
 
-Tableau Desktop is available free of charge to full-time students. Tableau Public is a free version that anyone can use, featuring most core features. Both are suitable for this workshop.
+This workshop uses **Tableau Desktop: Public Edition**, an installed desktop application, not the web-based authoring tool at public.tableau.com. Desktop: Public Edition can save workbooks locally on your computer and can also publish them to Tableau Public. It is free, but it is not licensed for commercial use, and workbooks you publish are visible to anyone.
 
-### Installing Tableau Public
-
-1. Go to <https://www.tableau.com/products/public/download>
+1. Go to <https://www.tableau.com/products/public/download>.
 2. Enter your information and click **Download the App**.
 3. Install the application following the on-screen instructions.
-4. Open the app after installation.
+4. Launch Tableau Desktop: Public Edition.
 
-### Installing Tableau Desktop:
+::: callout
+## Already have institutionally licensed Tableau Desktop?
 
-1. If you are a full-time student:
-2. Go to this link: <https://www.tableau.com/academic/students>
-3. Click the central button “GET TABLEAU FOR FREE”
-4. Enter your details 
-1. Click the “VERIFY STUDENT STATUS”
-1. Go to your email & find the email from Tableau with the  subject line: “Your Tableau Desktop Product Key is Enclosed”
-1. Click on “Download Tableau Desktop”
-1. It will download Tableau Desktop and open this tab: https://www.tableau.com/products/desktop/download?signin=academic
-1. Follow the 3 steps on the website linked in step 7 (1. Download, 2. Install, 3. Register)
-1. Find & Open ‘Tableau Desktop’ in your Applications
+If your institution provides licensed **Tableau Desktop: Professional Edition** (for example, through a course or department license), you can use it instead — everything in this lesson works the same way. Follow your institution's instructions for activating that license; this lesson does not cover that process.
+:::
 
-![Tableau Student Signup](fig/signup-tableau-student.png){
-alt='Alternative text descriptions are defined here'
-width='33%'
-}
+### Pre-workshop check
 
-1. On this window: Follow the blue link “Activate Tableau”
-1. Then this window will open and select “Activate with a product key”
+Before the workshop, please:
 
-![
-Tableau Activate Product Key](fig/activate-product-key.png){
-alt='Alternative text descriptions are defined here'
-width='33%'
-}
+1. Install Tableau Desktop: Public Edition (above) and confirm it launches.
+2. Download the workshop dataset (below).
+3. Open the CSV file in Tableau (`Connect > Text File`) and confirm you see a data preview. You do not need to build anything yet — we'll do that together in Episode 1.
 
-If prompted to create a profile, complete the form to activate your Tableau Public account.
+If you run into trouble with any of these steps, please reach out before the workshop so we can help you get set up.
+
+## Data Set
+
+This workshop uses the **legacy LAPD Traffic Collision dataset**, a historical record of traffic collisions in the City of Los Angeles from 2010 through early 2026. LAPD stopped updating this dataset after transitioning to a new records management system; it remains published for historical reference only, and a separate, modernized collision dataset may eventually replace it. Because the data is no longer changing, it's well suited to a workshop: everyone works from the same numbers.
+
+The data was transcribed from paper traffic reports, and the source notice cautions that it may contain inaccuracies. Locations with missing coordinates are recorded as `(0, 0)` rather than left blank — this is a sentinel value, not a "null point," and we'll filter it out when mapping in Episode 3.
+
+- Source: [Traffic Collision Data from 2010 to Present](https://catalog.data.gov/dataset/traffic-collision-data-from-2010-to-present) (data.gov / LAPD, via the Los Angeles Open Data portal)
+- Provider: Los Angeles Police Department
+- Coverage: 2010 through the dataset's final update
+
+**Download:**
+
+1. Go to <https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data>.
+2. Click **Export** in the upper-right menu.
+3. Choose **CSV** as the export format and click **Download**.
+4. Save the file somewhere you can find it, and note the folder — you'll connect to this file in Episode 1.
+
+::: callout
+## Follow-up: fixed workshop snapshot
+
+This live source can in principle be re-exported at any time, which means learners downloading on different days could get slightly different row counts. For a reproducible, dated snapshot (e.g. `traffic-collisions-2026-08-19.csv`, with the retrieval date recorded in this file and in the instructor notes), that snapshot has not yet been created. **This is a tracked follow-up**, not something silently added to this build — see the instructor notes for status. Until it exists, download fresh from the source above and record your retrieval date.
+:::
+
+### Optional: LAPD Divisions boundary data
+
+Episode 3 includes an **optional** challenge that overlays LAPD division boundaries on the collision map. This is not required for the core lesson. If you want to try it:
+
+1. Go to the [LAPD Divisions dataset page](https://geohub.lacity.org/datasets/lapd-divisions/about) on the LA GeoHub.
+2. Download the shapefile or GeoJSON.
+3. Unzip if needed, and keep the files together in one folder.
+
+You can skip this and still complete every required part of the workshop.

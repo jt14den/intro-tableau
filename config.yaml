@@ -21,14 +21,14 @@ carpentry_description: 'An introduction to data visualization using Tableau, thi
 title: 'Introduction to Data Visualization with Tableau'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: 2025-05-14
 
 # Comma-separated list of keywords for the lesson
 keywords: 'data visualization, Tableau, dashboards, exploratory data analysis, beginner-friendly, open science, instructional design, The Carpentries'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -40,7 +40,7 @@ source: 'https://github.com/jt14den/intro-tableau'
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'tdennis@library.ucla.edu'
 
 # Navigation ------------------------------------------------
 #
@@ -73,10 +73,13 @@ episodes:
 - building-dashboards.md
 
 # Information for Learners
-learners: 
+learners:
+- setup.md
+- reference.md
 
 # Information for Instructors
-instructors: 
+instructors:
+- instructor-notes.md
 
 # Learner Profiles
 profiles: 
