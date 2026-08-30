@@ -33,7 +33,7 @@ To start, let's visualize how the number of collisions changes over time, broken
 :::
 
 ::: callout
-## Expected outcome
+## Expected outcome: line chart by area
 At this point you should see one line per police area, all sharing a continuous year axis. If you see roughly 20 differently colored lines and it's hard to tell them apart, that's expected — we'll narrow this down next.
 :::
 
@@ -74,7 +74,7 @@ Use the `Hour Occurred` calculated field from Episode 2 to see how collisions ar
 :::
 
 ::: callout
-## Expected outcome
+## Expected outcome: bar chart by hour
 You should see 24 bars, one per hour (0 through 23), ordered left to right. If a given hour has zero collisions in the current filter selection, Tableau may simply omit that bar rather than show it at height zero — check the axis range if a chart looks like it's missing an hour.
 :::
 

@@ -12,7 +12,7 @@ exercises: 20
 :::
 
 ::: objectives
-- Understand what Tableau is and how Public Edition compares to a licensed edition.
+- Describe what Tableau is and how Public Edition compares to a licensed edition.
 - Install and launch Tableau Desktop: Public Edition.
 - Load a sample dataset, save it locally, and become familiar with the interface.
 :::
@@ -75,7 +75,7 @@ Before building anything, Tableau shows you the **Data Source page** — a previ
 - Do any columns look like the wrong data type (numbers stored as text, or vice versa)?
 
 ::: callout
-## Expected outcome
+## Expected outcome: Data Source page
 You should see a grid preview of your CSV with column headers along the top and a data-type icon (`Abc`, `#`, calendar, and so on) above each field name. If a field looks misclassified — for example, `Date Occurred` shown as `Abc` text instead of a date — you can change its data type here or later in the Data pane.
 :::
 
@@ -106,7 +106,7 @@ Before you go further, save a local copy of your workbook:
 3. Click **Save**.
 
 ::: callout
-## Expected outcome
+## Expected outcome: saved workbook file
 Your workbook now exists as a local `.twb` (or `.twbx`) file on your computer. Tableau Desktop: Public Edition can save locally like this at any point — you don't need to be online or publish anything to save your progress. Get in the habit of saving periodically as you work.
 :::
 

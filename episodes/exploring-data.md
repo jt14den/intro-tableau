@@ -59,7 +59,7 @@ Try this:
 3. Click a chart type. Tableau builds that view using the fields you selected.
 
 ::: callout
-## Expected outcome
+## Expected outcome: Show Me panel
 Only chart types compatible with a text dimension (`Area Name`) and an ID-like dimension (`DR Number`) will be enabled — for example, a bar chart or a text table. Chart types that need two measures, like a scatter plot, will be grayed out.
 :::
 
@@ -99,7 +99,7 @@ width='50%'
 4. Click **OK**.
 
 ::: callout
-## Expected outcome
+## Expected outcome: `Collision Count` field
 `Collision Count` appears in the Data pane under Measures, marked with an `=` icon and shown in green (continuous) with a `#` icon, since it's a numeric aggregation. Every time you use it in a view, its pill label will read `CNTD(DR Number)`.
 :::
 
@@ -128,7 +128,7 @@ INT([Time Occurred] / 100)
 This divides the HHMM value by 100 and truncates the decimal, leaving just the hour (0–23). Right-click `Hour Occurred` in the Data pane and set it to **Discrete** — we want each hour treated as its own category (a header), not a point on a continuous numeric scale.
 
 ::: callout
-## Expected outcome
+## Expected outcome: `Hour Occurred` field
 `Hour Occurred` appears as a blue, discrete field. Values range from 0 through 23. In Episode 3 we'll use it to build a **bar chart of collisions by hour** — a categorical breakdown, not a histogram of a truly continuous time measure, since the underlying values are whole-number hour buckets we defined ourselves.
 :::
 
