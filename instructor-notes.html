@@ -40,13 +40,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -348,14 +348,78 @@
         <h1>Instructor Notes</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<section><h2 class="section-heading" id="version-and-application">Version and application<a class="anchor" aria-label="anchor" href="#version-and-application"></a>
+</h2>
+<hr class="half-width">
+<p>This lesson was updated and validated against <strong>Tableau
+Desktop: Public Edition 2026.2.x</strong>. If you’re teaching from a
+different version:</p>
+<ul>
+<li>Menu paths for calculated fields, splits, map layers, and filter
+cards have moved between Tableau versions in the past (for example, the
+map background style menu moved from
+<code>Map &gt; Background Maps</code> to
+<code>Map &gt; Map Layers &gt; Background &gt; Style</code>). Spot-check
+the menu paths in each episode against your installed version before
+teaching.</li>
+<li>This lesson is written for the <strong>installed desktop
+application</strong>, not the web-based authoring tool at
+public.tableau.com. If a learner opens web authoring instead of the
+desktop app, some menu paths and shortcuts in this lesson won’t match
+what they see.</li>
+</ul></section><section><h2 class="section-heading" id="dataset-status">Dataset status<a class="anchor" aria-label="anchor" href="#dataset-status"></a>
+</h2>
+<hr class="half-width">
+<p>The workshop dataset (legacy LAPD Traffic Collision data) has stopped
+receiving updates — LAPD migrated to a new records management system and
+this dataset is retained for historical reference only. That makes it
+stable for teaching (everyone gets the same numbers), but be ready for a
+learner to ask why the data doesn’t include recent years.</p>
+<p><strong>Outstanding follow-up:</strong> a fixed, dated CSV snapshot
+for this workshop has not yet been created (see
+<code>learners/setup.md</code>). Until it exists, learners download
+directly from the live source, which could in principle change between
+sessions. Creating and hosting a dated snapshot removes that risk — flag
+this to whoever preps the next offering.</p>
+</section><section><h2 class="section-heading" id="likely-trouble-spots">Likely trouble spots<a class="anchor" aria-label="anchor" href="#likely-trouble-spots"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>
+<strong>Coordinate splitting (Episode 3):</strong>
+<code>Custom Split</code> on <code>Location</code> can behave
+differently if a learner’s export has extra whitespace or a different
+delimiter than a plain comma. Check the split preview before moving
+on.</li>
+<li>
+<strong>Aggregation confusion (Episode 2–3):</strong> learners will
+want to use <code>COUNT([DR Number])</code> out of habit. Walk through
+the grain check exercise before introducing <code>COUNTD</code> — the
+distinction won’t stick if it’s just asserted.</li>
+<li>
+<strong>Map rendering as a single dot:</strong> almost always means
+<code>DR Number</code> (or another record-level dimension) is missing
+from Detail on the Marks card. This is the single most common map
+troubleshooting question.</li>
+<li>
+<strong>Zero-length “phantom” bars on the hourly bar chart:</strong>
+if a filter has been applied, an hour with zero collisions in the
+current selection may simply not render a bar at all rather than showing
+a bar at height zero. Worth calling out live if it comes up.</li>
+</ul></section><section><h2 class="section-heading" id="desktop-vs--web-authoring">Desktop vs. web authoring<a class="anchor" aria-label="anchor" href="#desktop-vs--web-authoring"></a>
+</h2>
+<hr class="half-width">
+<p>If a learner is working from a personal Chromebook or otherwise can’t
+install the desktop app, they may be tempted to use Tableau Public’s web
+authoring tool instead. It’s a different (though related) product with
+its own menu structure; this lesson does not cover it. Point such
+learners to institutional lab machines if available, or flag it as an
+unsupported path for this particular workshop.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-      <section id="aggregate-instructor-notes"></section>
+</section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
 </div>
@@ -375,7 +439,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -404,9 +468,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor-notes.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor-notes.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2026-09-08",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

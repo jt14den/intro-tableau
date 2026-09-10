@@ -24,13 +24,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -246,8 +246,13 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-is-a-dashboard">What Is a Dashboard?</a></li>
+<li><a href="#layout-tiled-vs.-floating">Layout: Tiled vs. Floating</a></li>
+<li><a href="#titling-sheets-on-a-dashboard">Titling sheets on a dashboard</a></li>
 <li><a href="#adding-interactivity">Adding Interactivity</a></li>
+<li><a href="#shared-filters-across-worksheets">Shared filters across worksheets</a></li>
 <li><a href="#saving-and-publishing-to-tableau-public">Saving and Publishing to Tableau Public</a></li>
+<li><a href="#accessibility">Accessibility</a></li>
+<li><a href="#final-check-before-sharing">Final check before sharing</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -312,7 +317,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Building and Sharing Dashboards</h1>
-        <p>Last updated on 2025-06-04 |
+        <p>Last updated on 2026-09-10 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/building-dashboards.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -336,7 +341,7 @@
 <ul><li>How do I combine multiple visualizations into a single
 dashboard?</li>
 <li>How can filters and interactivity be shared across charts?</li>
-<li>How do I publish or share Tableau Public visualizations?</li>
+<li>How do I publish or share a Tableau Public visualization?</li>
 </ul></div>
 </div>
 </div>
@@ -345,22 +350,24 @@ dashboard?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Create a dashboard that brings together multiple views.</li>
-<li>Enable filtering across all visualizations in a dashboard.</li>
-<li>Save and share your dashboard using Tableau Public.</li>
+<li>Enable filter actions and shared filters across a dashboard.</li>
+<li>Save and share a dashboard using Tableau Public, with attention to
+accessibility and privacy.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>Welcome to the final episode! Here, we’ll bring together all the
-visualizations we’ve created into powerful, interactive dashboards.
-Dashboards are where your data story truly comes alive, allowing others
-to explore and understand your insights.</p>
+<p>Welcome to the final episode! Here, we’ll bring together the
+visualizations we’ve built — <code>Collisions Over Time</code>,
+<code>Collisions by Hour</code>, <code>Age Distribution</code>,
+<code>Collision Map</code>, and
+<code>Collisions by Area (Animated)</code> — into an interactive
+dashboard.</p>
 <section><h2 class="section-heading" id="what-is-a-dashboard">What Is a Dashboard?<a class="anchor" aria-label="anchor" href="#what-is-a-dashboard"></a></h2>
-<hr class="half-width"><p>A <strong>dashboard</strong> in Tableau is a canvas where you can
-combine multiple charts and visual elements into a single interactive
-view. This allows users to compare different perspectives and present a
-lot more information in a smaller, cohesive frame.</p>
+<hr class="half-width"><p>A <strong>dashboard</strong> in Tableau is a canvas where you combine
+multiple worksheets and other visual elements into a single interactive
+view, letting users compare different perspectives at once.</p>
 <div id="creating-a-dashboard" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -369,81 +376,207 @@ lot more information in a smaller, cohesive frame.</p>
 <div id="creating-a-dashboard" class="callout-inner">
 <h3 class="callout-title">Creating a Dashboard</h3>
 <div class="callout-content">
-<ul><li>Click the <strong>Dashboard</strong> icon (the middle tab at the
-bottom, typically between “New Worksheet” and “New Story”).</li>
-<li>In the left sidebar, you’ll see a list of all your created sheets.
-Drag your desired sheets (e.g.,
-<code>Accidents Over Time (Animated)</code>,
-<code>Running Total Accidents Over Time</code>, and
-<code>Accident Map</code>) into the main dashboard area.</li>
-<li>Adjust the layout by dragging edges of the sheets or by setting the
-dashboard size to <strong>Automatic</strong> for flexible viewing.</li>
-<li>You can label your sheets directly on the dashboard by
-double-clicking the tab name at the bottom of each sheet you’ve
-added.</li>
+<ul><li>Click the <strong>New Dashboard</strong> icon (the middle tab at the
+bottom, between “New Worksheet” and “New Story”).</li>
+<li>In the left sidebar, you’ll see a list of your created sheets. Drag
+<code>Collisions Over Time</code> and <code>Collision Map</code> into
+the dashboard area.</li>
 </ul></div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="adding-interactivity">Adding Interactivity<a class="anchor" aria-label="anchor" href="#adding-interactivity"></a></h2>
-<hr class="half-width"><p>This is where dashboards become truly powerful! You can make any
-sheet on your dashboard act as a filter for others, allowing users to
-interact with your data dynamically.</p>
-<div id="adding-an-interactive-filter" class="callout checklist">
+</section><section><h2 class="section-heading" id="layout-tiled-vs--floating">Layout: Tiled vs. Floating<a class="anchor" aria-label="anchor" href="#layout-tiled-vs--floating"></a></h2>
+<hr class="half-width"><p>Tableau places dashboard objects in one of two ways:</p>
+<ul><li>
+<strong>Tiled</strong> objects snap into a grid alongside other
+objects and automatically resize as you add or move things — predictable
+and easiest to keep organized. This is the default and what we recommend
+for this workshop.</li>
+<li>
+<strong>Floating</strong> objects sit at a fixed position and can
+overlap other objects — more flexible for layering elements like a logo
+or a text box over a chart, but easier to make a mess of.</li>
+</ul><p>Stick with <strong>tiled</strong> placement (and layout containers,
+which group tiled objects together) for your first dashboard. Floating
+is worth exploring later once you’re comfortable with the basics.</p>
+<div id="sizing-your-dashboard" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
-<div id="adding-an-interactive-filter" class="callout-inner">
-<h3 class="callout-title">Adding an Interactive Filter</h3>
+<div id="sizing-your-dashboard" class="callout-inner">
+<h3 class="callout-title">Sizing your dashboard</h3>
 <div class="callout-content">
-<ul><li>Click on a chart <em>inside</em> the dashboard that you want to use
-as a filter (e.g., your <code>Accident Map</code>).</li>
-<li>On the floating toolbar that appears when a chart is selected, click
-the <strong>Use as Filter</strong> icon (it looks like a funnel
-symbol).</li>
-<li>Repeat this step for any other views that should affect others
-interactively. For example, if you make your
-<code>Accidents Over Time (Animated)</code> sheet a filter as well.</li>
+<ul><li>In the Dashboard pane on the left, set <strong>Size</strong> to a
+fixed desktop size (for example, <code>1000 x 800</code>) rather than
+<strong>Automatic</strong> for this workshop. A fixed size makes the
+layout predictable while you’re learning; <strong>Automatic</strong>
+sizing and device-specific layouts (desktop/tablet/phone) are worth
+exploring as a later extension, not something to take on today.</li>
 </ul></div>
 </div>
 </div>
-<p>Now, when you click a specific value (e.g., a bar on a chart, or a
-specific area on a map), other views linked by the filter will respond
-instantly, updating to show only the data relevant to your selection.
-This dynamic interaction makes your dashboard a powerful exploration
-tool!</p>
-</section><section><h2 class="section-heading" id="saving-and-publishing-to-tableau-public">Saving and Publishing to Tableau Public<a class="anchor" aria-label="anchor" href="#saving-and-publishing-to-tableau-public"></a></h2>
-<hr class="half-width"><p>Once you’re satisfied with your dashboard:</p>
-<div id="checklist3" class="callout checklist">
+</section><section><h2 class="section-heading" id="titling-sheets-on-a-dashboard">Titling sheets on a dashboard<a class="anchor" aria-label="anchor" href="#titling-sheets-on-a-dashboard"></a></h2>
+<hr class="half-width"><p>To show a title for a sheet within the dashboard:</p>
+<ol style="list-style-type: decimal"><li>Select the sheet inside the dashboard.</li>
+<li>Open that sheet’s menu (the small dropdown arrow that appears in its
+top-right corner when selected) and choose <strong>Show
+Title</strong>.</li>
+<li>Double-click the title text to edit it directly, or use the same
+<strong>Edit Title…</strong> / <strong>Insert</strong> workflow from
+Episode 4 to add a dynamic value.</li>
+</ol><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Don’t rename a dashboard sheet by double-clicking its worksheet tab
+at the bottom of the screen — that renames the underlying worksheet
+everywhere it’s used, not just its dashboard title. Use the sheet’s own
+<strong>Show Title</strong> / <strong>Edit Title</strong> controls
+instead.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="adding-interactivity">Adding Interactivity<a class="anchor" aria-label="anchor" href="#adding-interactivity"></a></h2>
+<hr class="half-width"><p>This is where dashboards become powerful: you can make any sheet act
+as a filter for others.</p>
+<div id="adding-an-interactive-filter-action" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<span class="callout-header">Checklist</span>
+<div id="adding-an-interactive-filter-action" class="callout-inner">
+<h3 class="callout-title">Adding an Interactive Filter Action</h3>
+<div class="callout-content">
+<ul><li>Select the sheet inside the dashboard you want to use as a filter
+source (e.g. <code>Collision Map</code>).</li>
+<li>Open that sheet’s menu (the dropdown arrow in its corner, or
+<strong>More Options</strong>) and choose <strong>Use as
+Filter</strong>.</li>
+<li>Repeat for any other sheet that should filter the rest of the
+dashboard.</li>
+</ul></div>
+</div>
+</div>
+<p><code>Use as Filter</code> is a menu option on the sheet itself — it
+generates a filter action behind the scenes (visible under
+<strong>Dashboard &gt; Actions</strong> if you want to inspect or adjust
+it), rather than something you configure through a separate floating
+toolbar.</p>
+<p>Now, clicking a mark on a filter-source sheet — a bar, a map point —
+updates the other linked sheets to show only the related data.</p>
+</section><section><h2 class="section-heading" id="shared-filters-across-worksheets">Shared filters across worksheets<a class="anchor" aria-label="anchor" href="#shared-filters-across-worksheets"></a></h2>
+<hr class="half-width"><p>A filter card can also be applied beyond the single sheet it started
+on:</p>
+<div id="checklist4" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Go to <strong>File &gt; Save to Tableau Public As…</strong>
-</li>
-<li>Log in to your Tableau Public account.</li>
-<li>Name your workbook and save it.</li>
-<li>Tableau will open a browser with your published visualization.</li>
-<li>Click the <strong>Share</strong> icon to get an embed code or
-link.</li>
+<ul><li>On a worksheet, right-click the field on the Filters shelf.</li>
+<li>Choose <strong>Apply to Worksheets</strong>.</li>
+<li>Select <strong>All Using This Data Source</strong> to apply it
+everywhere that data source is used, or <strong>Selected
+Worksheets…</strong> to choose specific sheets.</li>
 </ul></div>
 </div>
 </div>
-<div id="caution1" class="callout caution">
+<p>This is different from a dashboard filter action: a shared filter
+changes what data each sheet can show at all, while a filter action
+responds to a click and filters based on what was selected.</p>
+</section><section><h2 class="section-heading" id="saving-and-publishing-to-tableau-public">Saving and Publishing to Tableau Public<a class="anchor" aria-label="anchor" href="#saving-and-publishing-to-tableau-public"></a></h2>
+<hr class="half-width"><p>Once you’re satisfied with your dashboard:</p>
+<div id="checklist5" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<span class="callout-header">Checklist</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>Go to <strong>Server &gt; Tableau Public &gt; Save to Tableau
+Public</strong>.</li>
+<li>Log in to your Tableau Public account (create one if needed).</li>
+<li>Name your workbook and save.</li>
+</ul></div>
+</div>
+</div>
+<div id="expected-outcome" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="expected-outcome" class="callout-inner">
+<h3 class="callout-title">Expected outcome</h3>
+<div class="callout-content">
+<p>Tableau uploads your workbook and opens your default browser to the
+published view on Tableau Public’s website. Sharing controls — including
+embed code, a direct link, and download settings — appear below the
+visualization on that page.</p>
+</div>
+</div>
+</div>
+<div id="publishing-is-public" class="callout caution">
 <div class="callout-square">
 <i class="callout-icon" data-feather="alert-triangle"></i>
 </div>
 <span class="callout-header">Caution</span>
+<div id="publishing-is-public" class="callout-inner">
+<h3 class="callout-title">Publishing is public</h3>
+<div class="callout-content">
+<ul><li>Your visualization, once published, is visible to anyone on the
+web.</li>
+<li>The workbook and its underlying data <strong>may be
+downloadable</strong> by viewers, depending on your settings.</li>
+<li>Disabling downloads reduces but does not eliminate exposure — it is
+<strong>not sufficient protection</strong> for sensitive data.</li>
+<li>
+<strong>Never publish sensitive, private, licensed, or restricted
+data</strong> to Tableau Public. If you’re working with data like that
+in your own work, use a licensed edition that can publish to Tableau
+Cloud or Tableau Server with proper access controls instead.</li>
+</ul></div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="accessibility">Accessibility<a class="anchor" aria-label="anchor" href="#accessibility"></a></h2>
+<hr class="half-width"><p>Before sharing, take a pass at accessibility:</p>
+<ul><li>For each worksheet, go to <strong>Worksheet &gt;
+Accessibility</strong> to add alt text describing what the chart shows
+and why it matters — this is what screen reader users will hear in place
+of the visual.</li>
+<li>On the dashboard, check each sheet’s <strong>More Options</strong>
+menu for an <strong>Accessibility</strong> option to set dashboard-level
+alt text where available.</li>
+<li>Don’t rely on color alone to convey meaning — pair color with
+labels, shapes, or direct annotation, since color-blind viewers and
+screen readers won’t get the same information from color that sighted
+viewers do.</li>
+</ul></section><section><h2 class="section-heading" id="final-check-before-sharing">Final check before sharing<a class="anchor" aria-label="anchor" href="#final-check-before-sharing"></a></h2>
+<hr class="half-width"><p>Before you consider a dashboard done, view it in a browser (not just
+the desktop app) and check:</p>
+<div id="checklist6" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<span class="callout-header">Checklist</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>All data in Tableau Public is public. Don’t upload sensitive or
-private data.</p>
+<ul><li>Titles and axis units are clear and accurate.</li>
+<li>Filters behave as expected, and selections can be cleared.</li>
+<li>Tooltips display useful, correctly formatted information.</li>
+<li>Text and marks have adequate color contrast.</li>
+<li>The dashboard remains usable at a smaller browser width.</li>
+<li>Every filter action’s target sheets update correctly when you
+click.</li>
+<li>Any public-facing title, description, or tags you set are accurate
+and don’t reference private context.</li>
+</ul></div>
 </div>
 </div>
-</div>
-<hr><div id="challenge1" class="callout challenge">
+<div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -452,8 +585,8 @@ private data.</p>
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
 <p><strong>Challenge: Build and Publish a Dashboard</strong></p>
-<p>Create a dashboard with at least two visualizations. Enable filter
-interactivity, and publish it to your Tableau Public profile.</p>
+<p>Create a dashboard with at least two visualizations. Enable a filter
+action, and publish it to your Tableau Public profile.</p>
 <ul><li>What story does your dashboard tell?</li>
 <li>Could someone unfamiliar with the data understand what they’re
 seeing?</li>
@@ -467,7 +600,8 @@ seeing?</li>
 </button>
 <div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
-<p>Add meaningful titles and tooltips to help interpret your charts.</p>
+<p>Add meaningful titles, alt text, and tooltips to help interpret your
+charts.</p>
 </div>
 </div>
 </div>
@@ -479,9 +613,12 @@ seeing?</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ul><li>Combine the Line Chart and Map into one dashboard.</li>
-<li>Use <code>Area Name</code> as a filter.</li>
-<li>Add a dynamic title and test your dashboard in the browser.</li>
+<ul><li>Combine <code>Collisions Over Time</code> and
+<code>Collision Map</code> into one dashboard.</li>
+<li>Use <code>Collision Map</code> as a filter source via <strong>Use as
+Filter</strong>.</li>
+<li>Add worksheet alt text, a dynamic dashboard title, and test the
+published dashboard in a browser.</li>
 </ul></div>
 </div>
 </div>
@@ -493,9 +630,19 @@ seeing?</li>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Dashboards combine multiple charts into one interactive view.</li>
-<li>Filters and selections can link multiple charts together.</li>
-<li>Tableau Public lets you publish and share dashboards easily.</li>
+<ul><li>Reference only worksheets you’ve actually built, by their exact
+names, in dashboard instructions.</li>
+<li>Tiled layout with a fixed dashboard size is the reliable beginner
+default; Floating and Automatic sizing are later extensions.</li>
+<li>Use each sheet’s own menu for <strong>Show Title</strong> and
+<strong>Use as Filter</strong> — don’t rename dashboard titles by
+editing the underlying worksheet tab.</li>
+<li>A shared filter (<strong>Apply to Worksheets</strong>) and a
+dashboard filter action (<strong>Use as Filter</strong>) solve different
+problems.</li>
+<li>Tableau Public dashboards are public and may be downloadable — never
+publish sensitive data, and add accessibility alt text before
+sharing.</li>
 </ul></div>
 </div>
 </div>
@@ -534,7 +681,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -562,9 +709,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/building-dashboards.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/building-dashboards.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2025-06-04",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

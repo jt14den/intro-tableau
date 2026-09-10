@@ -24,13 +24,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -205,7 +205,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -291,7 +291,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2025-06-04 |
+        <p>Last updated on 2026-09-10 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -305,38 +305,67 @@
 
         
 
-<dl><dt>Calculated Field</dt>
+<section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
+<hr class="half-width"><dl><dt>Aggregation</dt>
 <dd>
-A new field created in Tableau using a formula based on existing data.
-Calculated fields allow you to perform computations, manipulate strings,
-apply logic, and aggregate data to generate new insights that aren’t
-directly present in your original dataset.
+How Tableau summarizes multiple values of a measure into one, such as
+<code>SUM</code>, <code>AVG</code>, <code>COUNT</code>, or
+<code>COUNTD</code> (count distinct). Aggregation is independent of a
+field’s data type or role — it’s the calculation applied when combining
+rows.
+</dd>
+<dt>Calculated Field</dt>
+<dd>
+A new field created in Tableau using a formula based on existing data,
+marked with a small <code>=</code> icon in the Data pane. Calculated
+fields allow you to perform computations, manipulate strings, apply
+logic, and derive new insights that aren’t directly present in your
+original dataset. The <code>=</code> icon indicates the field was
+calculated or copied — it does not by itself indicate a data type or
+aggregation.
+</dd>
+<dt>Card</dt>
+<dd>
+A container in the Tableau interface that holds related controls — for
+example, the Marks card (controls how marks are drawn) or a filter card
+(the interactive control a viewer uses to change a filter’s selected
+values).
 </dd>
 <dt>Continuous</dt>
 <dd>
-In Tableau, a field that represents an unbroken range of values,
-typically numbers or dates. Continuous fields usually create axes in a
-visualization and are represented by green pills.
+In Tableau, a way of displaying a field so it forms an unbroken axis of
+values, typically for numbers or dates. Continuous fields are shown as
+<strong>green</strong> pills and usually create an axis in a
+visualization. Both dimensions and measures can be continuous —
+continuous is a display property, not a field role.
 </dd>
 <dt>Dashboard</dt>
 <dd>
-A canvas in Tableau where you combine multiple worksheets (charts) and
-other visual elements into a single interactive view. Dashboards allow
-users to compare different perspectives of data and apply filters across
-multiple charts simultaneously.
+A canvas in Tableau where you combine multiple worksheets and other
+visual elements into a single interactive view. Dashboards allow users
+to compare different perspectives of data and apply shared filters or
+filter actions across multiple charts.
+</dd>
+<dt>Data Type</dt>
+<dd>
+The kind of value a field holds — string, number, date, Boolean,
+spatial, and so on — shown by a small icon next to the field name. Data
+type is independent of field role (dimension/measure) and of
+discrete/continuous display.
 </dd>
 <dt>Dimension</dt>
 <dd>
-In Tableau, a qualitative field that contains categorical data (e.g.,
-names, dates, geographic data, IDs). Dimensions are used to categorize,
-segment, and reveal details in your data. They typically create headers
-in a visualization and are represented by blue pills.
+In Tableau, a field role for qualitative data used to categorize,
+segment, and reveal detail — names, IDs, geographic data, and so forth.
+Dimensions are commonly discrete (blue) but can also be set to
+continuous, for example a date dimension shown as a continuous timeline.
 </dd>
 <dt>Discrete</dt>
 <dd>
-In Tableau, a field that represents distinct, separate values or
-categories. Discrete fields usually create headers in a visualization
-and are represented by blue pills.
+In Tableau, a way of displaying a field so it produces distinct,
+separate values or categories. Discrete fields are shown as
+<strong>blue</strong> pills and usually create headers in a
+visualization. Both dimensions and measures can be discrete.
 </dd>
 <dt>Exploratory Data Analysis (EDA)</dt>
 <dd>
@@ -344,31 +373,118 @@ An iterative process of analyzing data sets to summarize their main
 characteristics, often using visual methods. EDA helps you understand
 your data, detect outliers, discover patterns, and formulate hypotheses.
 </dd>
+<dt>Filter Action</dt>
+<dd>
+A dashboard-level interaction, created via <strong>Use as
+Filter</strong> on a sheet (or <strong>Dashboard &gt; Actions</strong>),
+where selecting a mark on one sheet filters the data shown on other
+sheets in the dashboard.
+</dd>
+<dt>Filter Card</dt>
+<dd>
+The interactive control Tableau displays in a view when a filter’s
+<strong>Show Filter Card</strong> option is enabled, letting a viewer
+change which values are included. Filter cards have several display
+modes, including Single Value (List), Single Value (Dropdown), Multiple
+Values (List), and Multiple Values (Dropdown).
+</dd>
+<dt>Mark</dt>
+<dd>
+A single visual element in a Tableau view representing one or more
+records — a bar, line segment, circle, map point, and so on. The Marks
+card controls how marks are drawn and lets you assign fields to
+properties like Color, Size, Label, Detail, and Tooltip.
+</dd>
 <dt>Measure</dt>
 <dd>
-In Tableau, a quantitative field that can be aggregated (e.g., sums,
-averages, counts). Measures are values that you can perform mathematical
-operations on. They typically create axes in a visualization and are
-represented by green pills.
+In Tableau, a field role for quantitative data meant to be aggregated —
+sums, averages, counts, and so forth. Measures are commonly continuous
+(green) but can be set to discrete, for example when you want one bar
+per exact value rather than a single aggregated number.
 </dd>
 <dt>Pages Shelf</dt>
 <dd>
-A shelf in Tableau that allows you to break a view into a sequence of
-pages based on the individual members of a dimension or measure. This is
-commonly used to create animations over time, with each “page”
-representing a different step or time period.
+A shelf in Tableau that breaks a view into a sequence of pages (frames)
+based on the individual values of a field placed on it — for example,
+one page per year. Each page shows that value’s own data; the Pages
+shelf does not by itself accumulate or total values across pages. A
+genuine running total requires a separate table calculation.
 </dd>
-<dt>Tableau Public</dt>
+<dt>Pill</dt>
 <dd>
-A free version of Tableau Desktop that allows users to create and
-explore visualizations. Workbooks created in Tableau Public are
-primarily designed to be saved to a public online profile, making them
-accessible to anyone on the web.
+The small rounded box representing a field once it’s placed on a shelf
+or card. A pill’s color (blue or discrete, green or continuous) reflects
+the discrete/continuous display setting, not the field’s data type or
+role.
 </dd>
-</dl><!--
+<dt>Shelf</dt>
+<dd>
+A drop target in the Tableau interface — Rows, Columns, Filters, Pages,
+and so on — where you place pills to build a view.
+</dd>
+<dt>Tableau Desktop: Public Edition</dt>
+<dd>
+The free, installed edition of Tableau Desktop used in this workshop. It
+can save workbooks locally and publish them to Tableau Public, supports
+a limited set of data source types, is capped at 15 million rows, and is
+not licensed for commercial use.
+</dd>
+<dt>Worksheet</dt>
+<dd>
+An individual authoring sheet in a Tableau workbook where a single chart
+or view is built, as distinct from a dashboard (which combines multiple
+worksheets).
+</dd>
+</dl></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><p>Official Tableau and source-data documentation consulted while
+validating this lesson for Tableau Desktop: Public Edition 2026.2.x:</p>
+<ul><li><a href="https://www.tableau.com/support/releases" class="external-link">Tableau
+releases</a></li>
+<li><a href="https://www.tableau.com/academic/students" class="external-link">Tableau for
+Students</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/desktop_comparison.htm" class="external-link">Edition
+comparison</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/publish_workbooks_tableaupublic.htm" class="external-link">Saving
+and publishing to Tableau Public</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/datafields_understanddatawindow.htm" class="external-link">Fields
+in the Data pane</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm" class="external-link">Dimensions,
+measures, blue, and green</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/buildauto_showme.htm" class="external-link">Show
+Me</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_formulas.htm" class="external-link">Calculated
+fields</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/calculations_bins.htm" class="external-link">Bins</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/dates_continuous.htm" class="external-link">Continuous
+dates</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm" class="external-link">Edit
+axes</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/split.htm" class="external-link">Split
+fields</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/maps_howto_symbol.htm" class="external-link">Point
+maps</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/maps_options.htm" class="external-link">Map
+appearance</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/maps_explore.htm" class="external-link">Map
+controls</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/buildmanual_shelves.htm" class="external-link">Shelves
+and Pages</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/filtering.htm" class="external-link">Filters</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm" class="external-link">Applying
+filters across worksheets</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm" class="external-link">Dashboards</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/actions_filter.htm" class="external-link">Filter
+actions</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/formatting_specific_titlecaption.htm" class="external-link">Titles</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/accessibility_create_view.htm" class="external-link">Accessibility</a></li>
+<li><a href="https://catalog.data.gov/dataset/traffic-collision-data-from-2010-to-present" class="external-link">Historical
+LAPD collision dataset notice</a></li>
+<li><a href="https://geohub.lacity.org/datasets/lapd-divisions/about" class="external-link">Current
+LAPD Divisions page</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
       </div>
@@ -394,7 +510,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -422,9 +538,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/reference.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/reference.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2025-06-04",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

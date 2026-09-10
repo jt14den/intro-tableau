@@ -24,13 +24,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -209,7 +209,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -293,18 +293,42 @@
     </nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
 
-<p>This lesson introduces data visualization using Tableau Public. You
-will learn how to load data, create basic charts and maps, and build a
-simple dashboard. The lesson uses free tools and open datasets. No prior
-experience with Tableau is needed.</p>
-<p>This is a pre-alpha lesson. It’s still in development and hasn’t been
-taught yet.</p>
-<div class="prerequisite">
+<p>This lesson introduces data visualization using <strong>Tableau
+Desktop: Public Edition</strong>, the installed desktop application (not
+Tableau Public web authoring). You will learn how to load data, create
+basic charts and maps, and build a simple dashboard. The lesson uses
+free tools and an open dataset. No prior experience with Tableau is
+needed.</p>
+<p>This lesson has been pilot-tested and is under revision for Tableau
+2026.2.x. See <a href="index.html#setup">Setup</a> for the version this
+material was validated against.</p>
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Tableau Public publishes workbooks to a public website. Do not use it
+with sensitive, private, or restricted data. See the Setup page for
+details.</p>
+</div>
+</div>
+</div>
+<div id="prereq1" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<span class="callout-header">Prerequisite</span>
+<div class="callout-inner">
+<div class="callout-content">
 <ul><li>Basic spreadsheet skills (e.g., sorting, filtering, understanding
 rows and columns)</li>
 <li>Comfort using a mouse and navigating desktop applications (clicking,
 dragging, opening files)</li>
 </ul></div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -319,19 +343,22 @@ any links that you are not going to use.
  1. <a href="introduction.html">Getting Started with Tableau Public</a>
 </td>
 <td>
-What is Tableau?<br>What is Tableau Public?<br>How do I install
-Tableau Public and open a dataset?<br>What kinds of data can Tableau
-help me visualize?<br>:::
+What is Tableau?<br>What is Tableau Desktop: Public Edition, and how
+does it differ from a licensed edition?<br>How do I install Tableau
+Desktop: Public Edition and open a dataset?<br>What kinds of data can
+Tableau help me visualize?<br>:::
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 35m
 </td>
 <td>
- 2. <a href="exploring-data.html">Exploring and Cleaning Your Data</a>
+ 2. <a href="exploring-data.html">Understanding Fields and Preparing
+Data</a>
 </td>
 <td>
-How does Tableau interpret and categorize data types?<br>What are
-Dimensions and Measures?<br>How do I identify and prepare fields for
+What is the difference between a field’s data type, its role, and how
+it’s displayed?<br>What do the blue and green pill colors actually
+mean?<br>How do I identify and prepare fields for
 visualization?<br>:::
 </td>
 </tr><tr><td>
@@ -342,7 +369,7 @@ visualization?<br>:::
 and Maps</a>
 </td>
 <td>
-How do I create a line chart, histogram, or map in Tableau?<br>How do
+How do I create a line chart, bar chart, or map in Tableau?<br>How do
 field types affect the kind of visualization Tableau creates?<br>How
 can I use geographic data for mapping?<br>:::
 </td>
@@ -354,9 +381,10 @@ can I use geographic data for mapping?<br>:::
 and Filters</a>
 </td>
 <td>
-How can I animate a visualization over time?<br>How can filters help
-explore different aspects of a dataset?<br>What options in Tableau help
-make visualizations more dynamic and readable?<br>:::
+How can I animate a visualization by year using the Pages shelf?<br>How
+can filters help explore different aspects of a dataset?<br>What
+options in Tableau help make visualizations more dynamic and
+readable?<br>:::
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>02h 45m
@@ -368,8 +396,8 @@ Dashboards</a>
 <td>
 How do I combine multiple visualizations into a single
 dashboard?<br>How can filters and interactivity be shared across
-charts?<br>How do I publish or share Tableau Public
-visualizations?<br>:::
+charts?<br>How do I publish or share a Tableau Public
+visualization?<br>:::
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>03h 20m
@@ -385,54 +413,125 @@ any links that you are not going to use.
  --></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><section><h2 class="section-heading" id="data-sets">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a></h2>
-<hr class="half-width"><p>Data #1: Traffic Collision Data from 2010 to Present</p>
-<p><a href="https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data" class="external-link uri">https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data</a></p>
-<ul><li>Click ‘Export’ in the upper right-hand menu</li>
-<li>Make sure the export format is “CSV” (default) and click
-“Download”.</li>
-<li>Please put this in a folder where you can find it later.</li>
-</ul><p>Data #2: Spatial LAPD Boundaries Data</p>
-<p><a href="https://geohub.lacity.org/datasets/031d488e158144d0b3aecaa9c888b7b3_0" class="external-link uri">https://geohub.lacity.org/datasets/031d488e158144d0b3aecaa9c888b7b3_0</a>
-Click “View Full Details” in the left panel In the new page, click
-“Download” Unzip the zip file and put everything into the same folder as
-the earlier one</p>
-</section><section><h2 class="section-heading" id="tableau-installation">Tableau Installation<a class="anchor" aria-label="anchor" href="#tableau-installation"></a></h2>
-<hr class="half-width"><p>Tableau Desktop is available free of charge to full-time students.
-Tableau Public is a free version that anyone can use, featuring most
-core features. Both are suitable for this workshop.</p>
-<div class="section level3">
-<h3 id="installing-tableau-public">Installing Tableau Public<a class="anchor" aria-label="anchor" href="#installing-tableau-public"></a></h3>
-<ol style="list-style-type: decimal"><li>Go to <a href="https://www.tableau.com/products/public/download" class="external-link uri">https://www.tableau.com/products/public/download</a>
-</li>
+      </section><section id="setup"><div id="public-data-only" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="public-data-only" class="callout-inner">
+<h3 class="callout-title">Public data only</h3>
+<div class="callout-content">
+<p>Tableau Public publishes workbooks to a public website, and the
+underlying data may be downloadable by anyone who views it. <strong>Do
+not use this workshop’s tools with sensitive, private, licensed, or
+restricted data.</strong> The dataset used here is public and openly
+licensed.</p>
+</div>
+</div>
+</div>
+<blockquote>
+<p>These instructions were validated against <strong>Tableau Desktop:
+Public Edition 2026.2.x</strong>. Web authoring (public.tableau.com) and
+earlier desktop versions may use slightly different menus.</p>
+</blockquote>
+<section><h2 class="section-heading" id="tableau-installation">Tableau Installation<a class="anchor" aria-label="anchor" href="#tableau-installation"></a></h2>
+<hr class="half-width"><p>This workshop uses <strong>Tableau Desktop: Public Edition</strong>,
+an installed desktop application, not the web-based authoring tool at
+public.tableau.com. Desktop: Public Edition can save workbooks locally
+on your computer and can also publish them to Tableau Public. It is
+free, but it is not licensed for commercial use, and workbooks you
+publish are visible to anyone.</p>
+<ol style="list-style-type: decimal"><li>Go to <a href="https://www.tableau.com/products/public/download" class="external-link uri">https://www.tableau.com/products/public/download</a>.</li>
 <li>Enter your information and click <strong>Download the
 App</strong>.</li>
 <li>Install the application following the on-screen instructions.</li>
-<li>Open the app after installation.</li>
-</ol></div>
+<li>Launch Tableau Desktop: Public Edition.</li>
+</ol><div id="already-have-institutionally-licensed-tableau-desktop" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="already-have-institutionally-licensed-tableau-desktop" class="callout-inner">
+<h3 class="callout-title">Already have institutionally licensed Tableau
+Desktop?</h3>
+<div class="callout-content">
+<p>If your institution provides licensed <strong>Tableau Desktop:
+Professional Edition</strong> (for example, through a course or
+department license), you can use it instead — everything in this lesson
+works the same way. Follow your institution’s instructions for
+activating that license; this lesson does not cover that process.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
-<h3 id="installing-tableau-desktop">Installing Tableau Desktop:<a class="anchor" aria-label="anchor" href="#installing-tableau-desktop"></a></h3>
-<ol style="list-style-type: decimal"><li>If you are a full-time student:</li>
-<li>Go to this link: <a href="https://www.tableau.com/academic/students" class="external-link uri">https://www.tableau.com/academic/students</a>
-</li>
-<li>Click the central button “GET TABLEAU FOR FREE”</li>
-<li>Enter your details</li>
-<li>Click the “VERIFY STUDENT STATUS”</li>
-<li>Go to your email &amp; find the email from Tableau with the subject
-line: “Your Tableau Desktop Product Key is Enclosed”</li>
-<li>Click on “Download Tableau Desktop”</li>
-<li>It will download Tableau Desktop and open this tab: <a href="https://www.tableau.com/products/desktop/download?signin=academic" class="external-link uri">https://www.tableau.com/products/desktop/download?signin=academic</a>
-</li>
-<li>Follow the 3 steps on the website linked in step 7 (1. Download, 2.
-Install, 3. Register)</li>
-<li>Find &amp; Open ‘Tableau Desktop’ in your Applications</li>
-</ol><figure><img src="../fig/signup-tableau-student.png" style="width:33.0%" alt="Alternative text descriptions are defined here" class="figure mx-auto d-block"><div class="figcaption">Tableau Student Signup</div>
-</figure><ol style="list-style-type: decimal"><li>On this window: Follow the blue link “Activate Tableau”</li>
-<li>Then this window will open and select “Activate with a product
-key”</li>
-</ol><figure><img src="../fig/activate-product-key.png" style="width:33.0%" alt="Alternative text descriptions are defined here" class="figure mx-auto d-block"><div class="figcaption">Tableau Activate Product Key</div>
-</figure><p>If prompted to create a profile, complete the form to activate your
-Tableau Public account.</p>
+<h3 id="pre-workshop-check">Pre-workshop check<a class="anchor" aria-label="anchor" href="#pre-workshop-check"></a></h3>
+<p>Before the workshop, please:</p>
+<ol style="list-style-type: decimal"><li>Install Tableau Desktop: Public Edition (above) and confirm it
+launches.</li>
+<li>Download the workshop dataset (below).</li>
+<li>Open the CSV file in Tableau (<code>Connect &gt; Text File</code>)
+and confirm you see a data preview. You do not need to build anything
+yet — we’ll do that together in Episode 1.</li>
+</ol><p>If you run into trouble with any of these steps, please reach out
+before the workshop so we can help you get set up.</p>
+</div>
+</section><section><h2 class="section-heading" id="data-set">Data Set<a class="anchor" aria-label="anchor" href="#data-set"></a></h2>
+<hr class="half-width"><p>This workshop uses the <strong>legacy LAPD Traffic Collision
+dataset</strong>, a historical record of traffic collisions in the City
+of Los Angeles from 2010 through early 2026. LAPD stopped updating this
+dataset after transitioning to a new records management system; it
+remains published for historical reference only, and a separate,
+modernized collision dataset may eventually replace it. Because the data
+is no longer changing, it’s well suited to a workshop: everyone works
+from the same numbers.</p>
+<p>The data was transcribed from paper traffic reports, and the source
+notice cautions that it may contain inaccuracies. Locations with missing
+coordinates are recorded as <code>(0, 0)</code> rather than left blank —
+this is a sentinel value, not a “null point,” and we’ll filter it out
+when mapping in Episode 3.</p>
+<ul><li>Source: <a href="https://catalog.data.gov/dataset/traffic-collision-data-from-2010-to-present" class="external-link">Traffic
+Collision Data from 2010 to Present</a> (data.gov / LAPD, via the Los
+Angeles Open Data portal)</li>
+<li>Provider: Los Angeles Police Department</li>
+<li>Coverage: 2010 through the dataset’s final update</li>
+</ul><p><strong>Download:</strong></p>
+<ol style="list-style-type: decimal"><li>Go to <a href="https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data" class="external-link uri">https://data.lacity.org/Public-Safety/Traffic-Collision-Data-from-2010-to-Present/d5tf-ez2w/about_data</a>.</li>
+<li>Click <strong>Export</strong> in the upper-right menu.</li>
+<li>Choose <strong>CSV</strong> as the export format and click
+<strong>Download</strong>.</li>
+<li>Save the file somewhere you can find it, and note the folder —
+you’ll connect to this file in Episode 1.</li>
+</ol><div id="follow-up-fixed-workshop-snapshot" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="follow-up-fixed-workshop-snapshot" class="callout-inner">
+<h3 class="callout-title">Follow-up: fixed workshop snapshot</h3>
+<div class="callout-content">
+<p>This live source can in principle be re-exported at any time, which
+means learners downloading on different days could get slightly
+different row counts. For a reproducible, dated snapshot
+(e.g. <code>traffic-collisions-2026-08-19.csv</code>, with the retrieval
+date recorded in this file and in the instructor notes), that snapshot
+has not yet been created. <strong>This is a tracked follow-up</strong>,
+not something silently added to this build — see the instructor notes
+for status. Until it exists, download fresh from the source above and
+record your retrieval date.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="optional-lapd-divisions-boundary-data">Optional: LAPD Divisions boundary data<a class="anchor" aria-label="anchor" href="#optional-lapd-divisions-boundary-data"></a></h3>
+<p>Episode 3 includes an <strong>optional</strong> challenge that
+overlays LAPD division boundaries on the collision map. This is not
+required for the core lesson. If you want to try it:</p>
+<ol style="list-style-type: decimal"><li>Go to the <a href="https://geohub.lacity.org/datasets/lapd-divisions/about" class="external-link">LAPD
+Divisions dataset page</a> on the LA GeoHub.</li>
+<li>Download the shapefile or GeoJSON.</li>
+<li>Unzip if needed, and keep the files together in one folder.</li>
+</ol><p>You can skip this and still complete every required part of the
+workshop.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -460,7 +559,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -488,9 +587,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/index.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/index.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2026-09-08",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

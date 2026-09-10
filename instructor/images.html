@@ -40,13 +40,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -249,7 +249,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -352,28 +352,35 @@
 <section id="introduction"><h2 class="section-heading"><a href="introduction.html">Getting Started with Tableau Public</a></h2>
 <hr class="half-width">
 <h3 id="introduction-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Open Tableau and under Connect, select Text file’</p>
-<figure><img src="../fig/connect-text-file.png" style="width:50.0%" alt="Open Tableau and under Connect, select Text file" class="figure mx-auto d-block"><div class="figcaption">Open and connect a text file</div>
+<p aria-hidden="true">Image 1 of 1: ‘Tableau Desktop: Public Edition, showing the Connect pane with "To a File" options including Text file selected’</p>
+<figure><img src="../fig/connect-text-file.png" style="width:50.0%" alt='Tableau Desktop: Public Edition, showing the Connect pane with "To a File" options including Text file selected' class="figure mx-auto d-block"><div class="figcaption">Open and connect a text file</div>
 </figure><hr>
 <h3 id="introduction-figure-2">Figure 2</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Figure: After selecting your CSV file, Tableau displays a preview of your data source. Click "Sheet 1" at the bottom to proceed to the worksheet.’</p>
-<figure><img src="../fig/tableau-data-source-preview.png" style="width:50.0%" alt='Figure: After selecting your CSV file, Tableau displays a preview of your data source. Click "Sheet 1" at the bottom to proceed to the worksheet.' class="figure mx-auto d-block"><div class="figcaption">Worksheet 1 after selecting a CSV file</div>
-</figure><hr></section><section id="exploring-data"><h2 class="section-heading"><a href="exploring-data.html">Exploring and Cleaning Your Data</a></h2>
+<p aria-hidden="true">Image 1 of 1: ‘The Data Source page after connecting a CSV file, showing a preview grid of the traffic collision data with column headers and data-type icons’</p>
+<figure><img src="../fig/tableau-data-source-preview.png" style="width:50.0%" alt="The Data Source page after connecting a CSV file, showing a preview grid of the traffic collision data with column headers and data-type icons" class="figure mx-auto d-block"><div class="figcaption">Worksheet 1 after selecting a CSV file</div>
+</figure><hr></section><section id="exploring-data"><h2 class="section-heading"><a href="exploring-data.html">Understanding Fields and Preparing Data</a></h2>
 <hr class="half-width">
 <h3 id="exploring-data-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Example of creating a calculated field for Number of Accidents’</p>
-<figure><img src="../fig/calculated-field-dr-number.png" style="width:50.0%" alt="Example of creating a calculated field for Number of Accidents" class="figure mx-auto d-block"><div class="figcaption">Creating a calculated field for DR Number</div>
+<p aria-hidden="true">Image 1 of 1: ‘Right-click menu on a pill, showing a Measure submenu (Sum, Average, Count, and so on) above a separate pair of checkboxes for Discrete and Continuous’</p>
+<figure><img src="../fig/dr-number-count.png" style="width:50.0%" alt="Right-click menu on a pill, showing a Measure submenu (Sum, Average, Count, and so on) above a separate pair of checkboxes for Discrete and Continuous" class="figure mx-auto d-block"><div class="figcaption">Field context menu on a shelf, showing
+Dimension/Measure and Discrete/Continuous as two separate groups of
+options</div>
 </figure><hr>
 <h3 id="exploring-data-figure-2">Figure 2</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Example of creating a calculated field for Number of Accidents’</p>
-<figure><img src="../fig/dr-number-count.png" style="width:50.0%" alt="Example of creating a calculated field for Number of Accidents" class="figure mx-auto d-block"><div class="figcaption">Making your new variable be a count of Number of
-Accidents</div>
+<p aria-hidden="true">Image 1 of 1: ‘Right-click context menu on a field in the Data pane, showing Create submenu with Calculated Field, Group, Set, Bins, and Parameter options’</p>
+<figure><img src="../fig/calculated-field-dr-number.png" style="width:50.0%" alt="Right-click context menu on a field in the Data pane, showing Create submenu with Calculated Field, Group, Set, Bins, and Parameter options" class="figure mx-auto d-block"><div class="figcaption">The Create menu in the Data pane, showing the
+Calculated Field… option</div>
 </figure><hr></section><section id="creating-visualisations"><h2 class="section-heading"><a href="creating-visualisations.html">Visualizing Data with Charts and Maps</a></h2>
 <hr class="half-width">
 <h3 id="creating-visualisations-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Changing the base layer to show streets on your map.’</p>
-<figure><img src="../fig/maps-add-streets.png" alt="Changing the base layer to show streets on your map." class="figure mx-auto d-block"><div class="figcaption">Changing the base layer to show streets on your
-map.</div>
+<p aria-hidden="true">Image 1 of 1: ‘Data pane context menu for a text field, showing Rename, Copy Values, Hide, and further down Create Calculated Field, Create Group, Split, and Custom Split options’</p>
+<figure><img src="../fig/split-lat-lon.png" style="width:50.0%" alt="Data pane context menu for a text field, showing Rename, Copy Values, Hide, and further down Create Calculated Field, Create Group, Split, and Custom Split options" class="figure mx-auto d-block"><div class="figcaption">Right-click menu on the Location field showing
+Split and Custom Split options</div>
+</figure><hr>
+<h3 id="creating-visualisations-figure-2">Figure 2</h3>
+<p aria-hidden="true">Image 1 of 1: ‘The "Add a Connection" dialog in Tableau, with Spatial file highlighted as a connection type alongside Microsoft Excel, Text file, JSON file, and PDF file’</p>
+<figure><img src="../fig/add-spatial-file-tableau.png" style="width:40.0%" alt='The "Add a Connection" dialog in Tableau, with Spatial file highlighted as a connection type alongside Microsoft Excel, Text file, JSON file, and PDF file' class="figure mx-auto d-block"><div class="figcaption">Splitting the Location field into a spatial
+connection, useful for the optional LAPD Divisions overlay below</div>
 </figure><hr></section><section id="adding-interactivity"><h2 class="section-heading"><a href="adding-interactivity.html">Adding Interactivity with Pages and Filters</a></h2>
 <hr class="half-width"></section><section id="building-dashboards"><h2 class="section-heading"><a href="building-dashboards.html">Building and Sharing Dashboards</a></h2>
 <hr class="half-width"></section>
@@ -396,7 +403,7 @@ map.</div>
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -425,9 +432,9 @@ map.</div>
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/images.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/images.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2026-09-08",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

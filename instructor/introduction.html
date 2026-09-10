@@ -24,13 +24,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -210,8 +210,11 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-is-tableau">What is Tableau?</a></li>
-<li><a href="#tableau-public-vs.-tableau-desktop">Tableau Public vs. Tableau Desktop</a></li>
+<li><a href="#tableau-editions">Tableau Editions</a></li>
 <li><a href="#launching-tableau-and-connecting-to-data">Launching Tableau and Connecting to Data</a></li>
+<li><a href="#the-data-source-page">The Data Source page</a></li>
+<li><a href="#getting-oriented-in-a-worksheet">Getting oriented in a worksheet</a></li>
+<li><a href="#save-your-work-locally">Save your work locally</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -221,7 +224,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -306,13 +309,13 @@
           Home
         </a>
         <a class="chapter-link float-end" href="../instructor/exploring-data.html" rel="next">
-          Next: Exploring and Cleaning Your Data...
+          Next: Understanding Fields and Preparing Data...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Getting Started with Tableau Public</h1>
-        <p>Last updated on 2025-06-05 |
+        <p>Last updated on 2026-09-10 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -334,8 +337,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What is Tableau?</li>
-<li>What is Tableau Public?</li>
-<li>How do I install Tableau Public and open a dataset?</li>
+<li>What is Tableau Desktop: Public Edition, and how does it differ from
+a licensed edition?</li>
+<li>How do I install Tableau Desktop: Public Edition and open a
+dataset?</li>
 <li>What kinds of data can Tableau help me visualize?</li>
 </ul></div>
 </div>
@@ -344,10 +349,11 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Understand what Tableau is and the difference between the Public and
-Desktop versions.</li>
-<li>Install and launch Tableau Public.</li>
-<li>Load a sample dataset and become familiar with the interface.</li>
+<ul><li>Describe what Tableau is and how Public Edition compares to a
+licensed edition.</li>
+<li>Install and launch Tableau Desktop: Public Edition.</li>
+<li>Load a sample dataset, save it locally, and become familiar with the
+interface.</li>
 </ul></div>
 </div>
 </div>
@@ -358,53 +364,66 @@ Desktop versions.</li>
 explore and communicate data effectively through interactive charts,
 dashboards, and maps. It’s widely used across many fields, including
 business, public policy, and research.</p>
-</section><section><h2 class="section-heading" id="tableau-public-vs--tableau-desktop">Tableau Public vs. Tableau Desktop<a class="anchor" aria-label="anchor" href="#tableau-public-vs--tableau-desktop"></a></h2>
-<hr class="half-width"><p>There are two main versions of Tableau:</p>
+<p>This workshop uses <strong>Tableau Desktop: Public Edition</strong> —
+the installed desktop application, not the web-based authoring tool at
+public.tableau.com. Menu paths and screenshots in this lesson describe
+the desktop app.</p>
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Tableau Public publishes workbooks to a public website, and the
+underlying data may be downloadable. Don’t use it with sensitive or
+restricted data. We’ll come back to this in Episode 5.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="tableau-editions">Tableau Editions<a class="anchor" aria-label="anchor" href="#tableau-editions"></a></h2>
+<hr class="half-width"><p>There are three current editions of Tableau Desktop:</p>
 <ul><li>
-<strong>Tableau Public</strong> is a free version that lets you
-create visualizations and publish them to a public web profile. It’s
-ideal for learning, sharing, and non-sensitive data.</li>
+<strong>Tableau Desktop: Public Edition</strong> — free, installed
+application. Saves locally and publishes to Tableau Public. Not licensed
+for commercial use. This is what we’re using today.</li>
 <li>
-<strong>Tableau Desktop</strong> is the full version available
-through paid licenses or free academic access for students. It includes
-additional features like saving locally and connecting to a broader
-range of data sources.</li>
+<strong>Tableau Desktop: Free Edition</strong> — free, unlimited
+rows, but cannot publish anywhere (local analysis only). Useful for
+private, non-shareable data, but out of scope for this workshop.</li>
+<li>
+<strong>Tableau Desktop: Professional Edition</strong> — the fully
+licensed edition, available through paid or institutional licenses. Adds
+live database connections, unlimited data sources, and publishing to
+Tableau Cloud or Tableau Server in addition to Tableau Public.</li>
 </ul><div class="section level3">
-<h3 id="feature-comparison-table-for-current-tableau-public-and-desktop">Feature Comparison Table for current Tableau Public and Desktop<a class="anchor" aria-label="anchor" href="#feature-comparison-table-for-current-tableau-public-and-desktop"></a></h3>
-<table class="table"><caption>Comparison of Tableau Desktop and Tableau Public features as of
-2025</caption>
-<colgroup><col width="17%"><col width="21%"><col width="60%"></colgroup><thead><tr><th align="left">Feature</th>
-<th align="left">Tableau Desktop</th>
-<th align="left">Tableau Public (Desktop &amp; Web)</th>
+<h3 id="feature-comparison-public-edition-vs--professional-edition">Feature comparison: Public Edition vs. Professional Edition<a class="anchor" aria-label="anchor" href="#feature-comparison-public-edition-vs--professional-edition"></a></h3>
+<table class="table"><caption>Tableau Desktop edition comparison, validated against the <a href="https://help.tableau.com/current/pro/desktop/en-us/desktop_comparison.htm" class="external-link">official
+edition comparison page</a>
+</caption>
+<colgroup><col width="23%"><col width="34%"><col width="41%"></colgroup><thead><tr><th align="left">Feature</th>
+<th align="left">Tableau Desktop: Public Edition</th>
+<th align="left">Tableau Desktop: Professional Edition</th>
 </tr></thead><tbody><tr><td align="left">Save Locally</td>
 <td align="left">Yes</td>
-<td align="left">Yes (as of 2025.1.2)</td>
-</tr><tr><td align="left">Private Workbooks</td>
-<td align="left">Yes (local, Server, Cloud)</td>
-<td align="left">No (primarily for public sharing; local saves are for
-personal use/prep for publish)</td>
-</tr><tr><td align="left">Data Sources</td>
-<td align="left">Full (databases, cloud, files, etc.)</td>
-<td align="left">Limited (CSV, Excel, Google Sheets, JSON, PDF, Spatial
-Files, WDC, etc.)</td>
-</tr><tr><td align="left">Live Connections</td>
 <td align="left">Yes</td>
-<td align="left">No (works with data extracts/snapshots)</td>
-</tr><tr><td align="left">Geospatial Files</td>
-<td align="left">Yes</td>
-<td align="left">Yes</td>
-</tr><tr><td align="left">Join/Blend Data</td>
-<td align="left">Yes (full capabilities)</td>
-<td align="left">Yes (for supported file types; limited
-cross-database/published source joins)</td>
-</tr><tr><td align="left">Export Options</td>
-<td align="left">PDF, PPT, Image, Data, Crosstab, etc.</td>
-<td align="left">Image, PDF, Data (when viewed on web); limited image
-export from desktop app only</td>
-</tr><tr><td align="left">Cost</td>
-<td align="left">Paid license (free for students)</td>
-<td align="left">Free</td>
-</tr></tbody></table></div>
+</tr><tr><td align="left">Row limit</td>
+<td align="left">15 million rows</td>
+<td align="left">Unlimited</td>
+</tr><tr><td align="left">Publishing destinations</td>
+<td align="left">Tableau Public only</td>
+<td align="left">Tableau Public, Tableau Cloud, Tableau Server</td>
+</tr><tr><td align="left">Data source connections</td>
+<td align="left">Limited (CSV, Excel, Google Sheets, JSON, PDF, spatial
+files, and similar)</td>
+<td align="left">Full (databases, cloud services, live connections, and
+more)</td>
+</tr><tr><td align="left">Commercial use</td>
+<td align="left">Not permitted</td>
+<td align="left">Permitted</td>
+</tr></tbody></table><p>Everything in this workshop stays well within the Public Edition’s
+limits.</p>
+</div>
 </section><section><h2 class="section-heading" id="launching-tableau-and-connecting-to-data">Launching Tableau and Connecting to Data<a class="anchor" aria-label="anchor" href="#launching-tableau-and-connecting-to-data"></a></h2>
 <hr class="half-width"><p>To get started, if Tableau Desktop (or Public) is in your dock, you
 can click it open. However, a standard method is to navigate to your
@@ -413,12 +432,82 @@ there.</p>
 <p>Once Tableau is open:</p>
 <ol style="list-style-type: decimal"><li>Under <strong>Connect</strong>, click <strong>Text
 File</strong>.</li>
-</ol><figure><img src="../fig/connect-text-file.png" style="width:50.0%" alt="Open Tableau and under Connect, select Text file" class="figure mx-auto d-block"><div class="figcaption">Open and connect a text file</div>
+</ol><figure><img src="../fig/connect-text-file.png" style="width:50.0%" alt='Tableau Desktop: Public Edition, showing the Connect pane with "To a File" options including Text file selected' class="figure mx-auto d-block"><div class="figcaption">Open and connect a text file</div>
 </figure><ol start="2" style="list-style-type: decimal"><li>Browse to your downloaded CSV file and select it.</li>
-<li>Tableau will show a preview of the data. Click <strong>Sheet
-1</strong> to begin working.</li>
-</ol><figure><img src="../fig/tableau-data-source-preview.png" style="width:50.0%" alt='Figure: After selecting your CSV file, Tableau displays a preview of your data source. Click "Sheet 1" at the bottom to proceed to the worksheet.' class="figure mx-auto d-block"><div class="figcaption">Worksheet 1 after selecting a CSV file</div>
-</figure><div id="keypoints1" class="callout keypoints">
+</ol></section><section><h2 class="section-heading" id="the-data-source-page">The Data Source page<a class="anchor" aria-label="anchor" href="#the-data-source-page"></a></h2>
+<hr class="half-width"><p>Before building anything, Tableau shows you the <strong>Data Source
+page</strong> — a preview of your connected file. Take a moment to check
+it over:</p>
+<ul><li>Do the field names match what you expect (<code>Area Name</code>,
+<code>Date Occurred</code>, <code>DR Number</code>, and so on)?</li>
+<li>Does each row represent one collision record? This matters later
+when we count accidents.</li>
+<li>Are date fields recognized as dates (a calendar icon next to the
+field), not plain text?</li>
+<li>Do any columns look like the wrong data type (numbers stored as
+text, or vice versa)?</li>
+</ul><div id="expected-outcome-data-source-page" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="expected-outcome-data-source-page" class="callout-inner">
+<h3 class="callout-title">Expected outcome: Data Source page</h3>
+<div class="callout-content">
+<p>You should see a grid preview of your CSV with column headers along
+the top and a data-type icon (<code>Abc</code>, <code>#</code>,
+calendar, and so on) above each field name. If a field looks
+misclassified — for example, <code>Date Occurred</code> shown as
+<code>Abc</code> text instead of a date — you can change its data type
+here or later in the Data pane.</p>
+</div>
+</div>
+</div>
+<ol start="3" style="list-style-type: decimal"><li>Click <strong>Sheet 1</strong> at the bottom to move from the Data
+Source page into a new <strong>worksheet</strong>.</li>
+</ol><figure><img src="../fig/tableau-data-source-preview.png" style="width:50.0%" alt="The Data Source page after connecting a CSV file, showing a preview grid of the traffic collision data with column headers and data-type icons" class="figure mx-auto d-block"><div class="figcaption">Worksheet 1 after selecting a CSV file</div>
+</figure></section><section><h2 class="section-heading" id="getting-oriented-in-a-worksheet">Getting oriented in a worksheet<a class="anchor" aria-label="anchor" href="#getting-oriented-in-a-worksheet"></a></h2>
+<hr class="half-width"><p>A <strong>worksheet</strong> is where you build one chart. The
+<strong>view</strong> is what actually renders in that worksheet as you
+add fields. A few parts of the interface you’ll use constantly:</p>
+<ul><li>
+<strong>Data pane</strong> — the list of fields (columns) from your
+connected data, on the left.</li>
+<li>
+<strong>field</strong> / <strong>pill</strong> — each item in the
+Data pane is a field; when you drag it into the view it becomes a small
+rounded box called a pill.</li>
+<li>
+<strong>Rows shelf</strong> and <strong>Columns shelf</strong> —
+drop pills here to define the rows and columns of your view.</li>
+<li>
+<strong>Marks card</strong> — controls how each data point is drawn
+(as a bar, line, circle, map point, and so on) and lets you add fields
+to Color, Size, Label, Detail, and Tooltip.</li>
+</ul><p>We’ll use this vocabulary throughout the rest of the lesson.</p>
+</section><section><h2 class="section-heading" id="save-your-work-locally">Save your work locally<a class="anchor" aria-label="anchor" href="#save-your-work-locally"></a></h2>
+<hr class="half-width"><p>Before you go further, save a local copy of your workbook:</p>
+<ol style="list-style-type: decimal"><li>Go to <strong>File &gt; Save As</strong>.</li>
+<li>Choose a location and file name (for example,
+<code>intro-tableau-workshop.twb</code>).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol><div id="expected-outcome-saved-workbook-file" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="expected-outcome-saved-workbook-file" class="callout-inner">
+<h3 class="callout-title">Expected outcome: saved workbook file</h3>
+<div class="callout-content">
+<p>Your workbook now exists as a local <code>.twb</code> (or
+<code>.twbx</code>) file on your computer. Tableau Desktop: Public
+Edition can save locally like this at any point — you don’t need to be
+online or publish anything to save your progress. Get in the habit of
+saving periodically as you work.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -427,10 +516,13 @@ File</strong>.</li>
 <div class="callout-content">
 <ul><li>Tableau helps you explore and present data using interactive
 visualizations.</li>
-<li>Tableau Public is free and great for learning, but saves work to the
-web.</li>
-<li>Tableau Desktop provides additional functionality and is free for
-students.</li>
+<li>Tableau Desktop: Public Edition is free, saves locally, and
+publishes only to Tableau Public — not to Tableau Cloud or Tableau
+Server.</li>
+<li>A licensed Tableau Desktop: Professional Edition adds unlimited
+rows, live connections, and more publishing destinations.</li>
+<li>Check the Data Source page before building: field names, row grain,
+and recognized data types all matter later.</li>
 <li>Use well-formatted CSVs to start quickly.</li>
 </ul></div>
 </div>
@@ -451,7 +543,7 @@ any links that you are not going to use.
           Home
         </a>
         <a class="chapter-link float-end" href="../instructor/exploring-data.html" rel="next">
-          Next: Exploring and Cleaning Your Data...
+          Next: Understanding Fields and Preparing Data...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -470,7 +562,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -498,9 +590,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/introduction.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/introduction.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2025-06-05",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

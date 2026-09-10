@@ -40,13 +40,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -352,43 +352,76 @@
 <ul>
 <li>Tableau helps you explore and present data using interactive
 visualizations.</li>
-<li>Tableau Public is free and great for learning, but saves work to the
-web.</li>
-<li>Tableau Desktop provides additional functionality and is free for
-students.</li>
+<li>Tableau Desktop: Public Edition is free, saves locally, and
+publishes only to Tableau Public — not to Tableau Cloud or Tableau
+Server.</li>
+<li>A licensed Tableau Desktop: Professional Edition adds unlimited
+rows, live connections, and more publishing destinations.</li>
+<li>Check the Data Source page before building: field names, row grain,
+and recognized data types all matter later.</li>
 <li>Use well-formatted CSVs to start quickly.</li>
-</ul></section><section id="exploring-data"><h2 class="section-heading"><a href="exploring-data.html">Exploring and Cleaning Your Data</a></h2>
+</ul></section><section id="exploring-data"><h2 class="section-heading"><a href="exploring-data.html">Understanding Fields and Preparing Data</a></h2>
 <hr class="half-width">
 <ul>
-<li>Tableau automatically classifies data into dimensions (categorical)
-and measures (quantitative).</li>
-<li>The “Show Me” panel suggests visualization types based on selected
-data.</li>
-<li>Data preparation, including binning and calculated fields, improves
-visualization clarity.</li>
+<li>Data type, field role (dimension/measure), aggregation, and
+discrete/continuous are four separate concepts — Tableau just displays
+them together.</li>
+<li>Blue means discrete, green means continuous. Dimensions can be
+continuous; measures can be discrete.</li>
+<li>The <code>=</code> icon marks a calculated or copied field, not a
+specific data type.</li>
+<li>Check whether one row equals one collision before counting — use
+<code>COUNTD</code> if <code>DR Number</code> can repeat.</li>
+<li>“Show Me” evaluates your selected fields, enables compatible chart
+types, and builds the view you pick.</li>
+<li>A short data audit before visualizing surfaces problems (duplicates,
+invalid values, sentinel coordinates) early.</li>
 </ul></section><section id="creating-visualisations"><h2 class="section-heading"><a href="creating-visualisations.html">Visualizing Data with Charts and Maps</a></h2>
 <hr class="half-width">
 <ul>
 <li>Dragging fields to Columns and Rows defines the structure of your
 chart.</li>
-<li>The Show Me panel helps you quickly preview different visualization
-types.</li>
-<li>Latitude and longitude values can be transformed into map views
-using geographic roles.</li>
+<li>Converting a date to continuous creates a continuous axis — it does
+not, by itself, animate or smooth anything.</li>
+<li>With ~20 categories, filter or highlight before drawing conclusions
+from a color-coded line chart.</li>
+<li>A record-level dimension (like <code>DR Number</code>) on Detail is
+required for a map to plot individual points instead of one averaged
+mark.</li>
+<li>
+<code>(0, 0)</code> coordinates are a numeric sentinel for missing
+location, not a “null point” — filter them out before setting your map
+extent.</li>
 </ul></section><section id="adding-interactivity"><h2 class="section-heading"><a href="adding-interactivity.html">Adding Interactivity with Pages and Filters</a></h2>
 <hr class="half-width">
 <ul>
-<li>The Pages shelf adds animation by slicing your visualization into
-steps.</li>
-<li>Filters let you focus on specific parts of your dataset.</li>
+<li>The Pages shelf steps a view through one frame per year — it shows
+each year’s own values, not a running total.</li>
+<li>A genuine cumulative view requires a Running Total table
+calculation, a separate feature from Pages.</li>
+<li>A field on the Filters shelf, a filter card, and a dashboard filter
+action are three different things.</li>
+<li>Filter cards have specific display modes: Single Value (List),
+Single Value (Dropdown), Multiple Values (List), Multiple Values
+(Dropdown).</li>
 <li>Labels, color, and dynamic titles help clarify what your
 visualization is showing.</li>
 </ul></section><section id="building-dashboards"><h2 class="section-heading"><a href="building-dashboards.html">Building and Sharing Dashboards</a></h2>
 <hr class="half-width">
 <ul>
-<li>Dashboards combine multiple charts into one interactive view.</li>
-<li>Filters and selections can link multiple charts together.</li>
-<li>Tableau Public lets you publish and share dashboards easily.</li>
+<li>Reference only worksheets you’ve actually built, by their exact
+names, in dashboard instructions.</li>
+<li>Tiled layout with a fixed dashboard size is the reliable beginner
+default; Floating and Automatic sizing are later extensions.</li>
+<li>Use each sheet’s own menu for <strong>Show Title</strong> and
+<strong>Use as Filter</strong> — don’t rename dashboard titles by
+editing the underlying worksheet tab.</li>
+<li>A shared filter (<strong>Apply to Worksheets</strong>) and a
+dashboard filter action (<strong>Use as Filter</strong>) solve different
+problems.</li>
+<li>Tableau Public dashboards are public and may be downloadable — never
+publish sensitive data, and add accessibility alt text before
+sharing.</li>
 </ul></section>
 </div>
     </main>
@@ -409,7 +442,7 @@ visualization is showing.</li>
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -438,9 +471,9 @@ visualization is showing.</li>
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/key-points.html",
   "identifier": "https://jt14den.github.io/intro-tableau/key-points.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2026-09-08",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>

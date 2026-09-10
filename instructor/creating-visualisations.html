@@ -24,13 +24,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An introduction to data visualization using Tableau, this lesson guides learners through creating charts, dashboards, and exploring data interactively. No prior experience with Tableau is required." src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="exploring-data.html">2. Exploring and Cleaning Your Data</a>
+        <a href="exploring-data.html">2. Understanding Fields and Preparing Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -227,11 +227,10 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#line-chart-accidents-over-time-by-area">Line Chart: Accidents Over Time by Area</a></li>
-<li><a href="#histogram-accidents-by-time-of-day">Histogram: Accidents by Time of Day</a></li>
-<li><a href="#bar-chart-accidents-by-age">Bar Chart: Accidents by Age</a></li>
-<li><a href="#map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles</a></li>
-<li><a href="#optional-refine-your-map-display">Optional: Refine Your Map Display</a></li>
+        <ul><li><a href="#line-chart-collisions-over-time-by-area">Line Chart: Collisions Over Time by Area</a></li>
+<li><a href="#bar-chart-collisions-by-hour-of-day">Bar Chart: Collisions by Hour of Day</a></li>
+<li><a href="#bar-chart-collisions-by-victim-age">Bar Chart: Collisions by Victim Age</a></li>
+<li><a href="#map-plotting-collisions-in-los-angeles">Map: Plotting Collisions in Los Angeles</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -305,7 +304,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/exploring-data.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Exploring and Cleaning Your Data...
+          Previous: Understanding Fields and Preparing Data...
         </a>
         <a class="chapter-link float-end" href="../instructor/adding-interactivity.html" rel="next">
           Next: Adding Interactivity with Pages and...
@@ -314,7 +313,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Visualizing Data with Charts and Maps</h1>
-        <p>Last updated on 2025-06-05 |
+        <p>Last updated on 2026-09-10 |
 
         <a href="https://github.com/jt14den/intro-tableau/edit/main/episodes/creating-visualisations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -335,7 +334,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do I create a line chart, histogram, or map in Tableau?</li>
+<ul><li>How do I create a line chart, bar chart, or map in Tableau?</li>
 <li>How do field types affect the kind of visualization Tableau
 creates?</li>
 <li>How can I use geographic data for mapping?</li>
@@ -346,73 +345,68 @@ creates?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Create a line chart showing accidents over time by area.</li>
-<li>Use binned time data to generate a histogram.</li>
+<ul><li>Create a line chart showing collisions over time by area.</li>
+<li>Use <code>Hour Occurred</code> to build a bar chart of collisions by
+hour.</li>
 <li>Create a basic map using latitude and longitude values.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>Welcome back! In this episode, we will take the data we’ve prepared
-and start building impactful visualizations. We’ll explore how to create
-common chart types, such as line charts and histograms, and delve into
-the exciting world of mapping with geographic data.</p>
-<section><h2 class="section-heading" id="line-chart-accidents-over-time-by-area">Line Chart: Accidents Over Time by Area<a class="anchor" aria-label="anchor" href="#line-chart-accidents-over-time-by-area"></a></h2>
-<hr class="half-width"><p>To start, let’s visualize how the number of accidents changes over
-time, broken down by different areas. When thinking about a “time
-series” chart, we typically want time on our horizontal (x) axis. Let’s
-examine our available time variables.</p>
-<div id="accidents-over-time" class="callout checklist">
+<p>Welcome back! In this episode, we’ll take the fields we’ve prepared
+and start building visualizations: a line chart, a bar chart, and a
+map.</p>
+<section><h2 class="section-heading" id="line-chart-collisions-over-time-by-area">Line Chart: Collisions Over Time by Area<a class="anchor" aria-label="anchor" href="#line-chart-collisions-over-time-by-area"></a></h2>
+<hr class="half-width"><p>To start, let’s visualize how the number of collisions changes over
+time, broken down by area. For a time series, we want time on the
+horizontal (x) axis.</p>
+<div id="collisions-over-time" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
-<div id="accidents-over-time" class="callout-inner">
-<h3 class="callout-title">Accidents over time</h3>
+<div id="collisions-over-time" class="callout-inner">
+<h3 class="callout-title">Collisions over time</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Open a new worksheet. Let’s rename this sheet
-<code>Accidents Over Time</code>.</li>
-<li>Drag <code>Date Occurred</code> to <strong>Columns</strong>. You’ll
-notice it likely appears as a <strong>blue pill</strong> (discrete
-year).</li>
-<li>
-<strong>Important:</strong> Right-click <code>Date Occurred</code>
-on the Columns shelf → Convert to <strong>Continuous</strong> (choose
-<code>Year</code> under the green “Continuous” section). This transforms
-it into a <strong>green pill</strong>, representing a continuous
-timeline.</li>
-<li>Drag your calculated field, <code>Number of Accidents</code>, to
-<strong>Rows</strong>.</li>
-<li>To see trends for different areas, drag <code>Area Name</code> to
-<strong>Color</strong> under the Marks card. This will create a separate
-line for each area and generate a color legend.</li>
-<li>Double-click axis labels to rename them if desired, for example,
-from “SUM(Number of Accidents)” to “Number of Accidents.”</li>
+<ol style="list-style-type: decimal"><li>Open a new worksheet. Rename this sheet
+<code>Collisions Over Time</code>.</li>
+<li>Drag <code>Date Occurred</code> to <strong>Columns</strong>. It
+appears as a <strong>blue pill</strong> (discrete year headers) by
+default.</li>
+<li>Open the <code>Date Occurred</code> pill’s dropdown menu on the
+Columns shelf and choose the green, continuous <strong>Year</strong>
+option (listed under the continuous, green section of the menu —
+distinct from the discrete blue <code>YEAR</code> above it). This turns
+it into a <strong>green pill</strong>, <code>YEAR(Date Occurred)</code>,
+representing a continuous timeline.</li>
+<li>Drag <code>Collision Count</code> to <strong>Rows</strong>.</li>
+<li>To compare areas, drag <code>Area Name</code> to
+<strong>Color</strong> on the Marks card.</li>
 </ol></div>
 </div>
 </div>
-<div id="understanding-continuous-vs.-discrete-dates" class="callout">
+<div id="expected-outcome-line-chart-by-area" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="understanding-continuous-vs.-discrete-dates" class="callout-inner">
-<h3 class="callout-title">Understanding Continuous vs. Discrete
-Dates</h3>
+<div id="expected-outcome-line-chart-by-area" class="callout-inner">
+<h3 class="callout-title">Expected outcome: line chart by area</h3>
 <div class="callout-content">
-<p>When you first drag a date field, Tableau often defaults to a “blue
-pill” (discrete), showing individual years as distinct categories.
-However, for visualizing trends <em>over time</em> along a continuous
-axis, a “green pill” (continuous) is essential. This creates a proper
-timeline, allowing for smooth lines and animations, which we’ll explore
-later!</p>
+<p>At this point you should see one line per police area, all sharing a
+continuous year axis. If you see roughly 20 differently colored lines
+and it’s hard to tell them apart, that’s expected — we’ll narrow this
+down next.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="histogram-accidents-by-time-of-day">Histogram: Accidents by Time of Day<a class="anchor" aria-label="anchor" href="#histogram-accidents-by-time-of-day"></a></h2>
-<hr class="half-width"><p>Use the binned field created in the previous episode to examine
-accident frequency over time.</p>
+<div class="section level3">
+<h3 id="too-many-lines-to-compare">Too many lines to compare<a class="anchor" aria-label="anchor" href="#too-many-lines-to-compare"></a></h3>
+<p>With around 20 police areas, a line chart colored by
+<code>Area Name</code> produces about 20 lines — more than most people
+can visually distinguish or compare at once. Before drawing conclusions
+from this chart, narrow it down:</p>
 <div id="checklist2" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -420,72 +414,133 @@ accident frequency over time.</p>
 <span class="callout-header">Checklist</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Create a new worksheet.</li>
-<li>Drag <code>Time Occurred (bin)</code> to
-<strong>Columns</strong>.</li>
-<li>Drag the calculated field <code>Number of Accidents</code> to
-<strong>Rows</strong>.</li>
-</ol><ul><li>Optional: Drag <code>Area Name</code> to <strong>Filters</strong>,
-then click the filter card menu → <strong>Show Filter</strong>.</li>
-</ul></div>
+<ol style="list-style-type: decimal"><li>Drag <code>Area Name</code> to the <strong>Filters</strong>
+shelf.</li>
+<li>In the filter dialog, select 4–5 areas you want to compare (for
+example, a mix of high- and low-collision areas), then click
+<strong>OK</strong>.</li>
+</ol></div>
 </div>
 </div>
-<div id="callout2" class="callout">
+<p>With only a handful of lines, trends and crossovers become much
+easier to read. As an alternative to filtering, you can select a line
+directly in the view to highlight it against the others — useful when
+you want to keep all areas visible but draw attention to one.</p>
+</div>
+<div class="section level3">
+<h3 id="renaming-an-axis-label">Renaming an axis label<a class="anchor" aria-label="anchor" href="#renaming-an-axis-label"></a></h3>
+<p>To make the y-axis more readable:</p>
+<ul><li>Right-click the axis → <strong>Edit Axis…</strong>, and set a custom
+title (for example, “Collision Count” instead of “CNTD(DR
+Number)”).</li>
+</ul><div id="continuous-dates-create-a-continuous-axis" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div class="callout-inner">
+<div id="continuous-dates-create-a-continuous-axis" class="callout-inner">
+<h3 class="callout-title">Continuous dates create a continuous axis</h3>
 <div class="callout-content">
-<p>Histograms are ideal for showing the distribution of values across
-intervals—perfect for analyzing “Time Occurred.”</p>
+<p>Converting <code>Date Occurred</code> to continuous doesn’t add
+animation or automatically smooth anything — it changes how the axis is
+built. A discrete (blue) date field creates separate header labels, one
+per value. A continuous (green) date field creates a true numeric/time
+axis, which is what lets Tableau draw a single connected line across
+years instead of one segment per labeled category.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="bar-chart-accidents-by-age">Bar Chart: Accidents by Age<a class="anchor" aria-label="anchor" href="#bar-chart-accidents-by-age"></a></h2>
-<hr class="half-width"><p>Next, let’s visualize how accident counts vary by the age of the
-victim. This will help us understand the distribution of accidents
-across different age groups.</p>
-<div id="accidents-by-age" class="callout checklist">
+</div>
+</section><section><h2 class="section-heading" id="bar-chart-collisions-by-hour-of-day">Bar Chart: Collisions by Hour of Day<a class="anchor" aria-label="anchor" href="#bar-chart-collisions-by-hour-of-day"></a></h2>
+<hr class="half-width"><p>Use the <code>Hour Occurred</code> calculated field from Episode 2 to
+see how collisions are distributed across the day.</p>
+<div id="checklist3" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
-<div id="accidents-by-age" class="callout-inner">
-<h3 class="callout-title">Accidents by Age</h3>
+<div class="callout-inner">
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Create a new worksheet and rename it
-<code>Age Distribution of Accidents</code>.</li>
-<li>Drag <code>Victim Age</code> to <strong>Columns</strong>.</li>
-<li>Right-click on <code>Victim Age</code> on the Columns shelf and
-choose <strong>Convert to Dimension</strong>. <em>(Even though age is a
-number, we’re treating it as a distinct category for each bar in this
-chart, rather than a continuous range for a single line.)</em>
+<code>Collisions by Hour</code>.</li>
+<li>Drag <code>Hour Occurred</code> to <strong>Columns</strong>.</li>
+<li>Drag <code>Collision Count</code> to <strong>Rows</strong>.</li>
+<li>Confirm the Marks type is <strong>Bar</strong>.</li>
+</ol><ul><li>Optional: drag <code>Area Name</code> to <strong>Filters</strong>,
+then open the filter card’s dropdown menu and choose <strong>Show Filter
+Card</strong>.</li>
+</ul></div>
+</div>
+</div>
+<div id="expected-outcome-bar-chart-by-hour" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="expected-outcome-bar-chart-by-hour" class="callout-inner">
+<h3 class="callout-title">Expected outcome: bar chart by hour</h3>
+<div class="callout-content">
+<p>You should see 24 bars, one per hour (0 through 23), ordered left to
+right. If a given hour has zero collisions in the current filter
+selection, Tableau may simply omit that bar rather than show it at
+height zero — check the axis range if a chart looks like it’s missing an
+hour.</p>
+</div>
+</div>
+</div>
+<p>This is a <strong>bar chart of collisions by hour</strong>, not a
+histogram of a continuous time measure — <code>Hour Occurred</code> is a
+discrete category we defined ourselves (see Episode 2), not a raw
+continuous clock reading.</p>
+</section><section><h2 class="section-heading" id="bar-chart-collisions-by-victim-age">Bar Chart: Collisions by Victim Age<a class="anchor" aria-label="anchor" href="#bar-chart-collisions-by-victim-age"></a></h2>
+<hr class="half-width"><p>Next, let’s look at how collision counts vary by victim age — using
+<strong>age bins</strong>, not one bar per exact age, so the pattern is
+easier to read.</p>
+<div id="collisions-by-age" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<span class="callout-header">Checklist</span>
+<div id="collisions-by-age" class="callout-inner">
+<h3 class="callout-title">Collisions by age</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li>Create a new worksheet and rename it
+<code>Age Distribution</code>.</li>
+<li>Right-click <code>Victim Age</code> in the Data pane →
+<strong>Create &gt; Bins…</strong>
 </li>
-<li>Drag <code>Number of Accidents</code> (your calculated field) to
-<strong>Rows</strong>.</li>
-<li>Change the Marks type from <strong>Automatic</strong> to
-<strong>Bar</strong>.</li>
-<li>Use the <strong>Size</strong> slider on the Marks card to reduce bar
-width and prevent overlap, making the bars easier to distinguish.</li>
+<li>Set the bin size to <code>10</code> (or <code>5</code> for finer
+detail) and click <strong>OK</strong>. This creates a new field,
+<code>Victim Age (bin)</code>.</li>
+<li>Drag <code>Victim Age (bin)</code> to <strong>Columns</strong>.</li>
+<li>Drag <code>Collision Count</code> to <strong>Rows</strong>.</li>
+<li>Confirm the Marks type is <strong>Bar</strong>.</li>
 <li>Go to <strong>Analysis &gt; Show Mark Labels</strong> to display the
-<code>Number of Accidents</code> directly on top of each bar.</li>
+count on top of each bar.</li>
 </ol></div>
 </div>
 </div>
 <div class="section level4">
-<h4 id="interpreting-the-age-distribution">Interpreting the Age Distribution<a class="anchor" aria-label="anchor" href="#interpreting-the-age-distribution"></a></h4>
-<p>Now, let’s look at this distribution. Notice any interesting
-patterns? You might observe peaks at specific ages (like 30, 35, 40,
-45). This has come up before in workshops, and it’s quite interesting!
-It often makes us wonder if, for example, the LAPD estimates or rounds
-ages to the nearest five-year mark when exact victim age is unknown.</p>
-<p>Also, look at the very high bar around age 99. Why might there be so
-many victims listed at age 99? While we don’t have explicit
-documentation, a common practice in data collection is to use “99” as a
-placeholder for an <strong>unknown age</strong>. This is a great example
-of how visualizing data can reveal unexpected trends and prompt deeper
-questions about data collection practices!</p>
+<h4 id="interpreting-the-age-distribution">Interpreting the age distribution<a class="anchor" aria-label="anchor" href="#interpreting-the-age-distribution"></a></h4>
+<p>Look at the binned distribution. Two patterns are worth noting, but
+both are <strong>hypotheses to investigate, not confirmed facts</strong>
+— the chart alone can’t tell us why a pattern exists, only that it
+does:</p>
+<ul><li>If you build an <em>unbinned</em> view (one bar per exact age) you
+may notice spikes at ages ending in 0 or 5 (30, 35, 40, and so on). This
+could suggest digit preference or age estimation somewhere in the
+reporting process — officers rounding an approximate age rather than
+recording an exact one. It could also be a real feature of the
+population. The chart doesn’t tell us which.</li>
+<li>You may also see a spike at age 99. A common data-entry convention
+in some systems is to use a placeholder value like 99 for “unknown,” but
+<strong>we don’t have LAPD documentation confirming that’s what’s
+happening here.</strong> Without a codebook or data dictionary from LAPD
+confirming this, treat it as a hypothesis, not a finding.</li>
+</ul><p>The source data’s own documentation notes that these records were
+transcribed from paper traffic reports and may contain inaccuracies — a
+useful reminder whenever a visualization surfaces something that looks
+like a data artifact rather than a real-world pattern.</p>
 <div id="interpret-the-distribution" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -494,8 +549,11 @@ questions about data collection practices!</p>
 <div id="interpret-the-distribution" class="callout-inner">
 <h3 class="callout-title">Interpret the Distribution</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Do any ages have unusual spikes?</li>
-<li>What might cause them?</li>
+<ol style="list-style-type: decimal"><li>What would you need to see — a codebook, a data dictionary, a
+conversation with LAPD records staff — to confirm whether age 99 really
+means “unknown”?</li>
+<li>Does binning change which anomalies are visible, compared to one bar
+per exact age?</li>
 </ol></div>
 </div>
 </div>
@@ -504,71 +562,132 @@ questions about data collection practices!</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
-<p>Consider estimation or rounding practices in field data
-collection.</p>
+<p>Consider what kind of documentation would turn a visual hypothesis
+into a verified claim.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="map-plotting-accidents-in-los-angeles">Map: Plotting Accidents in Los Angeles<a class="anchor" aria-label="anchor" href="#map-plotting-accidents-in-los-angeles"></a></h2>
-<hr class="half-width"><p>Now for one of Tableau’s most powerful features: creating maps! If
-your dataset includes a <code>Location</code> column like
-<code>"34.05, -118.24"</code>, Tableau can help you visualize these
-geographic points.</p>
-<div id="mapping-accidents-in-los-angeles" class="callout checklist">
+</section><section><h2 class="section-heading" id="map-plotting-collisions-in-los-angeles">Map: Plotting Collisions in Los Angeles<a class="anchor" aria-label="anchor" href="#map-plotting-collisions-in-los-angeles"></a></h2>
+<hr class="half-width"><p>Now let’s build a map. The dataset’s <code>Location</code> field
+holds coordinate pairs like <code>"34.05, -118.24"</code> as a single
+text field, which we need to split into separate latitude and longitude
+fields.</p>
+<div id="splitting-location-into-latitude-and-longitude" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
-<div id="mapping-accidents-in-los-angeles" class="callout-inner">
-<h3 class="callout-title">Mapping Accidents in Los Angeles</h3>
+<div id="splitting-location-into-latitude-and-longitude" class="callout-inner">
+<h3 class="callout-title">Splitting Location into Latitude and
+Longitude</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Open a new worksheet and rename it <code>Accident Map</code>.
-Right-click <code>Location</code> → <strong>Split</strong>. This will
-separate the latitude and longitude values based on the comma.</li>
-<li>Rename the resulting fields <code>Location Split 1</code> to
-<code>Latitude</code> and <code>Location Split 2</code> to
+<ol style="list-style-type: decimal"><li>Open a new worksheet and rename it <code>Collision Map</code>.</li>
+<li>In the Data pane, right-click <code>Location</code> →
+<strong>Transform &gt; Custom Split…</strong>
+</li>
+<li>Split on the comma (<code>,</code>) separator. If the resulting
+values have leading/trailing spaces, trim them (Tableau’s split usually
+handles this, but check the preview).</li>
+<li>Rename the two resulting fields to <code>Latitude</code> and
 <code>Longitude</code>.</li>
-<li>Right-click each field in the Data pane → set <strong>Data
-Type</strong> to <em>Number (decimal)</em>.</li>
-<li>Right-click again → set <strong>Geographic Role</strong>: for your
-<code>Latitude</code> field, choose <code>Latitude</code>; for your
-<code>Longitude</code> field, choose <code>Longitude</code>. (You’ll see
-a small globe icon next to them once set correctly.)</li>
-<li>Double-click both <code>Latitude</code> and <code>Longitude</code>
-fields. Tableau will automatically place them on the Rows and Columns
-shelves, respectively, and start rendering a map.</li>
-<li>Once the map begins to load, use the map search bar (magnifying
-glass icon in the top right of the map view) to zoom directly to <em>Los
-Angeles</em>.</li>
+<li>Right-click each field → set <strong>Data Type</strong> to
+<strong>Number (decimal)</strong>.</li>
+<li>Right-click each field again → <strong>Geographic Role</strong> →
+choose <code>Latitude</code> for the <code>Latitude</code> field and
+<code>Longitude</code> for the <code>Longitude</code> field. A small
+globe icon appears next to each once set.</li>
 </ol></div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="map-loading-interaction-tips">Map Loading &amp; Interaction Tips<a class="anchor" aria-label="anchor" href="#map-loading-interaction-tips"></a></h4>
-<p>Maps, especially with many data points, can sometimes take a moment
-to load. Be patient! Once loaded, you might find yourself zoomed out to
-a global view. Use the search bar to pinpoint “Los Angeles, California”
-and quickly zoom in.</p>
-<p>Each point now represents a traffic incident. You can click the
-<strong>Pan Tool</strong> (represented by a hand icon) on the map
-controls to navigate the map view easily.</p>
-<p>Each point now represents a traffic incident.</p>
+<figure><img src="../fig/split-lat-lon.png" style="width:50.0%" alt="Data pane context menu for a text field, showing Rename, Copy Values, Hide, and further down Create Calculated Field, Create Group, Split, and Custom Split options" class="figure mx-auto d-block"><div class="figcaption">Right-click menu on the Location field showing
+Split and Custom Split options</div>
+</figure><div id="building-the-map" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
 </div>
-</section><section><h2 class="section-heading" id="optional-refine-your-map-display">Optional: Refine Your Map Display<a class="anchor" aria-label="anchor" href="#optional-refine-your-map-display"></a></h2>
-<hr class="half-width"><p>To improve readability and orientation:</p>
-<ul><li>Go to <strong>Map → Background Maps → Streets</strong> to switch to
-a street-level basemap.</li>
-<li>Use the <strong>Pan Tool</strong> (click the hand icon) to move
-across the map.</li>
-<li>Remove null points by right-clicking on any point in the ocean (0,0)
-and selecting <strong>Exclude</strong>.</li>
-</ul><figure><img src="../fig/maps-add-streets.png" alt="Changing the base layer to show streets on your map." class="figure mx-auto d-block"><div class="figcaption">Changing the base layer to show streets on your
-map.</div>
-</figure><div id="challenge2" class="callout challenge">
+<span class="callout-header">Checklist</span>
+<div id="building-the-map" class="callout-inner">
+<h3 class="callout-title">Building the map</h3>
+<div class="callout-content">
+<ol start="7" style="list-style-type: decimal"><li>Double-click both <code>Latitude</code> and <code>Longitude</code>
+in the Data pane. Tableau places <code>Longitude</code> on
+<strong>Columns</strong> and <code>Latitude</code> on
+<strong>Rows</strong> and begins rendering a map.</li>
+<li>Drag <code>DR Number</code> to <strong>Detail</strong> on the Marks
+card.</li>
+</ol></div>
+</div>
+</div>
+<div id="expected-outcome-and-a-common-gotcha" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="expected-outcome-and-a-common-gotcha" class="callout-inner">
+<h3 class="callout-title">Expected outcome — and a common gotcha</h3>
+<div class="callout-content">
+<p>Without a record-level dimension like <code>DR Number</code> on
+Detail, Tableau has nothing to tell each collision apart by, and will
+aggregate all the coordinates into a single averaged mark — you’ll see
+one dot instead of thousands. Adding <code>DR Number</code> to Detail
+tells Tableau to draw one mark per collision record.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="cleaning-up-the-map">Cleaning up the map<a class="anchor" aria-label="anchor" href="#cleaning-up-the-map"></a></h3>
+<p>The dataset uses <code>(0, 0)</code> — a real numeric coordinate
+pair, not a blank — as a <strong>sentinel value</strong> for missing
+location data. It is not a “null point”; it’s a placeholder that happens
+to land off the coast of Africa on a world map, which is why filtering
+it out matters before you zoom to Los Angeles.</p>
+<div id="checklist7" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<span class="callout-header">Checklist</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li>Drag <code>Latitude</code> to the <strong>Filters</strong> shelf,
+choose <strong>At Least</strong>, and set a lower bound just above 0
+(e.g. <code>1</code>) — or filter <code>Latitude</code> and
+<code>Longitude</code> to exclude exactly <code>0</code>.</li>
+<li>Use the map search/view controls in the <strong>upper-left</strong>
+of the map view to zoom to “Los Angeles, California.”</li>
+<li>On the Marks card, reduce <strong>Size</strong> and reduce
+<strong>Opacity</strong> (via the Color menu) to make dense, overlapping
+points more readable.</li>
+</ol></div>
+</div>
+</div>
+<p>To change the basemap style:</p>
+<ul><li>Go to <strong>Map &gt; Map Layers</strong>, then use the
+<strong>Style</strong> dropdown under Background to choose from options
+such as Streets, Light, Dark, or Satellite. (Exact style names may vary
+slightly by version — check what’s available in your installed Tableau
+before hard-coding a name in your own materials.)</li>
+</ul><!-- TODO (screenshot): retake in Tableau Desktop: Public Edition 2026.2.x showing Map > Map Layers with the Style dropdown under Background. The existing fig/maps-add-streets.png shows the older Map > Background Maps > [style list] menu and should not be used for this step. --><figure><img src="../fig/add-spatial-file-tableau.png" style="width:40.0%" alt='The "Add a Connection" dialog in Tableau, with Spatial file highlighted as a connection type alongside Microsoft Excel, Text file, JSON file, and PDF file' class="figure mx-auto d-block"><div class="figcaption">Splitting the Location field into a spatial
+connection, useful for the optional LAPD Divisions overlay below</div>
+</figure><div id="location-is-approximate" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="location-is-approximate" class="callout-inner">
+<h3 class="callout-title">Location is approximate</h3>
+<div class="callout-content">
+<p>Coordinates in this dataset are reduced-precision approximations of
+collision locations, not exact street addresses — a common privacy
+practice for public safety data. Don’t treat individual points as
+precise addresses.</p>
+</div>
+</div>
+</div>
+<div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -576,8 +695,39 @@ map.</div>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p><strong>Challenge: Compare Accidents Across Areas</strong></p>
-<p>Create a bar chart showing how accident counts compare across
+<p><strong>Optional challenge: overlay LAPD division
+boundaries</strong></p>
+<p>If you downloaded the LAPD Divisions spatial data in Setup, try
+adding it as a second data source and overlaying division boundaries on
+your collision map as a background layer. This is an extension, not a
+required part of the core lesson — skip it if you’re short on time.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
+</button>
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div class="accordion-body">
+<p>Connect to the spatial file the same way you’d connect to any file
+(<code>Connect &gt; Spatial File</code>), then combine it with your
+collision map using a dual-axis or map layer approach.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><strong>Challenge: Compare Collisions Across Areas</strong></p>
+<p>Create a bar chart showing how collision counts compare across
 different police areas.</p>
 <ul><li>Which field will you put on the x-axis (Columns)?</li>
 <li>Which field is best for the y-axis (Rows)?</li>
@@ -586,15 +736,15 @@ different police areas.</p>
 </ul></div>
 </div>
 </div>
-<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionHint3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
-  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint3" aria-expanded="false" aria-controls="collapseHint3">
+  <h4 class="accordion-header" id="headingHint3"> Give me a hint </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint3" class="accordion-collapse collapse" aria-labelledby="headingHint3" data-bs-parent="#accordionHint3">
 <div class="accordion-body">
 <p>Use <code>Area Name</code> for Columns and
-<code>Number of Accidents</code> as the Measure.</p>
+<code>Collision Count</code> as the measure.</p>
 </div>
 </div>
 </div>
@@ -604,13 +754,13 @@ different police areas.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>Drag <code>Area Name</code> to <strong>Columns</strong>.</li>
-<li>Use <code>Number of Accidents</code> (COUNT of
-<code>DR Number</code>) on <strong>Rows</strong>.</li>
-<li>Optionally add <code>Number of Accidents</code> to
-<strong>Label</strong> for better readability.</li>
+<li>Drag <code>Collision Count</code> (<code>COUNTD([DR Number])</code>)
+to <strong>Rows</strong>.</li>
+<li>Optionally add <code>Collision Count</code> to
+<strong>Label</strong> for readability.</li>
 </ul></div>
 </div>
 </div>
@@ -624,10 +774,17 @@ different police areas.</p>
 <div class="callout-content">
 <ul><li>Dragging fields to Columns and Rows defines the structure of your
 chart.</li>
-<li>The Show Me panel helps you quickly preview different visualization
-types.</li>
-<li>Latitude and longitude values can be transformed into map views
-using geographic roles.</li>
+<li>Converting a date to continuous creates a continuous axis — it does
+not, by itself, animate or smooth anything.</li>
+<li>With ~20 categories, filter or highlight before drawing conclusions
+from a color-coded line chart.</li>
+<li>A record-level dimension (like <code>DR Number</code>) on Detail is
+required for a map to plot individual points instead of one averaged
+mark.</li>
+<li>
+<code>(0, 0)</code> coordinates are a numeric sentinel for missing
+location, not a “null point” — filter them out before setting your map
+extent.</li>
 </ul></div>
 </div>
 </div>
@@ -635,6 +792,7 @@ using geographic roles.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/exploring-data.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -644,7 +802,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/exploring-data.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Exploring and Cleaning Your Data...
+          Previous: Understanding Fields and Preparing Data...
         </a>
         <a class="chapter-link float-end" href="../instructor/adding-interactivity.html" rel="next">
           Next: Adding Interactivity with Pages and...
@@ -666,7 +824,7 @@ any links that you are not going to use.
         | <a href="https://github.com/jt14den/intro-tableau/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:tdennis@library.ucla.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -694,9 +852,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
   "identifier": "https://jt14den.github.io/intro-tableau/instructor/creating-visualisations.html",
-  "dateCreated": "2025-06-12",
-  "dateModified": "2025-06-05",
-  "datePublished": "2026-09-08"
+  "dateCreated": "2025-05-14",
+  "dateModified": "2026-09-10",
+  "datePublished": "2026-09-10"
 }
 
   </script><script>
